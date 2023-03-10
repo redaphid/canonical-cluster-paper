@@ -1,2 +1,2 @@
 #! /usr/bin/env sh
-npx live-server
+npx live-server . ./styles

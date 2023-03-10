@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
   <link href="font-awesome/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="styles/main.css" rel="stylesheet">
+  <link href="styles/main.css"type="text/css" rel="stylesheet">
   <script type="module">
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
@@ -99,10 +99,10 @@
       console.log(main, 'from Works')
       return html`
         <section class="Works">
-          <h3>Experience</h3>
           <ul>
             ${main.map(s => html`
               <li>
+              <h3>${main.title}</h3>
               <${Work} section=${s} />
               </li>
             `)}
@@ -246,7 +246,7 @@
     window.getUniqueAbilities = () => getUniqueAbilities(res)
   </script>
 
-</header>
+</head>
 
 <body></body>
 

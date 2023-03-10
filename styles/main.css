@@ -11,7 +11,7 @@ body {
   --font-weight-regular: 400;
   --font-weight-smaller: 300;
   font-family: 'Ubuntu', Symbol;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 section {
@@ -19,7 +19,7 @@ section {
 }
 
 h3 {
-  font-weight: var(--font-bigger);
+  font-weight: var(--font-weight-bigger);
   font-size: 1.5em;
   margin: 0;
   width: fit-content;
@@ -27,16 +27,15 @@ h3 {
 }
 
 h4 {
-  font-weight: var(--font-bigger);
+  font-weight: var(--font-weight-smaller);
   font-size: 1em;
   margin: 0;
   width: fit-content;
-  border-bottom: 0.05em solid var(--emphasis-foreground);
 }
 
 h5 {
-  font-weight: var(--font-weight-regular);
-  font-size: 1em;
+  font-weight: var(--font-weight-smaller);
+  font-size: 0.75em;
   margin: 0;
   width: fit-content;
 }
@@ -87,7 +86,6 @@ time {
 .Summary {
   font-weight: 300;
   font-size: 0.9em;
-  margin:0;
   margin-left: 0.5em;
 }
 

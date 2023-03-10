@@ -112,6 +112,17 @@
         </section>
       `
     }
+    const Work = ({ question }) => {
+      const {prompt, answer} = question
+      return html`
+      <div class="Work">
+          <header>
+            <h4>${prompt}</h4>
+          </header>
+          <p>${answer}</p>
+        </div>
+      `
+    }
 
     const TimeRange = ({ start, end }) => {
       return html`
@@ -130,17 +141,6 @@
           <p class="Summary">${work.summary}</p>
           <${WorkSkills} skills=${work.skills} />
         </div>*/
-    const Work = ({ question }) => {
-      const {prompt, answer} = question
-      return html`
-      <div class="Work">
-          <header>
-            <h4>${prompt}</h4>
-          </header>
-          <p>${answer}</p>
-        </div>
-      `
-    }
     const WorkSkills = ({ skills }) => {
       return html`
         <ul class="WorkSkills">

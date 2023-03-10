@@ -5,7 +5,7 @@
         "title": "Identity and authorization technology",
         "questions": [
           {
-            "prompt": "question 1",
+            "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",
             "answer": "answer 1"
           },
           {

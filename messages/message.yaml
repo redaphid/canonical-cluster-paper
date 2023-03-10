@@ -1,6 +1,6 @@
 message:
   main:
-    - title: "Some random title"
+    - title: Some random title
       paragraphs:
         - |
           Some random text

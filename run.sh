@@ -1,2 +1,2 @@
 #! /usr/bin/env sh
-npx live-server . ./styles
+npx live-server . -- --browser=google-chrome

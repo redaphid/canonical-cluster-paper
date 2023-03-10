@@ -2,80 +2,87 @@
 <html>
 <header>
   <link href="font-awesome/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <style id="styles-general">
     @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600;800&display=swap');
-    /* Generic styles */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+  /* Generic styles */
 
-    body {
-      --emphasis-color: rgb(250, 198, 112);
-      --emphasis-extra: rgb(243, 121, 37);
-      --emphasis-foreground: black;
-      font-family: sans-serif;
-      font-size: 16px;
-    }
+  body {
+  --emphasis-color: rgb(250, 198, 112);
+  --emphasis-extra: rgb(243, 121, 37);
+  --emphasis-foreground: black;
+  --font-weight-biggest: 700;
+  --font-weight-bigger: 500;
+  --font-weight-regular: 400;
+  --font-weight-smaller: 300;
+  font-family: 'Ubuntu', Symbol;
+  font-size: 1em;
+  }
 
-    section {
-      padding: 1em;
-    }
+  section {
+  padding: 1em;
+  }
 
-    h3 {
-      font-weight: 600;
-      font-size: 1.5em;
-      margin: 0;
-      width: fit-content;
-      border-bottom: 0.05em solid var(--emphasis-foreground);
-    }
+  h3 {
+  font-weight: var(--font-bigger);
+  font-size: 1.5em;
+  margin: 0;
+  width: fit-content;
+  border-bottom: 0.05em solid var(--emphasis-foreground);
+  }
 
-    h4 {
-      font-weight: 600;
-      font-size: 1em;
-      margin: 0;
-      width: fit-content;
-    }
+  h4 {
+  font-weight: var(--font-bigger);
+  font-size: 1em;
+  margin: 0;
+  width: fit-content;
+  }
 
-    h5 {
-      font-weight: 400;
-      font-size: 1em;
-      margin: 0;
-      width: fit-content;
-    }
+  h5 {
+  font-weight: var(--font-weight-regular);
+  font-size: 1em;
+  margin: 0;
+  width: fit-content;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+  ul {
+  list-style: none;
+  padding: 0;
+  }
 
-    i {
-      font-size: 1.2em;
-      margin-right: 0.5em;
-      color: var(--emphasis-extra);
-    }
+  i {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  color: var(--emphasis-extra);
+  }
 
-    /* this will be used for the titles I had at each job */
-    em {
-      font-style: normal;
-      font-weight: 300;
-    }
+  /* this will be used for the titles I had at each job */
+  em {
+  font-style: normal;
+  font-weight: 300;
+  }
 
-    small {
-      font-size: 0.8em;
-      font-weight: 200;
+  small {
+  font-size: 0.8em;
+  font-weight: 200;
 
-    }
+  }
 
-    a {
-      color: var(--emphasis-foreground);
-    }
+  a {
+  color: var(--emphasis-foreground);
+  }
 
-    time {
-      font-weight: 300;
-      font-size: 0.90em;
-    }
+  time {
+  font-weight: 300;
+  font-size: 0.90em;
+  }
 
   </style>
   <style id="styles-components">
     .Resume {
-      font-family: 'Work Sans', serif;
 
       display: grid;
       grid-template-areas:
@@ -92,7 +99,7 @@
     }
 
     .Education p {
-      font-weight: 400;
+      font-weight: var(--font-weight-regular);
       font-size: 0.9em;
       margin: 0;
     }
@@ -109,7 +116,7 @@
     }
 
     .Identity h1 {
-      font-weight: 800;
+      font-weight: var(--font-weight-biggest);
       font-size: 3em;
       margin: 0;
       width: fit-content;
@@ -143,9 +150,11 @@
     .Communication {
       margin-bottom: 0.25em;
     }
+
     .Communications {
       grid-area: Communications;
     }
+
     .WorkSkills {
       display: flex;
       list-style: square;
@@ -155,23 +164,25 @@
       font-size: 0.75em;
       justify-content: center;
     }
+
     .WorkSkills li {
       /* center contents inside element*/
       justify-content: center;
       align-items: center;
 
       margin: 0.25em;
-      margin-top:0;
-      margin-bottom:0;
+      margin-top: 0;
+      margin-bottom: 0;
       padding: 0.25em;
-      padding-top:0;
-      padding-bottom:0;
+      padding-top: 0;
+      padding-bottom: 0;
       color: var(--emphasis-foreground);
     }
 
     .WorkSkills li:first-child {
-    list-style: none;
-  }
+      list-style: none;
+    }
+
   </style>
   <script type="module">
     import { h, render } from 'https://esm.sh/preact'
@@ -250,14 +261,14 @@
       `
     }
 
-    const Works = ({message}) => {
+    const Works = ({ message }) => {
       console.log({ message }, 'from Works')
       const works = []
       return html`
         <section class="Works">
           <h3>Experience</h3>
           <ul>
-            ${message?.paragraphs?.map( p => html`
+            ${message?.paragraphs?.map(p => html`
               <li>
               <${Work} message=${p} />
               </li>
@@ -275,7 +286,7 @@
       `
     }
 
-    const Work = ({message}) => {
+    const Work = ({ message }) => {
       console.log({ message }, 'from Work')
       return html`
       <div class="Work">

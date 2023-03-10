@@ -29,9 +29,11 @@
             <${Identity} Identity=${resume.basics} />
             <div class="Info">
             </div>
-            ${doc.main.map(section => html`
-              <${Works} section=${section} />
-            `)}
+            <div id="main">
+              ${doc.main.map(section => html`
+                <${Works} section=${section} />
+              `)}
+            </div>
           </div>
           `
     }
@@ -96,7 +98,20 @@
         </div>
       `
     }
-
+    const Prompts = ({ prompts }) => {
+      return html`
+        <section class="Prompts">
+          <h3>Prompts</h3>
+          <ul>
+            ${prompts.map(prompt => html`
+              <li>
+                <${Prompt} prompt=${prompt} />
+              </li>
+            `)}
+          </ul>
+        </section>
+      `
+    }
     const Works = ({ section }) => {
       console.log('from Works', section)
       return html`

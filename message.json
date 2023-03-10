@@ -17,6 +17,15 @@
             "answer": "answer 2"
           }
         ]
+      },
+      {
+        "title": "General Software Engineering experience",
+        "prompts": [
+          {
+            "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",
+            "answer": "answer 1"
+          }
+        ]
       }
     ],
     "paragraphs": null,

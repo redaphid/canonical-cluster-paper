@@ -29,9 +29,11 @@
             <${Identity} Identity=${resume.basics} />
             <div class="Info">
             </div>
-            ${doc.main.map(section => html`
-              <${Works} section=${section} />
-            `)}
+            <div class="Main">
+              ${doc.main.map(section => html`
+                <${Works} section=${section} />
+              `)}
+              </div>
           </div>
           `
     }

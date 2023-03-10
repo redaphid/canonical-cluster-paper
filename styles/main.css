@@ -77,7 +77,7 @@ time {
   display: grid;
   grid-template-areas:
     'Communications Identity'
-    'Info Works';
+    'Info Main';
   column-gap: 0.1em;
   row-gap: 0.1em;
   grid-template-columns: 50px;
@@ -118,8 +118,8 @@ time {
   background-color: rgb(245, 225, 190)
 }
 
-.Works {
-  grid-area: Works;
+.Main {
+  grid-area: Main;
 }
 
 .Work>header {

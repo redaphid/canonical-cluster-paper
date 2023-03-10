@@ -8,8 +8,8 @@
   <script type="module">
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
-    const msg = await fetch('message.json').then(res => res.json())
-    console.log({msg})
+    const res = await fetch('message.json').then(res => res.json())
+    console.log('from top', {res})
     /*
      <div class="Resume">
             <${Identity} Identity=${resume.basics} />
@@ -21,14 +21,15 @@
             </div>
             <${Works} works=${resume.work} />
           </div>*/
-    const Resume = ({ message }) => {
+    const Resume = ({ doc }) => {
+      console.log("from Resume", doc)
       const resume = {}
       return html`
           <div class="Resume">
             <${Identity} Identity=${resume.basics} />
             <div class="Info">
             </div>
-            <${Works} message=${message.message} />
+            <${Works} main=${doc.main} />
           </div>
           `
     }
@@ -94,15 +95,15 @@
       `
     }
 
-    const Works = ({ message }) => {
-      console.log({ message }, 'from Works')
+    const Works = ({ main }) => {
+      console.log(main, 'from Works')
       return html`
         <section class="Works">
           <h3>Experience</h3>
           <ul>
-            ${message?.questions?.map(p => html`
+            ${main.map(s => html`
               <li>
-              <${Work} message=${p} />
+              <${Work} section=${s} />
               </li>
             `)}
           </ul>
@@ -127,16 +128,17 @@
           <p class="Summary">${work.summary}</p>
           <${WorkSkills} skills=${work.skills} />
         </div>*/
-    const Work = ({ message }) => {
-      console.log({ message }, 'from Work')
-      const {question, answer} = message
+    const Work = ({ section }) => {
+      console.log( 'from Work',section)
+      const {title, paragraphs} = section
       return html`
       <div class="Work">
           <header>
-            <h4>Entry</h4>
+            <h4>${title}</h4>
           </header>
-          <p class="Summary">${question}</p>
-          <p class="Summary">${answer}</p>
+          ${paragraphs.map(p => html`
+            <p class="Summary">${p}</p>
+          `)}
         </div>
       `
     }
@@ -226,7 +228,7 @@
     }
 
     const html = htm.bind(h)
-    render(html`<${Resume} message=${msg}/>`, document.body)
+    render(html`<${Resume} doc=${res.doc}/>`, document.body)
 
     // helper functions
     const getUniqueAbilities = (resume) => {

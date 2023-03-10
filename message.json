@@ -1,10 +1,12 @@
 {
-  "message": {
+  "doc": {
     "main": [
       {
-        "title": "Some random title",
+        "title": "Identity and authorization technology",
         "paragraphs": [
-          "Some random text\nwith some more text\nand some more text\n"
+          "Some random text",
+          "with some more text",
+          "and some more text"
         ]
       }
     ],

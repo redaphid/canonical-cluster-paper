@@ -9,7 +9,11 @@
             "answer": "answer 1"
           },
           {
-            "prompt": "question 2",
+            "prompt": "Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.",
+            "answer": "answer 2"
+          },
+          {
+            "prompt": "Describe your experience with container technologies such as Docker, LXD and Kubernetes.",
             "answer": "answer 2"
           }
         ]

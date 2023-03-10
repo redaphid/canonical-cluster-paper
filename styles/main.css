@@ -131,6 +131,11 @@ time {
 
 .Work {
   margin-bottom: 1em;
+  border-bottom: 0.05em dotted #bbb;
+}
+.Work p {
+  font-weight: var(--font-weight-smaller);
+
 }
 
 .Ability,

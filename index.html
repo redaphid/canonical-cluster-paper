@@ -188,11 +188,23 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const msg = await fetch('message.json').then(res => res.json())
-
+    console.log({msg})
+    /*
+     <div class="Resume">
+            <${Identity} Identity=${resume.basics} />
+            <${Communications} profiles=${resume.basics.profiles} identity=${resume.basics} />
+            <div class="Info">
+              <${Abilities} skills=${resume.skills}/>
+              <${Educations} education=${resume.education} />
+              <${Admirers} admirers=${resume.references} />
+            </div>
+            <${Works} works=${resume.work} />
+          </div>*/
     const Resume = ({ message }) => {
       const resume = {}
       return html`
           <div class="Resume">
+            <${Identity} Identity=${resume.basics} />
             <div class="Info">
             </div>
             <${Works} message=${message.message} />
@@ -205,9 +217,9 @@
         <section class="Identity">
           <h3>Identity</h3>
           <h1>
-            ${Identity.name}.
+           hi
           </h1>
-          <h5>${Identity.label}</h>
+          <h5>hmm</h5>
         </section>
       `
     }
@@ -263,12 +275,11 @@
 
     const Works = ({ message }) => {
       console.log({ message }, 'from Works')
-      const works = []
       return html`
         <section class="Works">
           <h3>Experience</h3>
           <ul>
-            ${message?.paragraphs?.map(p => html`
+            ${message?.questions?.map(p => html`
               <li>
               <${Work} message=${p} />
               </li>
@@ -285,12 +296,26 @@
         </time>
       `
     }
-
+/*
+ <div class="Work">
+          <header>
+            <h4>${work.company}</h4>
+            <${TimeRange} start=${work.startDate} end=${work.endDate} />
+          </header>
+          <em>${work.position}</em>
+          <p class="Summary">${work.summary}</p>
+          <${WorkSkills} skills=${work.skills} />
+        </div>*/
     const Work = ({ message }) => {
       console.log({ message }, 'from Work')
+      const {question, answer} = message
       return html`
       <div class="Work">
-          <p class="Summary">${message}</p>
+          <header>
+            <h4>Entry</h4>
+          </header>
+          <p class="Summary">${question}</p>
+          <p class="Summary">${answer}</p>
         </div>
       `
     }

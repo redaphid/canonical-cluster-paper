@@ -3,15 +3,16 @@
 /* Generic styles */
 
 body {
-  --emphasis-color: rgb(250, 198, 112);
-  --emphasis-extra: rgb(243, 121, 37);
-  --emphasis-foreground: black;
+  --emphasis-extra: #77216F;
+  --emphasis-color: #77216F;
+  --emphasis-foreground: white;
   --font-weight-biggest: 700;
   --font-weight-bigger: 500;
   --font-weight-regular: 400;
   --font-weight-smaller: 300;
   font-family: 'Ubuntu', Symbol;
   font-size:0.85em;
+  width: 8.5in;
 }
 
 section {
@@ -100,7 +101,7 @@ time {
 }
 
 .Identity {
-  background-color: var(--emphasis-color);
+  background-color: var(--emphasis-extra);
   color: var(--emphasis-foreground);
   padding: 1em;
   grid-area: Identity;
@@ -115,7 +116,7 @@ time {
 
 .Info {
   grid-area: Info;
-  background-color: rgb(245, 225, 190)
+  background-color: var(--emphasis-color);
 }
 
 .Main {

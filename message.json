@@ -5,11 +5,11 @@
         "title": "Identity and authorization technology",
         "prompts": [
           {
-            "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",
-            "answer": "answer 222\n"
+            "prompt": "Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.",
+            "answer": "sadasd\n"
           },
           {
-            "prompt": "Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.",
+            "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",
             "answer": "answer 2"
           },
           {

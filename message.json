@@ -6,7 +6,7 @@
         "prompts": [
           {
             "prompt": "Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.",
-            "answer": "sadasd\n"
+            "answer": "hi\n"
           },
           {
             "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",

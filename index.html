@@ -83,6 +83,7 @@
         'Info Works';
       column-gap: 0.1em;
       row-gap: 0.1em;
+      grid-template-columns: 50px;
     }
 
     .Summary {
@@ -175,18 +176,15 @@
   <script type="module">
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
+    const msg = await fetch('message.json').then(res => res.json())
 
-    const Resume = ({ resume }) => {
+    const Resume = ({ message }) => {
+      const resume = {}
       return html`
           <div class="Resume">
-            <${Identity} Identity=${resume.basics} />
-            <${Communications} profiles=${resume.basics.profiles} identity=${resume.basics} />
             <div class="Info">
-              <${Abilities} skills=${resume.skills}/>
-              <${Educations} education=${resume.education} />
-              <${Admirers} admirers=${resume.references} />
             </div>
-            <${Works} works=${resume.work} />
+            <${Works} message=${message.message} />
           </div>
           `
     }
@@ -252,14 +250,16 @@
       `
     }
 
-    const Works = ({ works }) => {
+    const Works = ({message}) => {
+      console.log({ message }, 'from Works')
+      const works = []
       return html`
         <section class="Works">
           <h3>Experience</h3>
           <ul>
-            ${works.map(work => html`
+            ${message?.paragraphs?.map( p => html`
               <li>
-              <${Work} work=${work} />
+              <${Work} message=${p} />
               </li>
             `)}
           </ul>
@@ -275,16 +275,11 @@
       `
     }
 
-    const Work = ({ work }) => {
+    const Work = ({message}) => {
+      console.log({ message }, 'from Work')
       return html`
       <div class="Work">
-          <header>
-            <h4>${work.company}</h4>
-            <${TimeRange} start=${work.startDate} end=${work.endDate} />
-          </header>
-          <em>${work.position}</em>
-          <p class="Summary">${work.summary}</p>
-          <${WorkSkills} skills=${work.skills} />
+          <p class="Summary">${message}</p>
         </div>
       `
     }
@@ -374,8 +369,7 @@
     }
 
     const html = htm.bind(h)
-    const res = await fetch('resume.json').then(res => res.json())
-    render(html`<${Resume} resume=${res}/>`, document.body)
+    render(html`<${Resume} message=${msg}/>`, document.body)
 
     // helper functions
     const getUniqueAbilities = (resume) => {

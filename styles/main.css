@@ -127,10 +127,11 @@ time {
   margin-bottom: 0.25em;
 }
 
-.Works>ul {
+.Works ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 1em;
 }
 
 .Work {

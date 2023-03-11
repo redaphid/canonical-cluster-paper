@@ -3,15 +3,16 @@
 /* Generic styles */
 
 body {
-  --emphasis-extra: #77216F;
+  --emphasis-color-extra: #77216F;
   --emphasis-color: #77216F;
-  --emphasis-foreground: white;
+  --emphasis-color-foreground: white;
+  --color-foreground: black;
   --font-weight-biggest: 700;
   --font-weight-bigger: 500;
   --font-weight-regular: 400;
   --font-weight-smaller: 300;
   font-family: 'Ubuntu', Symbol;
-  font-size:0.85em;
+  font-size: 0.85em;
   max-width: 8.5in;
 }
 
@@ -22,13 +23,13 @@ section {
 h3 {
   font-weight: var(--font-weight-bigger);
   font-size: 1.5em;
-  margin: 0;
+  /* margin: 0; */
   width: fit-content;
-  border-bottom: 0.05em solid var(--emphasis-foreground);
+  border-bottom: 0.05em solid var(--color-foreground);
 }
 
 h4 {
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bigger);
   font-size: 1em;
   margin: 0;
   width: fit-content;
@@ -41,15 +42,11 @@ h5 {
   width: fit-content;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
 
 i {
   font-size: 1.2em;
   margin-right: 0.5em;
-  color: var(--emphasis-extra);
+  color: var(--emphasis-color-extra);
 }
 
 /* this will be used for the titles I had at each job */
@@ -65,7 +62,7 @@ small {
 }
 
 a {
-  color: var(--emphasis-foreground);
+  color: var(--color-foreground);
 }
 
 time {
@@ -101,8 +98,8 @@ time {
 }
 
 .Identity {
-  background-color: var(--emphasis-extra);
-  color: var(--emphasis-foreground);
+  background-color: var(--emphasis-color-extra);
+  color: var(--emphasis-color-foreground);
   padding: 1em;
   grid-area: Identity;
 }
@@ -130,13 +127,23 @@ time {
   margin-bottom: 0.25em;
 }
 
+.Works>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .Work {
   margin-bottom: 1em;
   border-bottom: 0.05em dotted #bbb;
 }
+
 .Work p {
   font-weight: var(--font-weight-smaller);
+}
 
+.Work ul {
+  list-style: square;
 }
 
 .Ability,
@@ -173,7 +180,7 @@ Communication {
   padding: 0.25em;
   padding-top: 0;
   padding-bottom: 0;
-  color: var(--emphasis-foreground);
+  color: var(--emphasis-color-foreground);
 }
 
 .WorkSkills li:first-child {

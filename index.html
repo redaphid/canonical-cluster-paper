@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="styles/main.css"type="text/css" rel="stylesheet">
   <script type="module">
+    import {marked} from  'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
@@ -41,7 +42,7 @@
     const Identity = ({ Identity }) => {
       return html`
         <section class="Identity">
-          <h3>Identity</h3>
+          <h2>Identity</h2>
         </section>
       `
     }
@@ -110,14 +111,18 @@
         </section>
       `
     }
+    const RenderRawHtml = ({ html }) =>
+    h('div', { dangerouslySetInnerHTML: { __html: html } });
+
     const Work = ({ question }) => {
       const {prompt, answer} = question
+      const formattedAnswer = marked(answer)
       return html`
       <div class="Work">
           <header>
             <h4>${prompt}</h4>
           </header>
-          <p>${answer}</p>
+          <p><${RenderRawHtml} html=${formattedAnswer}/></p>
         </div>
       `
     }

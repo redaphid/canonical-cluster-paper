@@ -11,8 +11,9 @@ doc:
 
           * Next, I worked for Unicon and used [Shiboboleth](https://www.shibboleth.net/) (a SAML-based identity provider)
 
-          * After this, I began work on the open-source Internet of Things platform "Meshblu", which was later acquired by Citrix.
+          * After this, I began work on the open-source Internet of Things platform "Meshblu", and the closed source application that ran on top of it called "Octoblu". Octoblu was later acquired by Citrix.
 
+          #### Experience with Meshblu
           Meshblu is capable of configuring and messaging hardware or software "devices" hardware being things like hue bulbs, or DIY Arduino projects, and software being things like web applications. I inherited Meshblu with a [permission system](https://meshblu.readme.io/reference/whitelists) that was baked directly in to the json document that represented the configuration of the device. This system was a simple one - arrays of concrete uuids that were allowed to perform certain actions. This system was only capable of dealing with concrete entities - no roles, groups, etc. My colleagues  and I eventually replaced it with a [more flexible system](https://meshblu.readme.io/reference/whitelists-2-0) that is still very simple and easy to understand.
 
 

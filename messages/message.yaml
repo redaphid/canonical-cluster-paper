@@ -15,7 +15,8 @@ doc:
 
           #### Meshblu
           Meshblu is capable of configuring and messaging hardware or software "devices" hardware being things like hue bulbs, or DIY Arduino projects, and software being things like web applications. I inherited Meshblu with a permission system that was baked directly in to the json document that represented the configuration of the device.
-          It had top-level keys in the config
+          It had top-level keys in the config.
+          The permission system either looked at the "owner" property of the device - a uuid that was kind of like the superuser of the device - or it looked at a series of "whitelist" keys which each contained an array of uuids to perform an action
 
 
 

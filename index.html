@@ -27,7 +27,7 @@
       const resume = {}
       return html`
           <div class="Resume">
-            <${Identity} Identity=${resume.basics} />
+            <${Identity} title=${doc.title} />
             <div class="Info">
             </div>
             <div class="Logo">
@@ -42,10 +42,10 @@
           `
     }
 
-    const Identity = ({ Identity }) => {
+    const Identity = ({ title }) => {
       return html`
         <section class="Identity">
-          <h2>Identity</h2>
+          <h2>${title}</h2>
         </section>
       `
     }

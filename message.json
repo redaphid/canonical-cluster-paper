@@ -1,6 +1,7 @@
 {
   "doc": {
     "logo": "images/interview-icon.png",
+    "title": "Interview",
     "main": [
       {
         "title": "Identity and Authorization Technology",

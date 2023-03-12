@@ -24,10 +24,10 @@ doc:
 
           We had many microservices that would "assume the identity" of a device, and bridge the gap between Meshblu and other services, which often required the use of OAuth. In some cases, I remember having to do the "OAuth handshake" between 4 different oauth providers (including at least 1 of ours). It will take me a while to remember the details of this, and I'm trying not to get *too* rambly for the sake of those having to read this :)
 
-          I later designed a on-prem cluster that incorporated a similar adapter pattern with regards to authn/authz.
-
           #### The "Totally Naive Services" cluster & Open Policy Agent experience
           I later designed an experimental cluster to be used in environments with potentially very complex and unknown-to-us security requirements, conceivably including governmental or military applications. The cluster would be deployed in both single-tenant, on-prem environments and multitenant cloud environments. The cluster design factored out multitenancy with respect to the services it contained; e.g. the underlying services did not have a concept of organizations, or really even users (with respect to security). I used Open Policy Agent to the point of absurdity when it came to this cluster design, with the expectation that we'd eventually hit a wall of impracticality after which the services inside the cluster would have to become more complex as they became more aware of their environment.
+
+          This approach to cluster development allowed us to build the cluster in parallel to the teams developing the services, and the development roadmaps of these services could be organized such that there was no wasted code if some of the more novel ideas did not work out.
 
           _aside: I wrote a wrote a Javascript poc that used OPA's ability to return a partially-solved abstract syntax tree from a policy, and then execute it using function composition with [Ramda](https://ramdajs.com/). Should you do this? No. But it was interesting!_
 

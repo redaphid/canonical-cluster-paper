@@ -14,9 +14,11 @@ doc:
           * After this, I began work on the open-source Internet of Things platform "Meshblu", and the closed source application that ran on top of it called "Octoblu". Octoblu was later acquired by Citrix.
 
           #### Experience with Meshblu
-          Meshblu is capable of configuring and messaging hardware or software "devices" hardware being things like hue bulbs, or DIY Arduino projects, and software being things like web applications. I inherited Meshblu with a [permission system](https://meshblu.readme.io/reference/whitelists) that was baked directly in to the json document that represented the configuration of the device. This system was a simple one - arrays of concrete uuids that were allowed to perform certain actions. This system was only capable of dealing with concrete entities - no roles, groups, etc. My colleagues  and I eventually replaced it with a [more flexible system](https://meshblu.readme.io/reference/whitelists-2-0) that is still very simple and easy to understand.
+          Meshblu is capable of configuring and messaging hardware or software "devices" hardware being things like hue bulbs, or DIY Arduino projects, and software being things like web applications. My team inherited Meshblu with a [permission system](https://meshblu.readme.io/reference/whitelists) that was baked directly in to the json document that represented the configuration of the device. This system was a simple one - arrays of concrete uuids that are allowed to perform certain actions. This system was only capable of dealing with concrete entities - no roles, groups, etc. My colleagues and I eventually replaced it with a [more flexible system](https://meshblu.readme.io/reference/whitelists-2-0) that is still very simple and easy to understand.
 
+          In short, it is a 2-dimensional "permission matrix", where the first dimension is the actions that can be taken on a device {broadcast, discover, configure, message}, and the second dimension usually has 2-3 permissions that were relevant to the action domain. Critically, we added an 'as' permission, allowed for impersonation, which made groups possible without being baked in to the system.
 
+          On top of this, we have many microservices that exist in "userland" with respect to Meshblu; they services could implement more complex authorization systems on top of Meshblu if they wanted something more complex.
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answer: answer 2

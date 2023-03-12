@@ -30,6 +30,9 @@
             <${Identity} Identity=${resume.basics} />
             <div class="Info">
             </div>
+            <div class="Logo">
+              <img src="${doc.logo}" alt="logo" />
+            </>
             <div class="Main">
               ${doc.main.map(section => html`
                 <${Works} section=${section} />
@@ -95,7 +98,6 @@
         </div>
       `
     }
-
     const Works = ({ section }) => {
       console.log('from Works', section)
       return html`

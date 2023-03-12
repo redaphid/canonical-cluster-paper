@@ -1,8 +1,9 @@
 {
   "doc": {
+    "logo": "images/interview-icon.png",
     "main": [
       {
-        "title": "Identity and authorization technology",
+        "title": "Identity and Authorization Technology",
         "prompts": [
           {
             "prompt": "Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.",
@@ -19,7 +20,7 @@
         ]
       },
       {
-        "title": "General Software Engineering experience",
+        "title": "General Software Engineering Experience",
         "prompts": [
           {
             "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",

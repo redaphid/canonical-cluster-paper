@@ -50,11 +50,15 @@ i {
 }
 
 /* this will be used for the titles I had at each job */
-em {
+/* em {
   font-style: normal;
   font-weight: 300;
+} */
+em {
+  font-style: italic;
+  font-weight:100;
+  font-size: 0.8em;
 }
-
 small {
   font-size: 0.8em;
   font-weight: 200;

@@ -22,7 +22,7 @@ doc:
 
           We had many authn/authz systems of our own to do this permission translation. For example, a microcontroller may need to authenticate via MQTT, the protocol it is using to communicate with Meshblu. Often communications happened over http, and we allowed for basic auth if necessary. Since we had many protocols, I ended up having doing this translation a lot.
 
-          We had many microservices that would "assume the identity" of a device, and bridge the gap between Meshblu and other services, which often required the use of OAuth. In some cases, I remember having to do the "OAuth handshake" between 4 different oauth providers (including hours). It will take me a while to remember the details of this, and I'm trying not to get *too* rambly for the sake of those having to read this :)
+          We had many microservices that would "assume the identity" of a device, and bridge the gap between Meshblu and other services, which often required the use of OAuth. In some cases, I remember having to do the "OAuth handshake" between 4 different oauth providers (including at least 1 of ours). It will take me a while to remember the details of this, and I'm trying not to get *too* rambly for the sake of those having to read this :)
 
           I later designed a on-prem cluster that incorporated a similar adapter pattern with regards to authn/authz.
 

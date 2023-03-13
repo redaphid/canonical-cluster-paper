@@ -16,7 +16,7 @@
       const resume = {}
       return html`
           <div class="Doc">
-            <${Identity} title=${doc.title} />
+            <${Heading} title=${doc.title} />
             <div class="Info">
             </div>
             <div class="Logo">
@@ -31,10 +31,11 @@
           `
     }
 
-    const Identity = ({ title }) => {
+    const Heading = ({ title }) => {
       return html`
         <section class="Identity">
           <h1>${title}.</h1>
+          <small>Want to see the diagrams in a Miro board? you can find tem <a href="https://miro.com/app/board/uXjVMeJA43k=/" target="_blank">here!</a></small>
         </section>
       `
     }
@@ -115,11 +116,8 @@
           ${answers?.map(answer => html`
             <ul class="Answers">
               <li>
-                ${
-                  !answer?.type || answer?.type == "markdown"
-                    ? html`<${RenderRawHtml} html=${marked(answer?.response)}/>`
-                    : html`<${Answers[answer.type]} prompt=${prompt} answer=${answer} />`
-                }
+                ${answer.figure? html`<img src=${answer.figure} />` : ''}
+                <p><${RenderRawHtml} html=${marked(answer?.response)}/></p>
               </li>
             </ul>
           `)}
@@ -132,11 +130,8 @@
       console.log('from WithFigure', answer)
       return html`
         <div class="WithFigure">
+
           <p>${new Array(100).fill(answer.response).join('')}</p>
-          <figure>
-           <img src="${answer.figure}" />
-           <figcaption>Image caption</figcaption>
-          </figure>
         </div>
       `
     }

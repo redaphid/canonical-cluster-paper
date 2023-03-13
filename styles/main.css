@@ -11,9 +11,10 @@ body {
   --font-weight-bigger: 500;
   --font-weight-regular: 400;
   --font-weight-smaller: 300;
+  --figure-size:30em;
   font-family: 'Ubuntu', Symbol;
   font-size: 0.85em;
-  max-width: 8.5in;
+  /* max-width: 8.5in; */
   color: var(--color-foreground);
 }
 
@@ -136,6 +137,10 @@ time {
   width: fit-content;
 
 }
+.Identity * {
+  color:var(--emphasis-color-foreground);
+}
+
 
 .Info {
   grid-area: Info;
@@ -177,11 +182,16 @@ time {
 .Prompt ul {
   list-style: square;
 }
-.WithFigure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.Answers img {
+  float:right;
+  width:40em;
+}
+.WithFigure > p {
+  margin:0;
+  padding:0;
+}
+figure img {
+  width:10em;
 }
 .Ability,
 Communication {

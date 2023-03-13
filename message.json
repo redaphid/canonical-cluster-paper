@@ -14,6 +14,7 @@
               },
               {
                 "response": "Authentication was handled at the boundary between the cluster and the \"big scary outside world\".\n",
+                "figure": "figures/naive-service-overview.jpg",
                 "type": "WithFigure"
               }
             ]

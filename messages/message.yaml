@@ -45,6 +45,7 @@ doc:
             1. I am pulling this purely from memory, right now, and recreating any diagrams on the fly so it's likely some of the details will be wrong, or vague.
         - response: |
             Authentication was handled at the boundary between the cluster and the "big scary outside world".
+          figure: figures/naive-service-overview.jpg
           type: WithFigure
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.

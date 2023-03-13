@@ -152,7 +152,7 @@ time {
   align-items: baseline;
   margin-bottom: 0.25em;
 }
-.Prompt > .Answer {
+.Prompt > .Answers {
   list-style: none;
 }
 .Prompts {

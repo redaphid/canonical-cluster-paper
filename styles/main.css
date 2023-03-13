@@ -75,8 +75,7 @@ time {
   font-size: 0.90em;
 }
 
-.Resume {
-
+.Doc {
   display: grid;
   grid-template-areas:
     'Logo Identity'

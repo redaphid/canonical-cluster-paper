@@ -34,6 +34,7 @@ doc:
           _aside: I wrote a wrote a Javascript poc that used OPA's ability to return a partially-solved abstract syntax tree from a policy, and then execute it using function composition with [Ramda](https://ramdajs.com/). Should you do this? No. But it was interesting!_
 
 
+
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answer: answer 2
       - prompt: Describe your experience with container technologies such as Docker, LXD and Kubernetes.

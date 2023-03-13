@@ -12,7 +12,7 @@
     const res = await fetch('message.json').then(res => res.json())
     console.log('from top', {res})
     /*
-     <div class="Resume">
+     <div class="Doc">
             <${Identity} Identity=${resume.basics} />
             <${Communications} profiles=${resume.basics.profiles} identity=${resume.basics} />
             <div class="Info">
@@ -22,11 +22,11 @@
             </div>
             <${Works} works=${resume.work} />
           </div>*/
-    const Resume = ({ doc }) => {
-      console.log("from Resume", doc)
+    const Doc = ({ doc }) => {
+      console.log("from Doc", doc)
       const resume = {}
       return html`
-          <div class="Resume">
+          <div class="Doc">
             <${Identity} title=${doc.title} />
             <div class="Info">
             </div>
@@ -232,7 +232,7 @@
     }
 
     const html = htm.bind(h)
-    render(html`<${Resume} doc=${res.doc}/>`, document.body)
+    render(html`<${Doc} doc=${res.doc}/>`, document.body)
 
     // helper functions
     const getUniqueAbilities = (resume) => {

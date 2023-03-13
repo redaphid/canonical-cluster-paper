@@ -138,7 +138,12 @@
           </header>
           ${answers.map(answer => html`
             <li>
-              <p><${RenderRawHtml} html=${marked(answer?.response || 'no response')}/></p>
+              ${
+                !answer?.response.type || answer?.response.type == "markdown"
+                  ? html`<${RenderRawHtml} html=${marked(answer?.response)}/>`
+                  : html`<${answer?.response.type} prompt=${prompt} answer=${answer} />`
+              }
+
             </li>
           `)}
 

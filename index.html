@@ -20,7 +20,7 @@
               <${Educations} education=${resume.education} />
               <${Admirers} admirers=${resume.references} />
             </div>
-            <${Works} works=${resume.work} />
+            <${Prompts} works=${resume.work} />
           </div>*/
     const Doc = ({ doc }) => {
       console.log("from Doc", doc)
@@ -35,7 +35,7 @@
             </>
             <div class="Main">
               ${doc.main.map(section => html`
-                <${Works} section=${section} />
+                <${Prompts} section=${section} />
               `)}
               </div>
           </div>
@@ -98,38 +98,38 @@
         </div>
       `
     }
-    const Works = ({ section }) => {
-      console.log('from Works', section)
+    const Prompts = ({ section }) => {
+      console.log('from Prompts', section)
       return html`
-        <section class="Works">
+        <section class="Prompts">
           <h3>${section.title}</h3>
           <ul>
             ${section.prompts.map(s => html`
               <li>
-                <${Work} question=${s} />
+                <${Prompt} question=${s} />
               </li>
             `)}
           </ul>
         </section>
       `
     }
-    const RenderRawHtml = ({ html }) =>
-    h('div', { dangerouslySetInnerHTML: { __html: html } });
+    const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
-    const Work = ({ question }) => {
-      console.log('from Work', question)
+    const Prompt = ({ question }) => {
+      console.log('from Prompt', question)
       const {prompt, answers} = question
       if(!answers || answers.length === 0) return html`
-      <div class="Work">
+      <div class="Prompt">
           <header>
             <h4>${prompt}</h4>
           </header>
+          <p>no answer</p>
         </div>
       `
       const answer = answers[0].response
       const formattedAnswer = marked(answer)
       return html`
-      <div class="Work">
+      <div class="Prompt">
           <header>
             <h4>${prompt}</h4>
           </header>
@@ -146,18 +146,18 @@
       `
     }
 /*
- <div class="Work">
+ <div class="Prompt">
           <header>
             <h4>${work.company}</h4>
             <${TimeRange} start=${work.startDate} end=${work.endDate} />
           </header>
           <em>${work.position}</em>
           <p class="Summary">${work.summary}</p>
-          <${WorkSkills} skills=${work.skills} />
+          <${PromptSkills} skills=${work.skills} />
         </div>*/
-    const WorkSkills = ({ skills }) => {
+    const PromptSkills = ({ skills }) => {
       return html`
-        <ul class="WorkSkills">
+        <ul class="PromptSkills">
           ${skills.map(skill => html`
             <li>
               ${skill}

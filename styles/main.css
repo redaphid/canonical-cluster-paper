@@ -146,32 +146,32 @@ time {
   grid-area: Main;
 }
 
-.Work>header {
+.Prompt>header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.25em;
 }
-.Works {
+.Prompts {
   background-color: var(--emphasis-color-foreground);
 }
-.Works ul {
+.Prompts ul {
   list-style: none;
   margin: 0;
   padding: 0;
   padding-left: 1em;
 }
 
-.Work {
+.Prompt {
   margin-bottom: 1em;
   border-bottom: 0.05em dotted #bbb;
 }
 
-.Work p {
+.Prompt p {
   font-weight: var(--font-weight-smaller);
 }
 
-.Work ul {
+.Prompt ul {
   list-style: square;
 }
 
@@ -188,7 +188,7 @@ Communication {
   grid-area: Communications;
 }
 
-.WorkSkills {
+.PromptSkills {
   display: flex;
   list-style: square;
   list-style-position: inside;
@@ -198,7 +198,7 @@ Communication {
   justify-content: center;
 }
 
-.WorkSkills li {
+.PromptSkills li {
   /* center contents inside element*/
   justify-content: center;
   align-items: center;
@@ -212,6 +212,6 @@ Communication {
   color: var(--emphasis-color-foreground);
 }
 
-.WorkSkills li:first-child {
+.PromptSkills li:first-child {
   list-style: none;
 }

@@ -186,6 +186,9 @@ time {
   float:right;
   width:40em;
 }
+.Answer {
+  overflow: auto;
+}
 .WithFigure > p {
   margin:0;
   padding:0;

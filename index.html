@@ -39,55 +39,6 @@
         </section>
       `
     }
-
-    const Communications = ({ profiles, identity }) => {
-      const email = {
-        network: 'envelope',
-        url: `mailto:${identity.email}`,
-        display: identity.email,
-        isBrand: false,
-      };
-      const phone = {
-        network: 'phone',
-        url: `tel:${identity.phone}`,
-        display: identity.phone,
-        isBrand: false,
-      };
-      const location = {
-        network: 'map-marker-alt',
-        url: `https://www.google.com/maps/place/${identity.location.address}`,
-        display: `${identity.location.city}, ${identity.location.region}`,
-        isBrand: false,
-      };
-      // merge profiles with contact info
-      const comms = [email, phone, ...profiles, location,];
-      return html`
-        <section class="Communications">
-          <h3>Communications</h3>
-          <ul>
-            ${comms.map(profile => html`
-              <li>
-                <${Communication} profile=${profile} />
-              </li>
-            `)}
-          </ul>
-        </section>
-      `
-    }
-
-    const Communication = ({ profile }) => {
-      const url = profile.url || ''
-      const isBrand = profile.isBrand ?? true;
-      const display = profile.display || url.replace("https://", "")
-      return html`
-        <div class="Communication">
-          <i class="fa-solid ${isBrand === true ? "fa-brands" : ""} fa-${profile.network}"></i>
-          <a href="${profile.url}" target="_blank">
-            ${display}
-          </a>
-        </div>
-      `
-    }
     const Prompts = ({ section }) => {
       console.log('from Prompts', section)
       return html`
@@ -115,7 +66,7 @@
           </header>
           ${answers?.map(answer => html`
             <ul class="Answers">
-              <li>
+              <li class="Answer">
                 ${answer.figure? html`<img src=${answer.figure} />` : ''}
                 <p><${RenderRawHtml} html=${marked(answer?.response)}/></p>
               </li>
@@ -146,16 +97,7 @@
     const Answers = {
       "WithFigure": WithFigure,
     }
-/*
- <div class="Prompt">
-          <header>
-            <h4>${work.company}</h4>
-            <${TimeRange} start=${work.startDate} end=${work.endDate} />
-          </header>
-          <em>${work.position}</em>
-          <p class="Summary">${work.summary}</p>
-          <${PromptSkills} skills=${work.skills} />
-        </div>*/
+
     const PromptSkills = ({ skills }) => {
       return html`
         <ul class="PromptSkills">

@@ -35,7 +35,7 @@ doc:
           _aside: I wrote a wrote a Javascript poc that used OPA's ability to return a partially-solved abstract syntax tree from a policy, and then execute it using function composition with [Ramda](https://ramdajs.com/). Should you do this? No. But it was interesting!_
 
           #### Cluster design from a security standpoint
-          Seeing how I now have a captive audience (dear reader), I will talk about the cluster a little more, as it can be used as an object lesson in how I design things when in "Research and Development mode", while minimizing risk during the development of production code.
+          Seeing how I now have a captive audience (dear reader), I'll use the cluster as an object lesson in how I design things when in "Research and Development mode", while minimizing risk during the development of production code.
           Before getting in to the details, I'd like to set a few expectations so I'll feel a little less self-consious while describing the architecture:
 
           1. As previously mentioned, the cluster design was experimental, deliberately exploring novel approaches to this problem.

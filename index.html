@@ -117,7 +117,16 @@
     h('div', { dangerouslySetInnerHTML: { __html: html } });
 
     const Work = ({ question }) => {
-      const {prompt, answer} = question
+      console.log('from Work', question)
+      const {prompt, answers} = question
+      if(!answers || answers.length === 0) return html`
+      <div class="Work">
+          <header>
+            <h4>${prompt}</h4>
+          </header>
+        </div>
+      `
+      const answer = answers[0].response
       const formattedAnswer = marked(answer)
       return html`
       <div class="Work">

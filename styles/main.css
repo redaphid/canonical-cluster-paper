@@ -177,7 +177,12 @@ time {
 .Prompt ul {
   list-style: square;
 }
-
+.WithFigure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .Ability,
 Communication {
   padding: 0.1em;

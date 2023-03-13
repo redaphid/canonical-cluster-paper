@@ -11,17 +11,6 @@
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
     console.log('from top', {res})
-    /*
-     <div class="Doc">
-            <${Identity} Identity=${resume.basics} />
-            <${Communications} profiles=${resume.basics.profiles} identity=${resume.basics} />
-            <div class="Info">
-              <${Abilities} skills=${resume.skills}/>
-              <${Educations} education=${resume.education} />
-              <${Admirers} admirers=${resume.references} />
-            </div>
-            <${Prompts} works=${resume.work} />
-          </div>*/
     const Doc = ({ doc }) => {
       console.log("from Doc", doc)
       const resume = {}
@@ -118,37 +107,36 @@
     const Prompt = ({ question }) => {
       console.log('from Prompt', question)
       const {prompt, answers} = question
-      if(!answers || answers.length === 0) return html`
-      <div class="Prompt">
-          <header>
-            <h4>${prompt}</h4>
-          </header>
-          <ui>
-            <li>
-              <p>no answer</p>
-            </li>
-          </ul>
-          <p>no answer</p>
-        </div>
-      `
       return html`
       <div class="Prompt">
           <header>
             <h4>${prompt}</h4>
           </header>
-          ${answers.map(answer => html`
+          ${answers?.map(answer => html`
             <ul class="Answers">
               <li>
                 ${
                   !answer?.type || answer?.type == "markdown"
                     ? html`<${RenderRawHtml} html=${marked(answer?.response)}/>`
-                    : html`<${answer?.response.type} prompt=${prompt} answer=${answer} />`
+                    : html`<${Answers[answer.type]} prompt=${prompt} answer=${answer} />`
                 }
-
               </li>
             </ul>
           `)}
 
+        </div>
+      `
+    }
+
+    const WithFigure = ({ prompt, answer }) => {
+      console.log('from WithFigure', answer)
+      return html`
+        <div class="WithFigure">
+          <p>${new Array(100).fill(answer.response).join('')}</p>
+          <figure>
+           <img src="${answer.figure}" />
+           <figcaption>Image caption</figcaption>
+          </figure>
         </div>
       `
     }
@@ -159,6 +147,9 @@
           ${start} to ${end ?? 'present'}
         </time>
       `
+    }
+    const Answers = {
+      "WithFigure": WithFigure,
     }
 /*
  <div class="Prompt">

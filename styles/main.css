@@ -146,11 +146,14 @@ time {
   grid-area: Main;
 }
 
-.Prompt>header {
+.Prompt > header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.25em;
+}
+.Prompt > .Answer {
+  list-style: none;
 }
 .Prompts {
   background-color: var(--emphasis-color-foreground);

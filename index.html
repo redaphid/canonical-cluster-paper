@@ -137,14 +137,16 @@
             <h4>${prompt}</h4>
           </header>
           ${answers.map(answer => html`
-            <li>
-              ${
-                !answer?.response.type || answer?.response.type == "markdown"
-                  ? html`<${RenderRawHtml} html=${marked(answer?.response)}/>`
-                  : html`<${answer?.response.type} prompt=${prompt} answer=${answer} />`
-              }
+            <ul class="Answers">
+              <li>
+                ${
+                  !answer?.type || answer?.type == "markdown"
+                    ? html`<${RenderRawHtml} html=${marked(answer?.response)}/>`
+                    : html`<${answer?.response.type} prompt=${prompt} answer=${answer} />`
+                }
 
-            </li>
+              </li>
+            </ul>
           `)}
 
         </div>

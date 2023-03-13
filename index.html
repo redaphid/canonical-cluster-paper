@@ -123,17 +123,25 @@
           <header>
             <h4>${prompt}</h4>
           </header>
+          <ui>
+            <li>
+              <p>no answer</p>
+            </li>
+          </ul>
           <p>no answer</p>
         </div>
       `
-      const answer = answers[0].response
-      const formattedAnswer = marked(answer)
       return html`
       <div class="Prompt">
           <header>
             <h4>${prompt}</h4>
           </header>
-          <p><${RenderRawHtml} html=${formattedAnswer}/></p>
+          ${answers.map(answer => html`
+            <li>
+              <p><${RenderRawHtml} html=${marked(answer?.response || 'no response')}/></p>
+            </li>
+          `)}
+
         </div>
       `
     }

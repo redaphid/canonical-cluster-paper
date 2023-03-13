@@ -41,7 +41,12 @@ doc:
           1. As previously mentioned, the cluster design was experimental, deliberately exploring novel approaches to this problem.
           1. It would likely not survive high-volume production use, though we did some benchmarks and it was not as bad as it will sound - mostly due to OPA's efficient caching of it's partial policy evaluations.
           1. The novelty of the cluster design was designed to be introduced iteratively; with each subsequent step being a little more "out there" without anybody becoming dependent on the riskier stuff.
-          1. I am pulling this purely from memory, right now, so it's likely some of the details will be wrong, or vague.
+          1. I am pulling this purely from memory, right now, and recreating any diagrams on the fly so it's likely some of the details will be wrong, or vague.
+
+          Here we go!
+          The cluster was built on top of Istio. At a high level, the cluster had 3 concentric rings of security: authorized, authenticated, and naive. [[fig1]]
+
+          Authentication was handled at the boundary between the cluster and the "big scary outside world".
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answer: answer 2

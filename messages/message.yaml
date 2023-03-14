@@ -39,13 +39,14 @@ doc:
             #### Cluster design from a security standpoint
             Seeing how I now have a captive audience (dear reader), I'll use the cluster as an object lesson in how I design things when in "Research and Development mode", while minimizing risk during the development of production code.
             I am recalling this from memory, and recreating the diagrams, so I may be wrong about some of the details.
+
         - response: |
             At the highest level, the cluster is divided into 3 concentric circles of trust:
 
         - response: |
             1. No trust (outside world)
             1. Authentication trust (within cluster)
-            1. Naive (within pod)
+            1. Authorization trust. "Naive" (within pod)
 
           figure:
             figure: naive-service-overview
@@ -56,8 +57,16 @@ doc:
             Outside of the authentication barrier, we are in a no-trust environment.
             Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
 
-            This was accomplished initially by using Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party (or many other authentication mechanisms), depending on cluster configuration.
+            #### Authentication Barrier
+            In the proof of concept, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I'll talk about a little bit later on.
+
+            Regardless of the mechanism used, in the end an OPA policy always gated access to the cluster. The client's authentication data was evaluated against OPA policies, which had the final say. This, like all autoinjected systems in the cluster, could be opted out of via configuration.
+
             This implementation, however, has a potential vulnerability in that we would need to scrub an "Identity" header off of the incoming request. Since all requests were coming in through the ingress controller that Envoy was manipulating the headers from, in theory this wouldn't be a problem - but I would have rather encapsulated the request in an envelope larger than the request itself. I had learned with Meshblu that separation between data and metadata is very important, especially with regard to security.
+
+            In addition, this header could be manipulated by a malicious service within the cluster. The header solution was good enough for a proof of concept, but further research would be needed to create an envelope for the request that sufficiently separated "userland" requests and cluster metadata. Anyway, that's a mini self-audit of this implementation.
+
+            Past this barrier, the services could trust that the request was from who it said it was, but they could not (yet) trust that the request was authorized to do what it was trying to do.
 
         - response: |
             An OPA service was injected into each Kubernetes pod by default, though the authors of a particular service could override the defaults if they were too onerous. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)

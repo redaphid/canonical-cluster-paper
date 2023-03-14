@@ -102,7 +102,7 @@ doc:
             An OPA service was injected into each Kubernetes pod, layered above Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio).
             Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
           figure:
-            figure: authz-barrier-1
+            figure: authentication-barrier
             miro: '3458764548747400083'
         - response: |
             #### Authorization Workflow
@@ -132,7 +132,7 @@ doc:
 
         - response: |
             #### Authorization and Authentication Egress Filters
-            You may have noticed an asymmetry
+            You may have noticed an asymmetry in the [authorization workflow](#figure-authorization-workflow) diagram. The ingress filter is a simple "allow" or "deny" filter, but the egress filter is a more complex filter that allows for more nuanced control over what a service can do.
 
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.

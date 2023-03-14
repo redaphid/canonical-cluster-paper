@@ -68,7 +68,7 @@ doc:
             _note: the authorization data in the diagram is separated logically from the request, but the information in practice would likely come from the request._
           figure:
             figure: authn-barrier-1
-            miro: '3458764548628056239'
+            miro: '3458764548747400083'
 
         - response: |
             In the proof of concept, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I'll talk about a little bit later on.
@@ -90,7 +90,7 @@ doc:
             Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
           figure:
             figure: authz-barrier-1
-            miro: '3458764548748235254&cot=14'
+            miro: '3458764548747400083'
 
         - response: |
             Past this point, we have what I'd consider "half" of a naive service: the service can trust that actions requested to be performed on a resource are allowed. If this is as far as I could take the cluster, it still provides a lot of value. But the service still needs to do some logic as to what a particular user can see, which is unsatisfying. But let's take a little break from these barriers, go depth-first, and talk about the origin of the authz/n information.

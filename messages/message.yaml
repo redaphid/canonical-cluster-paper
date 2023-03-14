@@ -42,7 +42,7 @@ doc:
 
             _aside: I wrote a wrote a Javascript poc that used OPA's ability to return a partially-solved abstract syntax tree from a policy, and then execute it using function composition with [Ramda](https://ramdajs.com/). Should you do this? No. But it was interesting!_
 
-            #### Cluster design from a security standpoint
+            #### Cluster Design from a Security Standpoint
             Seeing how I now have a captive audience (dear reader), I'll use the cluster as an object lesson in how I design things when in "Research and Development mode", while minimizing risk during the development of production code.
             I am recalling this from memory, and recreating the diagrams, so I may be wrong about some of the details.
 
@@ -132,7 +132,7 @@ doc:
 
         - response: |
             #### Authorization and Authentication Egress Filters
-            You may have noticed an asymmetry in the [authorization workflow](#figure-authorization-barrier) diagram. The ingress filter is a simple "allow" or "deny" filter, but the egress filter is a more complex filter that allows for more nuanced control over what a service can do.
+            You may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not; as a result, a service within a pod has to make assumptions regarding the security model.
 
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.

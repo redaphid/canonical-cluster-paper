@@ -104,6 +104,12 @@ doc:
           figure:
             figure: authz-barrier-1
             miro: '3458764548747400083'
+        - response: |
+            #### Authorization Workflow
+            This diagram shows the flow of data through the authorization barrier. We can see how the request proceeds through the cluster, and how the authorization barrier is enforced.
+          figure:
+            figure: authorization-workflow
+            miro: '3458764548844659047'
 
         - response: |
             Past this point, we have what I'd consider "half" of a naive service: the service can trust that actions requested to be performed on a resource are allowed. If this is as far as I could take the cluster, it still provides a lot of value. But the service still needs to do some logic as to what a particular user can see, which is unsatisfying. But let's take a little break from these barriers, go depth-first, and talk about the origin of the authz/n information.

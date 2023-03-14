@@ -109,9 +109,14 @@ doc:
            I accomplished this by making several microservices that used the adapter pattern to ETL (extract,transform,load) any information necessary for policy evaluation from various IdPs to OPA's internal, ephermal datastore.
 
             I preferred this method to OPA policies doing http requests to our adapters, as I feel doing http requests and parsing the results make policies much more difficult to understand, as the policy now has to know and deal with implementation details, which defeats the purpose of having a restricted policy language.
+
           figure:
             figure: opa-etl
             miro: '3458764548738949056'
+        - response: |
+            #### Authorization and Authentication Egress Filters
+
+
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answers:
         - response: |

@@ -73,11 +73,11 @@ doc:
 
             _note: the authorization data in the diagram is separated logically from the request, but the information in practice would likely come from the request._
           figure:
-            figure: authn-barrier-1
+            figure: authentication-barrier
             miro: '3458764548747400083'
         - response: |
             #### Authentication Workflow
-            This workflow diagram llustrates the flow of data through the authentication barrier.
+            This workflow diagram llustrates the flow of data through the authentication barrier. Note the 'Envoy' nodes represent the same Envoy service on the edge of the cluster.
 
           figure:
             figure: authentication-workflow
@@ -127,7 +127,7 @@ doc:
             I preferred this method to OPA policies doing http requests to our adapters, as I feel doing http requests and parsing the results make policies much more difficult to understand, as the policy now has to know and deal with implementation details, which defeats the purpose of having a restricted policy language.
 
           figure:
-            figure: identity-provider-to-opa
+            figure: identity-provider-data-to-opa
             miro: '3458764548738949056'
 
         - response: |

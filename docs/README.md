@@ -1,16 +1,6 @@
-# Welcome to the amazing repository for Aaron Herres's resume!
-Like many developers, I am not a fan of wysiwyg editors for text formatting.
+# Welcome to the amazing repository for Canonical's written interview! You will find some crazy systems I made to answer the prompts in order to make writing them a little more fun. I know it's overkill, but I wanted to try out some new technologies, and this seemed like a good excuse to do so.
 
-While writing this resume (the first time I've done something like this since 2013), I spent a a lot of time fighting the resume templates in Google Docs, as the little changes I wanted to make caused all sorts of frustrating problems when it came to the style or layout of the resume.
-
-So I went on a quest to experiment with patterns that separate the data of the resume with the style.
-You know, the thing you're supposed to do when doing front-end development.
-
-I researched a few ways to do this, and found an existing project for this kind of thing called [JSON Doc](https://jsonresume.org/).
-
-I didn't have a lot of luck with the existing theming system, as I had trouble generating pdfs that had sensible page breaks. I'm not a big fan of `float` in css, and after fighting a theme that used it for a while, I ended up making [this less-than-pretty resume](old/less-pretty-resume.pdf). I unfortunately didn't notice how messed up the resulting resume was, and applied to a few places with it :(. Once I noticed this about my resume, I decided to use "designing a pretty resume" as an excuse to try out a tech stack. This repo is a result of that ongoing project.
-
-So here it is!
+This repo is forked from my resume generating repo, which I will refrain from linking to in an effort to try to keep this this written portion anonymous.
 
 ## Tech Stack
 
@@ -24,9 +14,6 @@ I didn't want a build step, so I could avoid webpack and it's associated complex
 I wanted to try out grid, so I used [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for the layout. I also wanted to try out [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) for the colors, so I did that too.
 
 I spent too much time learning about font weights, and using a color eyedropper to pick colors from websites I thought had a nice theme. I ended up using [mubasic](https://www.mubasic.com/) as an inspiration for some of the design choices.
-
-### Deployment
-I wanted to use the html/css I wrote to generate a pdf, so I used Github Actions (that in turn uses [Puppeteer](https://pptr.dev/) to generate a pdf from the html and publish it to this repo's releases.
 
 
 ## Be Impressed!

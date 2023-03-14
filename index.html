@@ -14,9 +14,16 @@
     const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
+    // Yes, this is a hack. I would normally have a Link component, but since I'm using markdown this will have to do.
+    const defer = () => new Promise(resolve => requestAnimationFrame(resolve));
+
+    const removeElementIdFromURL = async () => {
+      await defer()
+      window.history.replaceState({}, document.title, window.location.pathname)
+    }
     const Doc = ({ doc }) => {
       return html`
-          <div class="Doc">
+          <div class="Doc" onClick=${removeElementIdFromURL}>
             <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
             <div class="Info">
             </div>

@@ -2,7 +2,7 @@
   "doc": {
     "logo": "images/interview-icon.png",
     "title": "Written Interview",
-    "miro": "https://miro.com/app/board/uXjVMeJA43k=/",
+    "miro": "https://miro.com/app/board/uXjVMeJA43k=",
     "repo": "https://github.com/redaphid/resume-canonical",
     "intro": "#### Structure of this Document\nWhen responding to these prompts, I found that answering them in a discrete fashion was not the most effective way to communicate experience and expertise in some technical matters. I have therefore organized some responses into descriptions of concrete solutions in my career that utilize the technologies in question. I provide a detailed description porkbarreled in to answering the questions as I encounter them, and refer to these descriptions in subsequent prompts. I have also included some diagrams to help visualize the concepts I am trying to communicate.\n\nI hope this format makes sense to you, though I imagine I won't be able to clarify anything, due to the anonymity of this process.\n",
     "main": [
@@ -36,10 +36,10 @@
                 }
               },
               {
-                "response": "#### Authentication Workflow\nThe workflow may serve to illustrate the flow of data through the authentication barrier\n",
+                "response": "#### Authentication Workflow\nThe workflow may serve to illustrate the flow of data through the authentication barrier. We can see how the request proceed\n",
                 "figure": {
                   "figure": "authentication-workflow",
-                  "miro": "3458764548747400083"
+                  "miro": "3458764548844659047"
                 }
               },
               {

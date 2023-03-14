@@ -93,7 +93,7 @@ doc:
             miro: '3458764548748235254&cot=14'
 
         - response: |
-            Past this point, we have what I'd consider "half" of a naive service: the service can trust that actions requested to be performed on a resource are allowed. If this is as far as I could take the cluster, it still provides a lot of value. But the service still needs to do some logic as to what a particular user can see.
+            Past this point, we have what I'd consider "half" of a naive service: the service can trust that actions requested to be performed on a resource are allowed. If this is as far as I could take the cluster, it still provides a lot of value. But the service still needs to do some logic as to what a particular user can see, which is unsatisfying. But let's take a little break from these barriers, go depth-first, and talk about the origin of the authz/n information.
 
         - response: |
             One of the goals of the cluster experiment was to support existing security infrastructure transparently. OPA was used as the only gate for both trust boundaries, but the clients may need information from their existing IdP (identity provider) in order to reason about access control. This entails using data or existing rules from Active Directory, Okta, or various other IdPs within the logic of a policy.

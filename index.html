@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link href="font-awesome/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="styles/main.css"type="text/css" rel="stylesheet">
+  <link href="styles/main.css" type="text/css" rel="stylesheet">
   <script type="module">
-    import {marked} from  'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
+    import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
@@ -34,7 +35,7 @@
           `
     }
 
-    const Heading = ({ title,miro }) => {
+    const Heading = ({ title, miro }) => {
       return html`
         <section class="Identity">
           <h1>${title}.</h1>
@@ -59,33 +60,36 @@
     }
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
+    let figureFlip = 0
     const Prompt = ({ question }) => {
-      console.log('from Prompt', question)
-      const {prompt, answers} = question
+      const { prompt, answers } = question
+      console.log('from Prompt', { figureFlip })
       return html`
       <div class="Prompt">
           <header>
             <h4>${prompt}</h4>
           </header>
-          ${answers?.map(answer => html`
-            <ul class="Answers">
-              <li class="Answer">
-                <p><${RenderRawHtml} html=${marked(answer?.response)}/></p>
-                <${Figure} figure=${answer.figure} />
-              </li>
-            </ul>
-          `)}
+          ${answers?.map(answer => {
+            if(answer.figure) figureFlip++
+            return html`
+                <ul class="Answers">
+                  <li class="Answer ${!(figureFlip % 2) ? 'flip-figure' : ''}">
+                    <p><${RenderRawHtml} html=${marked(answer.response)}/></p>
+                    ${answer.figure ? html`<${Figure} figure=${answer.figure} />` : ''}
+                  </li>
+                </ul>
+              `})}
 
         </div>
       `
     }
+
     const Figure = ({ figure }) => {
-      if(!figure) return ''
       return html`
-       ${figure.miro? html`
+       ${figure.miro ? html`
         <a href=${getMiroLink(figure.miro)} target="_blank">
           <img src=figures/${figure.figure}.jpg />
-        </a>` : html`<img src=${figure.location} />`}
+        </a>` : html`<img src=${figure.figure} />`}
       `
     }
     const WithFigure = ({ prompt, answer }) => {
@@ -97,29 +101,6 @@
         </div>
       `
     }
-
-    const TimeRange = ({ start, end }) => {
-      return html`
-        <time>
-          ${start} to ${end ?? 'present'}
-        </time>
-      `
-    }
-    const Answers = {
-      "WithFigure": WithFigure,
-    }
-
-    const PromptSkills = ({ skills }) => {
-      return html`
-        <ul class="PromptSkills">
-          ${skills.map(skill => html`
-            <li>
-              ${skill}
-            </li>
-          `)}
-        </ul>
-      `
-      }
 
     const html = htm.bind(h)
     render(html`<${Doc} doc=${res.doc}/>`, document.body)

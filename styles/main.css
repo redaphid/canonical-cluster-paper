@@ -19,7 +19,7 @@ body {
 }
 
 section {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 h3 {
@@ -177,13 +177,14 @@ time {
 
 .Prompt p {
   font-weight: var(--font-weight-smaller);
+  flex-grow:1;
 }
 
 .Prompt ul {
   list-style: square;
 }
 .Answers img {
-  width:30em;
+  width:25em;
 }
 .Answer {
   display: flex;
@@ -191,7 +192,7 @@ time {
   justify-content: space-between;
   align-items: center;
 }
-.Answer:odd {
+.Answer.flip-figure {
   flex-direction: row-reverse;
 }
 figure img {

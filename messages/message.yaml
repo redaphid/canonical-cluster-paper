@@ -30,7 +30,7 @@ doc:
 
             #### The "Totally Naive Services" cluster & Open Policy Agent experience
 
-            I later designed an experimental cluster to be used in environments with potentially very complex and unknown-to-us security requirements, conceivably including governmental or military applications. The cluster would be deployed in both single-tenant, on-prem environments and multitenant cloud environments. The cluster design factored out multitenancy with respect to the services it contained; e.g. the underlying services did not have a concept of organizations, or really even users (from a security standpoint). I used Open Policy Agent to the point of absurdity when it came to this cluster design, with the expectation that we'd eventually hit a wall of impracticality after which the services inside the cluster would have to become more complex as they became more aware of their environment.
+            I later designed an experimental cluster to be used in environments with complex and unknown-to-us security requirements, potentially including governmental or military applications. The cluster would be deployed in both single-tenant, on-prem environments and multitenant cloud environments. The cluster design factored out multitenancy with respect to the services it contained; e.g. the underlying services did not have a concept of organizations, or really even users (from a security standpoint). I used Open Policy Agent to the point of absurdity when it came to this cluster design, with the expectation that we'd eventually hit a wall of impracticality after which the services inside the cluster would have to become more complex as they became more aware of their environment.
 
             This approach to cluster development allowed us to build the cluster in parallel to the teams developing the services, and the development roadmaps of these services could be organized such that there was no wasted code if some of the more novel ideas did not work out.
 
@@ -43,9 +43,9 @@ doc:
             At the highest level, the cluster is divided into 3 concentric circles of trust:
 
         - response: |
-            * No trust (outside world)
-            * Authentication trust (within cluster)
-            * Naive (within pod)
+            1. No trust (outside world)
+            1. Authentication trust (within cluster)
+            1. Naive (within pod)
 
           figure:
             figure: naive-service-overview
@@ -53,13 +53,21 @@ doc:
 
         - response: |
             The barriers between these circles were enforced by OPA.
+            Outside of the authentication barrier, we are in a no-trust environment.
+            Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
+
+            This was accomplished initially by using Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party (or many other authentication mechanisms), depending on cluster configuration.
+            This implementation, however, has a potential vulnerability in that we would need to scrub an "Identity" header off of the incoming request. Since all requests were coming in through the ingress controller that Envoy was manipulating the headers from, in theory this wouldn't be a problem - but I would have rather encapsulated the request in an envelope larger than the request itself. I had learned with Meshblu that separation between data and metadata is very important, especially with regard to security.
 
         - response: |
             An OPA service was injected into each Kubernetes pod by default, though the authors of a particular service could override the defaults if they were too onerous. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)
             Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
 
         - response: |
-            One of the goals of the cluster experiment was to support existing security infrastructure transparently. OPA was used as the only gate for both trust boundaries, but the clients may need information from their existing IdP (identity provider) in order to reason about access control. This entails using data or existing rules from Active Directory, Okta, or various other IdPs within the logic of a policy. I accomplished this requirement by making several microservices that used the adapter pattern to ETL (extract,transform,load) any information necessary for policy evaluation from various IdPs to OPA's internal, ephermal datastore.
+            One of the goals of the cluster experiment was to support existing security infrastructure transparently. OPA was used as the only gate for both trust boundaries, but the clients may need information from their existing IdP (identity provider) in order to reason about access control. This entails using data or existing rules from Active Directory, Okta, or various other IdPs within the logic of a policy.
+
+        - response: |
+           I accomplished this requirement by making several microservices that used the adapter pattern to ETL (extract,transform,load) any information necessary for policy evaluation from various IdPs to OPA's internal, ephermal datastore.
           figure:
             figure: opa-etl
             miro: '3458764548738949056'

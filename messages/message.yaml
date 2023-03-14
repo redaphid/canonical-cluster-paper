@@ -41,15 +41,18 @@ doc:
             I am recalling this from memory, and recreating the diagrams, so I may be wrong about some of the details.
         - response: |
             At the highest level, the cluster is divided into 3 concentric circles of trust:
+
+        - response: |
             * No trust (outside world)
             * Authentication trust (within cluster)
             * Naive (within pod)
 
-            The barriers between these circles were enforced by OPA.
-
           figure:
             image: figures/naive-service-overview.jpg
             miro: '3458764548628056239'
+
+        - response: |
+            The barriers between these circles were enforced by OPA.
 
           type: WithFigure
 

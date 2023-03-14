@@ -183,11 +183,13 @@ time {
   list-style: square;
 }
 .Answers img {
-  float:right;
-  width:40em;
+  width:30em;
 }
 .Answer {
-  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 figure img {
   width:10em;

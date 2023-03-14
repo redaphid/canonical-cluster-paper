@@ -40,6 +40,11 @@ doc:
             Seeing how I now have a captive audience (dear reader), I'll use the cluster as an object lesson in how I design things when in "Research and Development mode", while minimizing risk during the development of production code.
             I am recalling this from memory, and recreating the diagrams, so I may be wrong about some of the details.
 
+            One of the goals of this architecture was to separate all authentication and authorization concerns from the services themselves, and end up with a "naive service", which I will here define as:
+
+            1. trusts that actions requested to be performed on a resource are allowed.
+            1. trusts that any information requested is allowed to be returned.
+
         - response: |
             At the highest level, the cluster is divided into 3 concentric circles of trust:
 
@@ -58,9 +63,9 @@ doc:
             Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
         - response: |
             #### Authentication Barrier
-            An OPA services was installed before Envoy at the ingress gateway of the cluster. OPA would evaluate the request after obtaining information necessary to reason about authentication legitimacy. This information could be provided as a result of an OIDC workflow, some kind of Active Directory authentication, or a variety of other authorization methods we supported via an adapter pattern described later on in this document. This policy could also be a passthrough, and assume whatever security handshake that happened earlier in the request flow validated user identity correctly.
+            An OPA service was installed before Envoy at the ingress gateway of the cluster. OPA would evaluate the request after obtaining information necessary to reason about authentication legitimacy. This information could be provided as a result of an OIDC workflow, some kind of Active Directory authentication, or a variety of other authorization methods we supported via an adapter pattern described later on in this document. This policy could also be a passthrough, and assume whatever security handshake that happened earlier in the request flow validated user identity correctly.
 
-            _note: the authorization data in the diagram is separated logically from the request, but the information in practice would likely come from the reques.t_
+            _note: the authorization data in the diagram is separated logically from the request, but the information in practice would likely come from the request._
           figure:
             figure: authn-barrier-1
             miro: '3458764548628056239'
@@ -75,16 +80,20 @@ doc:
             In addition, this header could be manipulated by a malicious service within the cluster. The header solution was good enough for a proof of concept, but further research would be needed to create an envelope for the request that sufficiently separated "userland" requests and cluster metadata. Anyway, that's a mini self-audit of this implementation.
 
             Past this barrier, the services could trust that the request was from who it said it was, but they could not (yet) trust that the request was authorized to do what it was trying to do.
-        - response: |
-            #### Authorization Barrier
-            After the authentication barrier is passed, any subsequent OPA policy evaluation can assume that the identity presented to the policy for evaluation is accurate, which allows for simple, decoupled policies to govern authorization on a per-service pod basis.
 
         - response: |
-            An OPA service was injected into each Kubernetes pod, layered above Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)
+            #### Authorization Barrier
+            After the authentication barrier is passed, any subsequent OPA policy evaluation can assume that the identity presented to the policy for evaluation is accurate, which allows for simple, decoupled policies to govern authorization on a per-service pod basis. You may notice below the similarity between the cluster-protecting authentication barrier, and this authorization barrier.
+
+        - response: |
+            An OPA service was injected into each Kubernetes pod, layered above Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio).
             Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
           figure:
             figure: authz-barrier-1
-            miro: '3458764548747161297'
+            miro: '3458764548748235254&cot=14'
+
+        - response: |
+            Past this point, we have what I'd consider "half" of a naive service: the service can trust that actions requested to be performed on a resource are allowed. If this is as far as I could take the cluster, it still provides a lot of value. But the service still needs to do some logic as to what a particular user can see.
 
         - response: |
             One of the goals of the cluster experiment was to support existing security infrastructure transparently. OPA was used as the only gate for both trust boundaries, but the clients may need information from their existing IdP (identity provider) in order to reason about access control. This entails using data or existing rules from Active Directory, Okta, or various other IdPs within the logic of a policy.

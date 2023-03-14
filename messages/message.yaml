@@ -129,8 +129,10 @@ doc:
           figure:
             figure: opa-etl
             miro: '3458764548738949056'
+
         - response: |
             #### Authorization and Authentication Egress Filters
+            You may have noticed an asymmetry
 
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.

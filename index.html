@@ -85,7 +85,7 @@
     const Figure = ({ figure }) => {
       return html`
        ${figure.miro ? html`
-        <a href=${getMiroLink(figure.miro)} target="_blank">
+        <a id="figure-${figure.figure}" href=${getMiroLink(figure.miro)} target="_blank">
           <img src=figures/${figure.figure}.jpg />
         </a>` : html`<img src=${figure.figure} />`}
       `

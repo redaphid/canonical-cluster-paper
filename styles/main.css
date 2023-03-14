@@ -7,6 +7,7 @@ body {
   --emphasis-color-alt: #E95420;
   --emphasis-color-foreground: white;
   --color-foreground: #111111;
+  --color-background: white;
   --font-weight-biggest: 700;
   --font-weight-bigger: 500;
   --font-weight-regular: 400;
@@ -80,19 +81,24 @@ time {
   display: grid;
   grid-template-areas:
     'Logo Identity'
-    'Info Main';
+    'Info Intro'
+    'Info Main'
+    ;
   column-gap: 0.1em;
   row-gap: 0.1em;
   background-color: #AEA79F;
   /* grid-template-columns: 50px; */
 }
-
-.Summary {
-  font-weight: 300;
-  font-size: 0.9em;
-  margin-left: 0.5em;
+.Intro{
+  grid-area: Intro;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: var(--font-weight-smaller);
 }
-
 .Education p {
   font-weight: var(--font-weight-regular);
   font-size: 0.9em;
@@ -191,6 +197,9 @@ time {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.Anwser > p > div {
+  page-break-inside: avoid;
 }
 .Answer.flip-figure {
   flex-direction: row-reverse;

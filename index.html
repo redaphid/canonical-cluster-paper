@@ -11,13 +11,10 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
-    const getMiroLink = (widget) => {
-      return `${res.doc.miro}/?moveToWidget=${widget}`
-    }
+    const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
+    const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
     const Doc = ({ doc }) => {
-      console.log("from Doc", doc)
-      const resume = {}
       return html`
           <div class="Doc">
             <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
@@ -26,6 +23,9 @@
             <div class="Logo">
               <img src="${doc.logo}" alt="logo" />
             </>
+            <div class="Intro">
+              <${RenderRawHtml} html=${marked(doc.intro)} />
+            </div>
             <div class="Main">
               ${doc.main.map(section => html`
                 <${Prompts} section=${section} />
@@ -45,7 +45,6 @@
       `
     }
     const Prompts = ({ section }) => {
-      console.log('from Prompts', section)
       return html`
         <section class="Prompts">
           <h3>${section.title}</h3>
@@ -59,12 +58,10 @@
         </section>
       `
     }
-    const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
     let figureFlip = 0
     const Prompt = ({ question }) => {
       const { prompt, answers } = question
-      console.log('from Prompt', { figureFlip })
       return html`
       <div class="Prompt">
           <header>
@@ -93,16 +90,6 @@
         </a>` : html`<img src=${figure.figure} />`}
       `
     }
-    const WithFigure = ({ prompt, answer }) => {
-      console.log('from WithFigure', answer)
-      return html`
-        <div class="WithFigure">
-
-          <p>${new Array(100).fill(answer.response).join('')}</p>
-        </div>
-      `
-    }
-
     const html = htm.bind(h)
     render(html`<${Doc} doc=${res.doc}/>`, document.body)
   </script>

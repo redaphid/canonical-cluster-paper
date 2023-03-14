@@ -58,6 +58,14 @@ doc:
             Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
         - response: |
             #### Authentication Barrier
+            An OPA services was installed before Envoy at the ingress gateway of the cluster. OPA would evaluate the request after obtaining information necessary to reason about authentication legitimacy. This information could be provided as a result of an OIDC workflow, some kind of Active Directory authentication, or a variety of other authorization methods we supported via an adapter pattern described later on in this document. This policy could also be a passthrough, and assume whatever security handshake that happened earlier in the request flow validated user identity correctly.
+
+            _note: the authorization data in the diagram is separated logically from the request, but the information in practice would likely come from the reques.t_
+          figure:
+            figure: authn-barrier-1
+            miro: '3458764548628056239'
+
+        - response: |
             In the proof of concept, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I'll talk about a little bit later on.
 
             Regardless of the mechanism used, in the end an OPA policy always gated access to the cluster. The client's authentication data was evaluated against OPA policies, which had the final say. This, like all autoinjected systems in the cluster, could be opted out of via configuration.

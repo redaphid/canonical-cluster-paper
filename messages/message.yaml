@@ -56,7 +56,7 @@ doc:
             The barriers between these circles were enforced by OPA.
             Outside of the authentication barrier, we are in a no-trust environment.
             Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
-
+        - response: |
             #### Authentication Barrier
             In the proof of concept, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I'll talk about a little bit later on.
 
@@ -67,6 +67,10 @@ doc:
             In addition, this header could be manipulated by a malicious service within the cluster. The header solution was good enough for a proof of concept, but further research would be needed to create an envelope for the request that sufficiently separated "userland" requests and cluster metadata. Anyway, that's a mini self-audit of this implementation.
 
             Past this barrier, the services could trust that the request was from who it said it was, but they could not (yet) trust that the request was authorized to do what it was trying to do.
+
+        - response: |
+            #### Authorization Barrier
+            After the authentication barrier is passed, any subsequent OPA policy evaluation can assume that the identity presented to the policy for evaluation is accurate, which allows for simple, decoupled policies to govern authorization on a per-service pod basis.
 
         - response: |
             An OPA service was injected into each Kubernetes pod by default, though the authors of a particular service could override the defaults if they were too onerous. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)

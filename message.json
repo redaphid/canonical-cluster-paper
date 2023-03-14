@@ -33,7 +33,11 @@
                 "response": "#### Authorization Barrier\nAfter the authentication barrier is passed, any subsequent OPA policy evaluation can assume that the identity presented to the policy for evaluation is accurate, which allows for simple, decoupled policies to govern authorization on a per-service pod basis.\n"
               },
               {
-                "response": "An OPA service was injected into each Kubernetes pod by default, though the authors of a particular service could override the defaults if they were too onerous. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)\nAlso by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.\n"
+                "response": "An OPA service was injected into each Kubernetes pod, layered above Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)\nAlso by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.\n",
+                "figure": {
+                  "figure": "authz-barrier-1",
+                  "miro": "3458764548747161297"
+                }
               },
               {
                 "response": "One of the goals of the cluster experiment was to support existing security infrastructure transparently. OPA was used as the only gate for both trust boundaries, but the clients may need information from their existing IdP (identity provider) in order to reason about access control. This entails using data or existing rules from Active Directory, Okta, or various other IdPs within the logic of a policy.\n"

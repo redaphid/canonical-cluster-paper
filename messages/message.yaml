@@ -60,7 +60,7 @@ doc:
             1. Authorization trust. "Naive" (within pod)
 
           figure:
-            figure: naive-service-overview
+            figure: naive-cluster-overview
             miro: '3458764548628056239'
 
         - response: |
@@ -102,7 +102,7 @@ doc:
             An OPA service was injected into each Kubernetes pod, layered above Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio).
             Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
           figure:
-            figure: authentication-barrier
+            figure: authorization-barrier
             miro: '3458764548747400083'
         - response: |
             #### Authorization Workflow
@@ -127,12 +127,12 @@ doc:
             I preferred this method to OPA policies doing http requests to our adapters, as I feel doing http requests and parsing the results make policies much more difficult to understand, as the policy now has to know and deal with implementation details, which defeats the purpose of having a restricted policy language.
 
           figure:
-            figure: opa-etl
+            figure: identity-provider-to-opa
             miro: '3458764548738949056'
 
         - response: |
             #### Authorization and Authentication Egress Filters
-            You may have noticed an asymmetry in the [authorization workflow](#figure-authorization-workflow) diagram. The ingress filter is a simple "allow" or "deny" filter, but the egress filter is a more complex filter that allows for more nuanced control over what a service can do.
+            You may have noticed an asymmetry in the [authorization workflow](#figure-authorization-barrier) diagram. The ingress filter is a simple "allow" or "deny" filter, but the egress filter is a more complex filter that allows for more nuanced control over what a service can do.
 
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.

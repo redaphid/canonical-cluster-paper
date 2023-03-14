@@ -62,7 +62,7 @@
                 }
               },
               {
-                "response": "#### Authorization Workflow\nThis diagram shows the flow of data through the authorization barrier. Note that all 'Envoy' elements in the diagram are the same service.\n\n\nAt this point, the request is coming from inside the cluster, with the rewritten identity header.\n",
+                "response": "#### Authorization Workflow\nThis diagram shows the flow of data through the authorization barrier. Note that all 'Envoy' nodes refer to the same service.\n\nAt this point, the request is coming from inside the cluster, with the rewritten identity header.\n",
                 "figure": {
                   "figure": "authorization-workflow",
                   "miro": "3458764548844659047"
@@ -82,7 +82,10 @@
                 }
               },
               {
-                "response": "#### Authorization and Authentication Egress Filters\nYou may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. Aas a result, a service within a pod may need to make assumptions regarding the security model.\n"
+                "response": "#### Authorization and Authentication Egress Filters\n\nYou may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. As a result, a service within a pod may need to make assumptions regarding the security model.\n"
+              },
+              {
+                "response": "One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.\n"
               }
             ]
           },

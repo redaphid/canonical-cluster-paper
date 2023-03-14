@@ -109,8 +109,7 @@ doc:
             miro: '3458764548747400083'
         - response: |
             #### Authorization Workflow
-            This diagram shows the flow of data through the authorization barrier. Note that all 'Envoy' elements in the diagram are the same service.
-
+            This diagram shows the flow of data through the authorization barrier. Note that all 'Envoy' nodes refer to the same service.
 
             At this point, the request is coming from inside the cluster, with the rewritten identity header.
           figure:
@@ -135,7 +134,11 @@ doc:
 
         - response: |
             #### Authorization and Authentication Egress Filters
-            You may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. Aas a result, a service within a pod may need to make assumptions regarding the security model.
+
+            You may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. As a result, a service within a pod may need to make assumptions regarding the security model.
+
+        - response: |
+            One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.
 
 
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.

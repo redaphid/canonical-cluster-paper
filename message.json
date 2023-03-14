@@ -3,6 +3,7 @@
     "logo": "images/interview-icon.png",
     "title": "Written Interview",
     "miro": "https://miro.com/app/board/uXjVMeJA43k=/",
+    "repo": "https://github.com/redaphid/resume-canonical",
     "main": [
       {
         "title": "Identity and Authorization Technology",
@@ -63,11 +64,19 @@
           },
           {
             "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",
-            "answer": "answer 2"
+            "answers": [
+              {
+                "response": "I both consumed OIDC responses, and run Keycloak as an OIDC provider in the cluster described above. Besides that, I can't think offhand of other work I've done regarding OIDC except to study the workflow in order to build the cluster.\n"
+              }
+            ]
           },
           {
             "prompt": "Describe your experience with container technologies such as Docker, LXD and Kubernetes.",
-            "answer": "answer 2"
+            "answers": [
+              {
+                "response": "sdadasd\n"
+              }
+            ]
           }
         ]
       },
@@ -75,13 +84,127 @@
         "title": "General Software Engineering Experience",
         "prompts": [
           {
-            "prompt": "Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.",
-            "answer": "answer 1"
+            "prompt": "What kinds of software projects have you worked on before? Which operating systems, development environments, languages, databases?"
+          },
+          {
+            "prompt": "Would you describe yourself as a high quality coder? Why?"
+          },
+          {
+            "prompt": "Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?"
+          },
+          {
+            "prompt": "What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led."
+          },
+          {
+            "prompt": "What is your proudest success as an engineering leader?"
+          },
+          {
+            "prompt": "Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?"
+          },
+          {
+            "prompt": "Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?"
+          },
+          {
+            "prompt": "How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?"
+          },
+          {
+            "prompt": "Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity"
+          },
+          {
+            "prompt": "Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?"
+          },
+          {
+            "prompt": "Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market"
+          },
+          {
+            "prompt": "Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?"
+          },
+          {
+            "prompt": "Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?"
+          },
+          {
+            "prompt": "Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?"
+          },
+          {
+            "prompt": "Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?"
+          },
+          {
+            "prompt": "Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?"
+          },
+          {
+            "prompt": "Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?"
+          }
+        ]
+      },
+      {
+        "title": "Industry leadership experience",
+        "prompts": [
+          {
+            "prompt": "Describe your speaking experience at industry events and conferences"
+          },
+          {
+            "prompt": "Are you a thought leader in any particular area of technology?"
+          },
+          {
+            "prompt": "Describe any experience working with startups. What did you draw from that experience that would be relevant for this application?"
+          },
+          {
+            "prompt": "Describe any experience working in a public company. What is important for your colleagues to know about being a public company?"
+          }
+        ]
+      },
+      {
+        "title": "Education",
+        "prompts": [
+          {
+            "prompt": "How did you fare in high school mathematics, physical sciences and computing? Which were strengths and which most enjoyable? How did you rank, competitively, in them?"
+          },
+          {
+            "prompt": "What sort of high school student were you? Outside of class, what were your interests and hobbies?  What would your high school peers remember you for, if we asked them?"
+          },
+          {
+            "prompt": "In languages and the arts at high school, what were your strongest subjects and how did you rank in those among your school peers?"
+          },
+          {
+            "prompt": "Describe some high school achievements considered exceptional by peers and staff"
+          },
+          {
+            "prompt": "Which degree and university did you choose, and why?"
+          },
+          {
+            "prompt": "Which university courses did you perform best at? How did you rank in your degree?"
+          },
+          {
+            "prompt": "Outside of class, what were your interests and where did you spend your time?"
+          },
+          {
+            "prompt": "What did you achieve at university that you consider exceptional?"
+          },
+          {
+            "prompt": "At high school or university, what leadership roles did you take on?"
+          }
+        ]
+      },
+      {
+        "title": "Context",
+        "prompts": [
+          {
+            "prompt": "Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?"
+          },
+          {
+            "prompt": "Who are Canonical's key competitors, and how should Canonical set about winning?"
+          },
+          {
+            "prompt": "Why do you most want to work for Canonical?"
+          },
+          {
+            "prompt": "What would you most want to change about Canonical?"
+          },
+          {
+            "prompt": "What gets you most excited about this role?"
           }
         ]
       }
-    ],
-    "paragraphs": null,
-    "thanks_at_the_end": "I am impressed by the context you have provided me during this process.\nI know some people think it's a bad thing to do this kind of work up front - and I've heard muttering on Reddit, etc that these first set of questions are unreasonable - but contextualizing them as a quasi-first-interview makes it seem totally reasonable. In addition, I am equally impressed by the role you play when it comes to finding the right fit for applicants, even if they have applied to the wrong position. I wish other hiring processes were more like this. Anyway, just wanted to let y'all know those thoughts crossed my mind.\n-"
+    ]
   }
 }

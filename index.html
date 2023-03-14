@@ -10,13 +10,16 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
-    console.log('from top', {res})
+    const getMiroLink = (widget) => {
+      return `${res.doc.miro}/?moveToWidget=${widget}`
+    }
+
     const Doc = ({ doc }) => {
       console.log("from Doc", doc)
       const resume = {}
       return html`
           <div class="Doc">
-            <${Heading} title=${doc.title} />
+            <${Heading} title=${doc.title} miro=${doc.miro} />
             <div class="Info">
             </div>
             <div class="Logo">
@@ -31,11 +34,11 @@
           `
     }
 
-    const Heading = ({ title }) => {
+    const Heading = ({ title,miro }) => {
       return html`
         <section class="Identity">
           <h1>${title}.</h1>
-          <small>Want to see the diagrams in a Miro board? you can find tem <a href="https://miro.com/app/board/uXjVMeJA43k=/" target="_blank">here!</a></small>
+          <small>Want to see the diagrams in a Miro board? you can find them <a href="${miro}" target="_blank">here!</a></small>
         </section>
       `
     }
@@ -67,7 +70,7 @@
           ${answers?.map(answer => html`
             <ul class="Answers">
               <li class="Answer">
-                ${answer.figure? html`<img src=${answer.figure} />` : ''}
+                <${Figure} figure=${answer.figure} />
                 <p><${RenderRawHtml} html=${marked(answer?.response)}/></p>
               </li>
             </ul>
@@ -76,7 +79,15 @@
         </div>
       `
     }
-
+    const Figure = ({ figure }) => {
+      if(!figure) return ''
+      return html`
+       ${figure.miro? html`
+        <a href=${getMiroLink(figure.miro)}>
+          <img src=${figure.image} />
+        </a>` : html`<img src=${figure.location} />`}
+      `
+    }
     const WithFigure = ({ prompt, answer }) => {
       console.log('from WithFigure', answer)
       return html`
@@ -108,80 +119,7 @@
           `)}
         </ul>
       `
-    }
-
-    const Educations = ({ education }) => {
-      return html`
-        <section class="Educations">
-          <h3>Education</h3>
-          <ul>
-            ${education.map(edu => html`
-              <li>
-                <${Education} education=${edu} />
-              </li>
-            `)}
-          </ul>
-        </section>
-      `
-    }
-
-    const Education = ({ education }) => {
-      return html`
-        <div class="Education">
-          <h4>${education.institution}</h4>
-          <p>${education.area} </p>
-          <p>${education.studyType}</p>
-          <${TimeRange} start=${education.startDate} end=${education.endDate} />
-        </div>
-      `
-    }
-
-    const Admirers = ({ admirers }) => {
-      return html`
-        <section class="Educations">
-          <h3>Admirers</h3>
-          <ul>
-            ${admirers.map(admirer => html`
-              <li>
-                <${Admirer} admirer=${admirer} />
-              </li>
-            `)}
-          </ul>
-        </section>
-      `
-    }
-
-    const Admirer = ({ admirer }) => {
-      return html`
-        <div class="Admirer">
-          <h4>${admirer.name}</h4>
-          <a href="mailto:${admirer.email}?subject=What do you admire most about Aaron Herres?" target="_blank">${admirer.email}</a>
-        </div>
-      `
-    }
-
-    const Abilities = ({ skills }) => {
-      return html`
-        <section class="Abilities">
-          <h3>Abilities</h3>
-          <ul>
-            ${skills.map(skill => html`
-              <li>
-                <${Ability} skill=${skill} />
-              </li>
-            `)}
-          </ul>
-        </section>
-      `
-    }
-
-    const Ability = ({ skill }) => {
-      return html`
-        <div class="Ability">
-          ${skill.name}
-        </div>
-      `
-    }
+      }
 
     const html = htm.bind(h)
     render(html`<${Doc} doc=${res.doc}/>`, document.body)

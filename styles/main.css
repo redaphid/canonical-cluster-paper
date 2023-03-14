@@ -14,7 +14,7 @@ body {
   --figure-size:30em;
   font-family: 'Ubuntu', Symbol;
   font-size: 0.85em;
-  /* max-width: 8.5in; */
+  max-width: 8.5in;
   color: var(--color-foreground);
 }
 
@@ -188,10 +188,6 @@ time {
 }
 .Answer {
   overflow: auto;
-}
-.WithFigure > p {
-  margin:0;
-  padding:0;
 }
 figure img {
   width:10em;

@@ -190,7 +190,9 @@ time {
   list-style: square;
 }
 .Answers img {
-  width:25em;
+  max-width:25em;
+  max-height:30em;
+  margin: 0.25em;
 }
 .Answer {
   display: flex;

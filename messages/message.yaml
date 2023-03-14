@@ -75,6 +75,13 @@ doc:
           figure:
             figure: authn-barrier-1
             miro: '3458764548747400083'
+        - response: |
+            #### Authentication Workflow
+            The workflow may serve to illustrate the flow of data through the authentication barrier
+
+          figure:
+            figure: authentication-workflow
+            miro: '3458764548747400083'
 
         - response: |
             In the proof of concept, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I'll talk about a little bit later on.

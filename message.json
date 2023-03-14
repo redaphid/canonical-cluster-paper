@@ -36,7 +36,7 @@
                 }
               },
               {
-                "response": "#### Authentication Workflow\nThe workflow may serve to illustrate the flow of data through the authentication barrier. We can see how the request proceed\n",
+                "response": "#### Authentication Workflow\nThis workflow diagram llustrates the flow of data through the authentication barrier.\n",
                 "figure": {
                   "figure": "authentication-workflow",
                   "miro": "3458764548844659047"
@@ -56,7 +56,7 @@
                 }
               },
               {
-                "response": "#### Authorization Workflow\nThis diagram shows the flow of data through the authorization barrier. We can see how the request proceeds through the cluster, and how the authorization barrier is enforced.\n",
+                "response": "#### Authorization Workflow\nThis diagram shows the flow of data through the authorization barrier. Note that all 'Envoy' elements in the diagram are the same service.\n\n\nAt this point, the request is coming from inside the cluster, with the rewritten identity header.\n",
                 "figure": {
                   "figure": "authorization-workflow",
                   "miro": "3458764548844659047"

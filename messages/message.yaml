@@ -77,7 +77,7 @@ doc:
             miro: '3458764548747400083'
         - response: |
             #### Authentication Workflow
-            The workflow may serve to illustrate the flow of data through the authentication barrier. We can see how the request proceed
+            This workflow diagram llustrates the flow of data through the authentication barrier.
 
           figure:
             figure: authentication-workflow
@@ -106,7 +106,10 @@ doc:
             miro: '3458764548747400083'
         - response: |
             #### Authorization Workflow
-            This diagram shows the flow of data through the authorization barrier. We can see how the request proceeds through the cluster, and how the authorization barrier is enforced.
+            This diagram shows the flow of data through the authorization barrier. Note that all 'Envoy' elements in the diagram are the same service.
+
+
+            At this point, the request is coming from inside the cluster, with the rewritten identity header.
           figure:
             figure: authorization-workflow
             miro: '3458764548844659047'

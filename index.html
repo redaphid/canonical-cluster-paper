@@ -83,8 +83,8 @@
       if(!figure) return ''
       return html`
        ${figure.miro? html`
-        <a href=${getMiroLink(figure.miro)}>
-          <img src=${figure.image} />
+        <a href=${getMiroLink(figure.miro)} target="_blank">
+          <img src=figures/${figure.figure}.jpg />
         </a>` : html`<img src=${figure.location} />`}
       `
     }

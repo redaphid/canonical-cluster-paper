@@ -48,14 +48,21 @@ doc:
             * Naive (within pod)
 
           figure:
-            image: figures/naive-service-overview.jpg
+            figure: naive-service-overview
             miro: '3458764548628056239'
 
         - response: |
             The barriers between these circles were enforced by OPA.
 
-          type: WithFigure
+        - response: |
+            An OPA service was injected into each Kubernetes pod by default, though the authors of a particular service could override the defaults if they were too onerous. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio)
+            Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
 
+        - response: |
+            One of the goals of the cluster experiment was to support existing security infrastructure transparently. OPA was used as the only gate for both trust boundaries, but the clients may need information from their existing IdP (identity provider) in order to reason about access control. This entails using data or existing rules from Active Directory, Okta, or various other IdPs within the logic of a policy. I accomplished this requirement by making several microservices that used the adapter pattern to ETL (extract,transform,load) any information necessary for policy evaluation from various IdPs to OPA's internal, ephermal datastore.
+          figure:
+            figure: opa-etl
+            miro: '3458764548738949056'
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answer: answer 2
       - prompt: Describe your experience with container technologies such as Docker, LXD and Kubernetes.

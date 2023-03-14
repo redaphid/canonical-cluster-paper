@@ -191,6 +191,9 @@ time {
   justify-content: space-between;
   align-items: center;
 }
+.Answer:odd {
+  flex-direction: row-reverse;
+}
 figure img {
   width:10em;
 }

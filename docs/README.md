@@ -4,11 +4,11 @@ This repo is forked from my resume generating repo, which I will refrain from li
 
 ## Tech Stack
 
-### JSON Doc
-I used the [JSON Doc](https://jsonresume.org/) schema to define the data for my resume, with some modifications that made generating an aesthetic resume easier in my opinion. So anyone else using JSON Doc can use it, with a few alterations.
-
 ### Preact
 I didn't want a build step, so I could avoid webpack and it's associated complexity. Instead, I decided to try out [Preact](https://preactjs.com/), which is similar to React, but using pure javascript and can be imported via a cdn! It can also emulate React if you want to use a build step, but I don't know why you'd do that.
+
+### YAML
+I'm usually not a huge fan, but It's definitely nicer than writing JSON by hand.
 
 ### Styles
 I wanted to try out grid, so I used [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for the layout. I also wanted to try out [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) for the colors, so I did that too.

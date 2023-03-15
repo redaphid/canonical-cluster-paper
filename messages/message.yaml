@@ -220,7 +220,10 @@ doc:
       - prompt: What kinds of software projects have you worked on before? Which operating systems, development environments, languages, databases?
         answers:
         - response: |
-            I pride myself in being a generalist. To that effect, I have worked on a huge variety of different systems, languages, etc. ranging from microcontrollers, to the open-source Internet of Things platforms [Meshblu](https://github.com/octoblu) I talk about a little [here](#experience-with-meshblu), to giant fancy clusters that you may remember me describing in a previous response :).
+            I pride myself in being a generalist. To that effect, I have worked on a huge variety of different systems, languages, etc. ranging from microcontrollers, to the open-source Internet of Things platform [Meshblu](https://github.com/octoblu) I talk about a little [here](#experience-with-meshblu), to giant fancy clusters that you may remember me describing in a previous response :).
+
+            I helped out with developing a new  closed-source browser recently, which was interesting. [Here](https://github.com/loqwai/experiments-messageport-react) is a repo where I experiment with distributing state via Message Ports to be rendered with React. Electron has some crazy way of fusing node-side and browser-side MessagePorts together, which is important, because when making a browser you have to deal with a lot of different processes, and you really need to have a structured way for them to communicate with each other.
+
 
             I like working on platforms when I get the chance - though this is no means required. Working at Octoblu on the IoT platform and the flow-based execution engine that ran on top of it was by far the most satisfying work of my career so far.
 
@@ -241,6 +244,8 @@ doc:
             As far as databases are concerned, I've used Firebase, Postgres, and MongoDB recently-ish. If Redis counts, I've done some of that. But it probably doesn't.
 
             The particulars of a given database haven't affected my career much so far. I try to get to the point where I'm abstracting the details as soon as possible, and rarely think about it again unless some problem crops up.
+
+            As far as development environments are concerned, I'm all-in on vscode and linux these days. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the linux kernel to support this hardware! I want out of Mac-land.
 
       - prompt: Would you describe yourself as a high quality coder? Why?
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?

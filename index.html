@@ -12,6 +12,9 @@
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
     const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
+    const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
+    window.getWidgetFromMiroLink = getWidgetFromMiroLink
+
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
     // Yes, this is a hack. I would normally have a Link component, but since I'm using markdown this will have to do.

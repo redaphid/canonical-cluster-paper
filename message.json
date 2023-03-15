@@ -155,7 +155,12 @@
         "title": "General Software Engineering Experience",
         "prompts": [
           {
-            "prompt": "What kinds of software projects have you worked on before? Which operating systems, development environments, languages, databases?"
+            "prompt": "What kinds of software projects have you worked on before? Which operating systems, development environments, languages, databases?",
+            "answers": [
+              {
+                "response": "I pride myself in being a generalist. To that effect, I have worked on a huge variety of different systems, languages, etc. ranging from microcontrollers to giant fancy clusters that you may remember me describing in a previous response :).\n\nAs far as languages go, I've used a ton of them. I'm a language nerd. I soapbox about Lisp when I see an opening in conversations.\n\nThese days I'm doing a lot of Typescript, but:\n\n- [here](https://github.com/loqwai/juniper-gardens-twig-debug)'s a repo where I helped an open source project by fixing a bug in their implementation of the ESPHome protocol that allows esp32 microcontrollers to get wifi credentials over BLE. (Javascript. On a microcontroller. This was not my idea)\n- [here](https://github.com/loqwai/extra-color-perception)'s a repo where I make hardware pendants that each glow a different color, and that color changes depending on how physically close you are to someone else wearing a pendant with a different color. (C++ on esp32s, using platform.io).\n- [here](https://github.com/loqwai/carbonaria)'s a repo where I learn Rust by making a game with my friend!\n- [here](https://github.com/redaphid/resume-canonical)'s the repo I used to generate this document. Mostly using Javascript and madness.\n\nI've used Go somewhat recently for professional, closed-source work. I'm catching up with Python to learn more about the latest AI craze.\n"
+              }
+            ]
           },
           {
             "prompt": "Would you describe yourself as a high quality coder? Why?"

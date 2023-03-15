@@ -206,6 +206,11 @@ time {
 .Answer.flip-figure {
   flex-direction: row-reverse;
 }
+.Answer > .fill-response img {
+  flex-grow: 1;
+  margin: 0.25em;
+  max-width: 100%;
+}
 figure img {
   width:10em;
 }

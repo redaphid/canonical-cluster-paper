@@ -146,6 +146,10 @@ doc:
             miro: '3458764548858771011'
         - response: |
            We can, however, use the same gating policy over the set of all resources. This returns all the resources a user is allowed to see, based on the 'gating' policy
+
+        - figure:
+            figure: opa-policy-filtering-resources
+            miro: '3458764548861602424'
           #OPA can apply [partial evaluation](https://blog.openpolicyagent.org/#partial-evaluation-162750eaf422) to a set of policies, which allows us to #specify which variables are known, and which the policy evaluator
 
 

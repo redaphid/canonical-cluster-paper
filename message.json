@@ -93,6 +93,12 @@
               },
               {
                 "response": "We can, however, use the same gating policy over the set of all resources. This returns all the resources a user is allowed to see, based on the 'gating' policy\n"
+              },
+              {
+                "figure": {
+                  "figure": "opa-policy-filtering-resources",
+                  "miro": "3458764548861602424"
+                }
               }
             ]
           },

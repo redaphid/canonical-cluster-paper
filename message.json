@@ -101,6 +101,9 @@
                   "figure": "opa-policy-filtering-resources",
                   "miro": "3458764548861602424"
                 }
+              },
+              {
+                "response": "_this, of course, has performance and pagination implications, but that's outside of the scope of the experiment_.\n"
               }
             ]
           },

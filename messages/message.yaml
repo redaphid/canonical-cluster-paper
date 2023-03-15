@@ -150,7 +150,9 @@ doc:
         - figure:
             figure: opa-policy-filtering-resources
             miro: '3458764548861602424'
-          #OPA can apply [partial evaluation](https://blog.openpolicyagent.org/#partial-evaluation-162750eaf422) to a set of policies, which allows us to #specify which variables are known, and which the policy evaluator
+
+        - response: |
+            _this, of course, has performance and pagination implications, but that's outside of the scope of the experiment_.
 
 
 

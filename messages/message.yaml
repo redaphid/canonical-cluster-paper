@@ -180,9 +180,22 @@ doc:
       - prompt: Describe your experience with container technologies such as Docker, LXD and Kubernetes.
         answers:
         - response: |
-            I have used Docker extensively throughout my personal and professional life. Here is a screenshot of my computer running Podman and Docker right now:
-        - figure:
-            figure: docker-and-podman
+            I have used Docker extensively throughout my personal and professional life. I'm running a Minecraft server, a duckdns image, and a Plex media server on this machine as I type this! I also have Podman, but ironically I have to run Podman with sudo, and I can run Docker without. Which, come to think of it, is a pretty big security vulnerability on my home machine...
+
+            I have a few personal repos that at least demonstrate my interest in Docker that I might as well list off:
+             - [here's a repo](https://github.com/redaphid/docker-compose-ecs-test) of me messing around with Docker Compose deploying to AWS! There is almost literally nothing in it, but if you're curious you can go through the commits and see what I was trying out.
+             - [here's an older repo](https://github.com/redaphid/jad) of me using Docker in various ways on a home server. In the `services/plex` directory you can see me do a little fanciness where I encrypt my Plex server preferences so I don't leak my token and can still have a public repo.
+             - [here's an older repo](https://github.com/redaphid/docker-ntp-server) Where I was running a very accurate ntp server in this effort to make "indoor gps" via ultrasonic emitters and detectors.
+
+              _tl;dr: I think it was 3 Raspberry Pi's that each had their own ultrasonic frequency. I was trying to triangulate the position of a device in a room that had an ultrasonic detector. It didn't work. But I learned a lot about how bats use ultrasonic frequencies to navigate!_
+
+            It looks like after a while I started using ZFS and relied on automatic snapshots to keep my Docker configs at home.
+
+
+            As you probably can imagine from the cluster experiment, I am at least somewhat familiar with Kubernetes. To be honest, I usually have to spin up and look in to using Kubernetes whenever I get my hands dirty with the copius YAML config. Kubernetes is the pragmatic choice for all enterprise development right now, but personally I find it to grossly violate the Unix Philosophy with it's complexity. That said, Kubernetes is important. I have used it in the past, and will again. Personal disagreements notwithstanding.
+
+            I prefer Docker Swarm, but I know I'm a minority at this point.
+
         - response:
     - title: General Software Engineering Experience
       prompts:

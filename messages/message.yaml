@@ -248,6 +248,50 @@ doc:
             Regarding development environments, I'm all-in on vscode and linux. I bought Red Hat 6.0 at a Gamestop in high school by saving up my lunch money. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the linux kernel to support this hardware! I want out of Mac-land.
 
       - prompt: Would you describe yourself as a high quality coder? Why?
+        answers:
+        - response: |
+            Yes, I would describe myself as a high quality coder.
+            I think it comes down to philosophy, development habits, and experience.
+
+            #### Philosophy
+            I have a syncretic coding philosophy that I've developed over the years, and love to talk about. Not much of my philosophy is novel, but I steal a lot from others. To wit:
+            * Unix Philosophy
+            * Worse is better
+            * The Zen of Python (with the exception of 'flat is better than nested')
+            * Pragmatic Programmer
+            * Some of Uncle Bob's Clean code.
+            * Test Driven Development
+              - I have a game that makes this fun, I swear!
+            * Strong opinions, weakly held.
+            * Some of "xtreme programming"
+            * "premature optimization is the root of all evil"
+            * Ping-Pong pairing.
+            * "The best code is no code at all"
+            * The "[Transformation Priority Premise](https://en.wikipedia.org/wiki/Transformation_Priority_Premise)" as a heuristic for code complexity.
+
+            ...and many others.
+
+            I apply the scientific method to my coding philosophy, and allow it to evolve over time, based on new information and experiences.
+
+            I try to use the Socratic Method whenever possible during architectural or procedural debates.
+
+            I really value collaboration. My brain probably can't come up with the best solution to a problem on its own. I like to bounce ideas off of other people.
+
+            I like finding out I was wrong about something! I enjoy well-intentioned critique of my work, and am happy to do it for others as well. I foster a culture where people "like it when they are wrong", and are open and eager to hear criticism. Because how else can we evolve?
+
+            I feel a major part of our job is the fight against entropy, and finding the simplest way to accomplish our goals.
+
+            #### Development Habits
+            The first thing that always comes to mind when I think about my good developer habits is this "game" I play that was originally for pairing. But I "play it" with myself when I can't pair, assuming both roles.
+
+            The game goes like this:
+            1. "Member 1" of the pair writes the simplest possible test that fails, given the current codebase.
+            1. "Member 2" of the pair writes the simplest possible code that will cause the test to pass - even if it's a function that returns a constant present in the test!
+            1. The roles in the pair are reversed, and the loop continues.
+
+            As a heuristic for what constitutes the "simplest possible code", I use the [Transformation Priority Premise](https://en.wikipedia.org/wiki/Transformation_Priority_Premise), moving from simplest->most complex code on this scale, increasing in complexity only when forced by a test to do so.
+
+
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?
       - prompt:  What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
       - prompt: What is your proudest success as an engineering leader?

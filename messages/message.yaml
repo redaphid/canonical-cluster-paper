@@ -294,10 +294,11 @@ doc:
 
             As a heuristic for what constitutes the "simplest possible code", I use the [Transformation Priority Premise](https://en.wikipedia.org/wiki/Transformation_Priority_Premise), moving from simplest->most complex code on this scale, increasing in complexity only when forced by a test to do so.
 
-            I resist the impulse overarchitecting things - sometimes even effectively! This game helps.
-
 
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?
+        answers:
+        - response: |
+            Yes, I would describe myself as an architect of resilient software.
       - prompt:  What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
       - prompt: What is your proudest success as an engineering leader?
       - prompt: Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?

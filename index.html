@@ -15,11 +15,11 @@
     const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
     window.getWidgetFromMiroLink = getWidgetFromMiroLink
 
+    const defer = () => new Promise(resolve => requestAnimationFrame(resolve));
+    const titleToId = title => title.toLowerCase().replace(/ /g, '-')
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
     // Yes, this is a hack. I would normally have a Link component, but since I'm using markdown this will have to do.
-    const defer = () => new Promise(resolve => requestAnimationFrame(resolve));
-
     const removeElementIdFromURL = async () => {
       await defer()
       window.history.replaceState({}, document.title, window.location.pathname)
@@ -72,8 +72,9 @@
     let figureFlip = 0
     const Prompt = ({ question }) => {
       const { prompt, answers } = question
+
       return html`
-      <div class="Prompt">
+      <div class="Prompt" id=${titleToId(prompt)}>
           <header>
             <h4>${prompt}</h4>
           </header>

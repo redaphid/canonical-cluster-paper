@@ -176,7 +176,7 @@ doc:
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answers:
         - response: |
-            I both consumed OIDC responses, and run Keycloak as an OIDC provider in the cluster described above. Besides that, I can't think offhand of other work I've done regarding OIDC except to study the workflow in order to build the cluster.
+            I both consumed OIDC responses from external identity providers, and run Keycloak as an OIDC provider in the cluster described above. Besides that, I can't think offhand of other work I've done regarding OIDC except to study the workflow in order to build the cluster.
       - prompt: Describe your experience with container technologies such as Docker, LXD and Kubernetes.
         answers:
         - response: |

@@ -142,7 +142,7 @@ doc:
         - response: |
             One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.
           figure:
-            figure: opa-policy-for-a-single-resource
+            figure: opa-policy-gating-a-single-resource
             miro: '3458764548858771011'
         - response: |
            We can, however, use the same gating policy over the set of all resources. This returns all the resources a user is allowed to see, based on the 'gating' policy

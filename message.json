@@ -142,7 +142,15 @@
             "prompt": "Describe your experience with container technologies such as Docker, LXD and Kubernetes.",
             "answers": [
               {
-                "response": "sdadasd\n"
+                "response": "I have used Docker extensively throughout my personal and professional life. Here is a screenshot of my computer running Podman and Docker right now:\n"
+              },
+              {
+                "figure": {
+                  "figure": "docker-and-podman"
+                }
+              },
+              {
+                "response": null
               }
             ]
           }

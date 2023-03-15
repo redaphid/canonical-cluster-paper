@@ -11,7 +11,7 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
-    const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
+    const getMiroLink = widget => widget ? `${res.doc.miro}/?moveToWidget=${widget}`: undefined
     const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
     window.getWidgetFromMiroLink = getWidgetFromMiroLink
 

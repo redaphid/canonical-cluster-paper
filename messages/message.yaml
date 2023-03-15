@@ -180,7 +180,10 @@ doc:
       - prompt: Describe your experience with container technologies such as Docker, LXD and Kubernetes.
         answers:
         - response: |
-            sdadasd
+            I have used Docker extensively throughout my personal and professional life. Here is a screenshot of my computer running Podman and Docker right now:
+        - figure:
+            figure: docker-and-podman
+        - response:
     - title: General Software Engineering Experience
       prompts:
       - prompt: What kinds of software projects have you worked on before? Which operating systems, development environments, languages, databases?

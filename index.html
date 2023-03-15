@@ -11,7 +11,7 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
-    const getMiroLink = widget => widget ? `${res.doc.miro}/?moveToWidget=${widget}`: undefined
+    const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
     const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
     window.getWidgetFromMiroLink = getWidgetFromMiroLink
 
@@ -96,9 +96,9 @@
       console.log({figure, hasResponse})
       return html`
        ${figure.miro ? html`
-        <a class="${!hasResponse? "fill-response": ""}" id="figure-${figure.figure}" href=${getMiroLink(figure.miro)} target="_blank">
-          <img src=figures/${figure.figure}.jpg />
-        </a>` : html`<img src=${figure.figure} />`}
+        <a id="figure-${figure.figure}" href=${getMiroLink(figure.miro)} target="_blank">
+          <img class="${!hasResponse? "fill-response": ""}"  src="figures/${figure.figure}".jpg />
+        </a>` : html`<img  class="${!hasResponse? "fill-response": ""}" src="figures/${figure.figure}.jpg" />`}
       `
     }
     const html = htm.bind(h)

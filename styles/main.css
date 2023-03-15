@@ -206,51 +206,8 @@ time {
 .Answer.flip-figure {
   flex-direction: row-reverse;
 }
-.Answer > .fill-response img {
+.Answer .fill-response {
   flex-grow: 1;
   margin: 0.25em;
   max-width: 100%;
-}
-figure img {
-  width:10em;
-}
-.Ability,
-Communication {
-  padding: 0.1em;
-}
-
-.Communication {
-  margin-bottom: 0.25em;
-}
-
-.Communications {
-  grid-area: Communications;
-}
-
-.PromptSkills {
-  display: flex;
-  list-style: square;
-  list-style-position: inside;
-  flex-wrap: wrap;
-  font-weight: 300;
-  font-size: 0.75em;
-  justify-content: center;
-}
-
-.PromptSkills li {
-  /* center contents inside element*/
-  justify-content: center;
-  align-items: center;
-
-  margin: 0.25em;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0.25em;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: var(--emphasis-color-foreground);
-}
-
-.PromptSkills li:first-child {
-  list-style: none;
 }

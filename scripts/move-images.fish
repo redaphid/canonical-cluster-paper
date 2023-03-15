@@ -18,5 +18,6 @@ end
 move-images
  while true
     fswatch -1 5 ~/Downloads
+    sleep 5
     move-images
 end

@@ -82,7 +82,7 @@
                 }
               },
               {
-                "response": "#### Authorization and Authentication Egress Filters\n_warning: we are entering the area in which performance could be a concern. Using the OPA service is a good way to reason about this approach, but other methods can be used to accomplish the same effect._\n\n\nYou may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. As a result, a service within a pod may need to make assumptions regarding the security model.\n"
+                "response": "#### Authorization and Authentication Egress Filters\n_warning: we are entering the area in which performance could be a concern. Using the OPA service is a good way to reason about this approach, but other methods can be used to accomplish the same effect. An example of this is [generating SQL from OPA policies](https://blog.openpolicyagent.org/write-policy-in-opa-enforce-policy-in-sql-d9d24db93bf4), but I am not a fan of this as it requires services to have special knowledge re: OPA._\n\n\nYou may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. As a result, a service within a pod may need to make assumptions regarding the security model.\n"
               },
               {
                 "response": "One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.\n"
@@ -106,7 +106,14 @@
                 "response": "_this, of course, has performance and pagination implications, but that's outside of the scope of the experiment_.\n"
               },
               {
-                "response": "We can even run this policy as a filter on a different microservice, as long as enough variables are applied via partial evaluation.\n"
+                "response": "We can even run this policy as a filter on a different microservice, as long as enough variables are applied via partial evaluation. This is a bit trickier though, and this answer is already ludicrously long. Just keep in mind that the resources returned by this microservice + selected policy would filtered __again__ by the egress filter on the microservice pod.\n"
+              },
+              {
+                "response": null,
+                "figure": {
+                  "figure": "opa-policy-filtering-other-domains",
+                  "miro": "3458764548863225249"
+                }
               }
             ]
           },

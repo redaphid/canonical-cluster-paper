@@ -123,7 +123,10 @@
                 }
               },
               {
-                "response": "#### Conclusion\nI hope that the above description of my experimental cluster design is enough to demonstrate some of my security engineering experience - particularly with regards to OPA. I plan on referring to this answer in subsequent prompts.\n\nI hope somebody took the time to read this, and that it was at least somewhat understandable. It was a lot of work recreating this from memory! Thanks for giving me a soapbox.\n"
+                "response": "Finally, the OPA policy that filters responses doesn't have to be the same policy that gates the requests. They can be totally unrelated. I reused the gate filter in the above examples to demonstrate how much mileage you can get out of a single policy using this architecture.\n"
+              },
+              {
+                "response": "#### Ok, well hopefully that was enough\nI hope that the above description of my experimental cluster design is enough to demonstrate some of my security engineering experience - particularly with regards to OPA. I plan on referring to this answer in subsequent prompts.\n\nI hope somebody took the time to read this, and that it was at least somewhat understandable. It was a lot of work recreating this from memory! Thanks for giving me a soapbox.\n"
               }
             ]
           },

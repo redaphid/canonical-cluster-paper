@@ -251,7 +251,7 @@ doc:
         answers:
         - response: |
             Yes, I would describe myself as a high quality coder.
-            I think it comes down to philosophy, development habits, and experience.
+            I think it all boils down to philosophy, with some experience mixed in.
 
             #### Philosophy
             I have a syncretic coding philosophy that I've developed over the years, and love to talk about. Not much of my philosophy is novel, but I steal a lot from others. To wit:
@@ -281,7 +281,10 @@ doc:
 
             I feel a major part of our job is the fight against entropy, and finding the simplest way to accomplish our goals.
 
-            #### Development Habits
+            I've mentioned a few times that I pride myself in being a generalist. And one of the reasons for this is I think it's good for you. It keeps the mind flexible, and just knowing what's out there in our huge field of work gives you more "tools" in your mental toolbox. I don't have to remember how to do a binary search, but I know that it exists, and what it's for. Knowing things like that helps you to design things better.
+            For example, learning about Rust's "match arms" and "match guards" has caused me to think about switch statements and guard clauses in other languages in a different way. I know if I see a problem that looks like something a match arm would make easier, there might be a development pattern I can use to imitate them, even if I'm not in Rust.
+
+            #### The Game
             The first thing that always comes to mind when I think about my good developer habits is this "game" I play that was originally for pairing. But I "play it" with myself when I can't pair, assuming both roles.
 
             The game goes like this:
@@ -290,6 +293,8 @@ doc:
             1. The roles in the pair are reversed, and the loop continues.
 
             As a heuristic for what constitutes the "simplest possible code", I use the [Transformation Priority Premise](https://en.wikipedia.org/wiki/Transformation_Priority_Premise), moving from simplest->most complex code on this scale, increasing in complexity only when forced by a test to do so.
+
+            I resist the impulse overarchitecting things - sometimes even effectively! This game helps.
 
 
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?

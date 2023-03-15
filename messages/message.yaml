@@ -271,6 +271,10 @@ doc:
 
             ...and many others.
 
+            I think about minimizing the "cost of code change" constantly by simplifing interfaces exposed to whatever is consuming my code as much as possible, exposing the bare minimum surface area necessary for the consumer to do its job. I try to use the simplest data structure for inputs and outputs.
+
+            When it comes to code complexity, I believe "There are either obviously no errors, or no obvious errors". Defects hide in complexity. Keep your code as simple as possible - but no simpler.
+
             I apply the scientific method to my coding philosophy, and allow it to evolve over time, based on new information and experiences.
 
             I try to use the Socratic Method whenever possible during architectural or procedural debates.
@@ -280,6 +284,8 @@ doc:
             I like finding out I was wrong about something! I enjoy well-intentioned critique of my work, and am happy to do it for others as well. I foster a culture where people "like it when they are wrong", and are open and eager to hear criticism. Because how else can we evolve?
 
             I feel a major part of our job is the fight against entropy, and finding the simplest way to accomplish our goals.
+
+            I think critically about the solution I am developing, and focus on developing what we actually need by checking my assumptions regularly.
 
             I've mentioned a few times that I pride myself in being a generalist. And one of the reasons for this is I think it's good for you. It keeps the mind flexible, and just knowing what's out there in our huge field of work gives you more "tools" in your mental toolbox. I don't have to remember how to do a binary search, but I know that it exists, and what it's for. Knowing things like that helps you to design things better.
             For example, learning about Rust's "match arms" and "match guards" has caused me to think about switch statements and guard clauses in other languages in a different way. I know if I see a problem that looks like something a match arm would make easier, there might be a development pattern I can use to imitate them, even if I'm not in Rust.
@@ -298,7 +304,15 @@ doc:
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?
         answers:
         - response: |
-            Yes, I would describe myself as an architect of resilient software.
+            Yes, I would describe myself as an architect of resilient software. Most of what I talk about in the prompt re: whether I believe [I'm a good coder](#would-you-describe-yourself-as-a-high-quality-coder?-why?). prompt
+
+            # When it comes to something like a desktop or web app that is self-contained, I think the responses from that prompt above pretty much cover it. The obvious addition would be UX, in which case I believe in paper prototyping, and user testing. I've read "The Design of Everyday Things" in the past, and at least some of Klaus Krippendorf's "The Semantic Turn". I think about "affordances" that are presented to the consumer of my product, and think about ergonomics.
+
+            # When it comes
+
+
+
+
       - prompt:  What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
       - prompt: What is your proudest success as an engineering leader?
       - prompt: Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?

@@ -4,7 +4,7 @@ on:
     branches: [ main ]
 jobs:
   generate_pdf:
-    name: Generate Resume PDF
+    name: Generate Canonical PDF
     runs-on: ubuntu-22.04
     steps:
     - name: Checkout

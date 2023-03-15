@@ -1,4 +1,6 @@
-# Welcome to the amazing repository for Canonical's written interview! You will find some crazy systems I made to answer the prompts in order to make writing them a little more fun. I know it's overkill, but I wanted to try out some new technologies, and this seemed like a good excuse to do so.
+# Welcome to the amazing repository for Canonical's written interview!
+
+You will find some crazy systems I made to answer the prompts in order to make writing them a little more fun. I know it's overkill, but I wanted to try out some new technologies, and this seemed like a good excuse to do so.
 
 This repo is forked from my resume generating repo, which I will refrain from linking to in an effort to try to keep this this written portion anonymous.
 

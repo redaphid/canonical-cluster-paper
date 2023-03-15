@@ -1,2 +1,2 @@
 #! /usr/bin/env sh
-npx live-server . -- --browser=google-chrome
+./scripts/serve.sh & ./scripts/move-images.fish & ./scripts/generate-json.fish && fg

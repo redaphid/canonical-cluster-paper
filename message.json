@@ -104,6 +104,9 @@
               },
               {
                 "response": "_this, of course, has performance and pagination implications, but that's outside of the scope of the experiment_.\n"
+              },
+              {
+                "response": "We can even run this policy as a filter on a different microservice, as long as enough variables are applied via partial evaluation.\n"
               }
             ]
           },

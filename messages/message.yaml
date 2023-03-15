@@ -196,6 +196,24 @@ doc:
 
             I prefer Docker Swarm, but I know I'm a minority at this point.
 
+            Regarding LXD: I just looked in to it, and it sounds pretty awesome! I haven't tried it, but it sounds like it might be helpful for me.
+
+            I (like any normal person) run a gaming vm inside my Linux box. Just because I don't want to have a "real" machine in my house that runs windows.
+
+            ```
+            <username>@mortal ~> sudo virsh list --all
+            Id   Name          State
+            ------------------------------
+            1    nx3           running
+            2    bf3           running
+            3    win7-2009     running
+            -    bt2_testbed   shut off
+            -    face          shut off
+            -    face2         shut off
+
+            ```
+            The little I just read about LXD sounds like it might be a rabbithole I should avoid until I fill out the rest of this document.
+
         - response:
     - title: General Software Engineering Experience
       prompts:

@@ -85,7 +85,9 @@
                 "response": "#### Authorization and Authentication Egress Filters\n_warning: we are entering the area in which performance could be a concern. Using the OPA service is a good way to reason about this approach, but other methods can be used to accomplish the same effect._\n\n\nYou may have noticed an asymmetry in the [authorization barrier](#authorization-barrier). While the request to perform an action is gated by an OPA policy, the response (egress from the pod) is not. As a result, a service within a pod may need to make assumptions regarding the security model.\n"
               },
               {
-                "response": "One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.\n",
+                "response": "One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.\n"
+              },
+              {
                 "figure": {
                   "figure": "opa-policy-gating-a-single-resource",
                   "miro": "3458764548858771011"

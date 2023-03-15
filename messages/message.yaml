@@ -141,7 +141,7 @@ doc:
 
         - response: |
             One way to think about policies is that they are 'gates' that control access to a resource. This is the most common use case of an OPA policy.
-          figure:
+        - figure:
             figure: opa-policy-gating-a-single-resource
             miro: '3458764548858771011'
         - response: |

@@ -237,7 +237,7 @@ doc:
             - [here](https://github.com/loqwai/extra-color-perception)'s a repo where I make hardware pendants that each glow a different color, and that color changes depending on how physically close you are to someone else wearing a pendant with a different color. (C++ on esp32s, using platform.io).
             - [here](https://github.com/loqwai/carbonaria)'s a repo where I learn Rust by making a game with my friend!
             - [here](https://github.com/redaphid/fish-shell-stuff)'s a repo of all my Fish shell functions I clone down when I set up a new machine or VM.
-            - [here](https://github.com/redaphid/resume-canonical)'s the repo I used to generate this document. Mostly using Javascript, HTML, and madness.
+            - [here](https://github.com/redaphid/resume-canonical)'s the repo I used to generate this document. Mostly using Javascript, HTML, Github Actions, and madness.
 
             I've used Go somewhat recently for professional, closed-source work. I'm catching up with Python to learn more about the latest AI craze. I coded in Java and C# in the distant past, when I didn't know any better.
 
@@ -245,7 +245,7 @@ doc:
 
             The particulars of a given database haven't affected my career much so far. I try to get to the point where I'm abstracting the details as soon as possible, and rarely think about it again unless some problem crops up.
 
-            As far as development environments are concerned, I'm all-in on vscode and linux these days. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the linux kernel to support this hardware! I want out of Mac-land.
+            Regarding development environments, I'm all-in on vscode and linux. I bought Red Hat 6.0 at a Gamestop in high school by saving up my lunch money. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the linux kernel to support this hardware! I want out of Mac-land.
 
       - prompt: Would you describe yourself as a high quality coder? Why?
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?

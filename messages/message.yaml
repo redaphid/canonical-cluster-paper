@@ -72,7 +72,7 @@ doc:
             Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
         - response: |
             #### Authentication Barrier
-            An OPA service was installed before Envoy at the ingress gateway of the cluster. OPA would evaluate the request after obtaining information necessary to reason about authentication legitimacy. This information could be provided as a result of an OIDC workflow, some kind of Active Directory authentication, or a variety of other authorization methods we supported via an adapter pattern described [later in this document](#authorization-adapters). This policy could also be a passthrough, and assume whatever security handshake that happened earlier in the request flow validated user identity correctly.
+            An OPA service was installed alongside Envoy at the ingress gateway of the cluster. OPA would evaluate the request after obtaining information necessary to reason about authentication legitimacy. This information could be provided as a result of an OIDC workflow, some kind of Active Directory authentication, or a variety of other authorization methods we supported via an adapter pattern described [later in this document](#authorization-adapters). This policy could also be a passthrough, and assume whatever security handshake that happened earlier in the request flow validated user identity correctly.
 
             _note: the authorization data in the diagram is separated logically from the request, but the information in practice would likely come from the request._
           figure:
@@ -102,7 +102,7 @@ doc:
             After the authentication barrier is passed, any subsequent OPA policy evaluation can assume that the identity presented to the policy for evaluation is accurate, which allows for simple, decoupled policies to govern authorization on a per-service pod basis. You may notice below the similarity between the cluster-protecting authentication barrier, and this authorization barrier.
 
         - response: |
-            An OPA service was injected into each Kubernetes pod, layered above Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio).
+            An OPA service was injected into each Kubernetes pod, alongside Envoy. Work was being done on embedding OPA as a plugin to Envoy (also injected by default in Istio).
             Also by default, the OPA service would only do the authorization gating on ingress traffic - though evolutions of this design allowed for OPA to filter egress traffic as well. But we'll get to that later.
           figure:
             figure: authorization-barrier

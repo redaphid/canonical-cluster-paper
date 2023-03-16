@@ -346,6 +346,7 @@ doc:
               I'm sounding like a broken record now, but I am extremely proud of the work I did on the Meshblu platform. It's architecture and design is great, the system was functional and processing 4 million messages a day. Translating the configuration and messaging systems of hundreds of types of devices and services into one \*ahem\* **canonical** system and having the system work well was a huge success.
 
       - prompt: Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?
+
       - prompt: Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?
       - prompt:  How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?
         answers:

@@ -11,12 +11,58 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
+
     const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
     const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
     window.getWidgetFromMiroLink = getWidgetFromMiroLink
 
-    const defer = () => new Promise(resolve => requestAnimationFrame(resolve));
+    const defer = () => new Promise(resolve => requestAnimationFrame(resolve))
+
     const titleToId = title => title.toLowerCase().replace(/ /g, '-')
+    const getListOfPromptNamesWithoutAnswers = () => {
+      return res.doc.main.reduce((acc, section) => {
+        return acc.concat(section.prompts.reduce((acc, prompt) => {
+          return acc.concat(prompt?.answers?.length ? [] : [prompt.prompt])
+        }, []))
+      }, [])
+    }
+    console.log(getListOfPromptNamesWithoutAnswers())
+    const promptsWithoutAnswers = () => {
+      return res.doc.main.reduce((acc, section) => {
+        return acc + section.prompts.reduce((acc, prompt) => {
+          return acc + (prompt?.answers?.length ? 0 : 1)
+        }, 0)
+      }, 0)
+    }
+
+    const promptsWithAnswers = () => {
+      return res.doc.main.reduce((acc, section) => {
+        return acc + section.prompts.reduce((acc, prompt) => {
+          return acc + (prompt?.answers?.length ? 1 : 0)
+        }, 0)
+      }, 0)
+    }
+
+    const getPrompt = id => {
+      const prompt = res.doc.main.reduce((acc, section) => {
+        return acc + section.prompts.reduce((acc, prompt) => {
+          return acc + (prompt?.answers?.length ? 1 : 0)
+        }, 0)
+      }, 0)
+    }
+
+    const isEditingMode = () => {
+      const urlParams = new URLSearchParams(window.location.search)
+      return urlParams.get('edit') === 'true'
+    }
+
+    const editMode = isEditingMode()
+
+    console.log({
+      total: promptsWithoutAnswers() + promptsWithAnswers(),
+      withAnswers: promptsWithAnswers(),
+      withoutAnswers: promptsWithoutAnswers()
+    })
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
     // Yes, this is a hack. I would normally have a Link component, but since I'm using markdown this will have to do.
@@ -24,11 +70,23 @@
       await defer()
       window.history.replaceState({}, document.title, window.location.pathname)
     }
+    const Progress = () => {
+      const total = promptsWithoutAnswers() + promptsWithAnswers()
+      const withAnswers = promptsWithAnswers()
+      const withoutAnswers = promptsWithoutAnswers()
+      return html`
+        <div class="Progress">
+          <h3>Progress</h3>
+          <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
+          <p>${withoutAnswers} / ${total} (${Math.round((withoutAnswers / total) * 100)}%)</p>
+        </div>    `
+    }
     const Doc = ({ doc }) => {
       return html`
           <div class="Doc" onClick=${removeElementIdFromURL}>
             <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
             <div class="Info">
+              ${editMode ? html`<${Progress} />` : ''}
             </div>
             <div class="Logo">
               <img src="${doc.logo}" alt="logo" />
@@ -44,7 +102,15 @@
           </div>
           `
     }
-
+    const Completion = ({ total, withAnswers, withoutAnswers }) => {
+      return html`
+        <div class="Completion">
+          <h3>Completion</h3>
+          <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
+          <p>${withoutAnswers} / ${total} (${Math.round((withoutAnswers / total) * 100)}%)</p>
+        </div>
+      `
+    }
     const Heading = ({ title, miro, repo }) => {
       return html`
         <section class="Identity">
@@ -94,7 +160,6 @@
     }
 
     const Figure = ({ figure, hasResponse }) => {
-      console.log({figure, hasResponse})
       return html`
        ${figure.miro ? html`
         <a id="figure-${figure.figure}" href=${getMiroLink(figure.miro)} target="_blank">

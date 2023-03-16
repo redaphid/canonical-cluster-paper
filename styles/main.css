@@ -211,3 +211,18 @@ time {
   margin: 0.25em;
   max-width: 100%;
 }
+/* Always see Completion widget on screen */
+.Progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--emphasis-color-foreground);
+  color: var(--emphasis-color);
+  padding: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  font-weight: var(--font-weight-normal);
+  z-index: 2;
+  border: 0.25em solid var(--emphasis-color);
+
+}

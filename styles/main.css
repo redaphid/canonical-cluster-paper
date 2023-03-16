@@ -15,7 +15,7 @@ body {
   --figure-size:30em;
   font-family: 'Ubuntu', Symbol;
   font-size: 0.85em;
-  max-width: 8.5in;
+  /* max-width: 8.5in; */
   color: var(--color-foreground);
 }
 
@@ -80,16 +80,16 @@ time {
 .Doc {
   display: grid;
   grid-template-areas:
-    'Logo Identity Progress'
-    'Info Intro Progress'
-    'Info Main Progress'
+    'Logo Identity'
+    'Info Intro'
+    'Info Main'
     ;
   column-gap: 0.1em;
   row-gap: 0.1em;
   background-color: #AEA79F;
-  /* grid-template-columns: 50px; */
+  max-width: 8.5in;
 }
-.Intro{
+.Intro {
   grid-area: Intro;
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -226,4 +226,10 @@ time {
   border: 0.25em solid var(--emphasis-color);
   width: calc(100% - 8.5in - 1em);
 
+}
+/* Hide Progress in print form */
+@media print {
+  .Progress {
+    display: none;
+  }
 }

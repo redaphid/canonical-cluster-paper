@@ -58,11 +58,13 @@
 
     const editMode = isEditingMode()
 
-    console.log({
+    const progress = {
       total: promptsWithoutAnswers() + promptsWithAnswers(),
       withAnswers: promptsWithAnswers(),
-      withoutAnswers: promptsWithoutAnswers()
-    })
+      withoutAnswers: promptsWithoutAnswers(),
+      remainingPromptsWithoutAnswers: getListOfPromptNamesWithoutAnswers()
+    }
+
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
 
     // Yes, this is a hack. I would normally have a Link component, but since I'm using markdown this will have to do.
@@ -70,10 +72,8 @@
       await defer()
       window.history.replaceState({}, document.title, window.location.pathname)
     }
-    const Progress = () => {
-      const total = promptsWithoutAnswers() + promptsWithAnswers()
-      const withAnswers = promptsWithAnswers()
-      const withoutAnswers = promptsWithoutAnswers()
+    const Progress = ({progress}) => {
+      const { total, withAnswers, withoutAnswers } = progress
       return html`
         <div class="Progress">
           <h3>Progress</h3>
@@ -86,7 +86,7 @@
           <div class="Doc" onClick=${removeElementIdFromURL}>
             <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
             <div class="Info">
-              ${editMode ? html`<${Progress} />` : ''}
+              ${editMode ? html`<${Progress} progress=${progress}/>` : ''}
             </div>
             <div class="Logo">
               <img src="${doc.logo}" alt="logo" />

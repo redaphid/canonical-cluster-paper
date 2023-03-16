@@ -76,7 +76,9 @@ time {
   font-weight: 300;
   font-size: 0.90em;
 }
-
+.Root {
+  display: flex;
+}
 .Doc {
   display: grid;
   grid-template-areas:
@@ -212,8 +214,10 @@ time {
   max-width: 100%;
 }
 /* Always see Completion widget on screen */
-.Progress {
+.Edit {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   right: 0;
   background-color: var(--emphasis-color-foreground);
@@ -225,7 +229,27 @@ time {
   z-index: 2;
   border: 0.25em solid var(--emphasis-color);
   width: calc(100% - 8.5in - 1em);
+  max-height: 100%;
 
+}
+.RemainingPrompts {
+  max-height: 100%;
+  overflow: scroll;
+}
+.RemainingPrompts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.1em;
+}
+.RemainingPrompts li {
+  margin-bottom: 0.5em;
+}
+.Edit h3 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  /* padding: 0.1em; */
+  border-bottom: 0.05em solid var(--emphasis-color);
 }
 /* Hide Progress in print form */
 @media print {

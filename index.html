@@ -85,9 +85,7 @@
       return html`
           <div class="Doc" onClick=${removeElementIdFromURL}>
             <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
-            <div class="Info">
-              ${editMode ? html`<${Progress} progress=${progress}/>` : ''}
-            </div>
+            <div class="Info"/>
             <div class="Logo">
               <img src="${doc.logo}" alt="logo" />
             </>
@@ -101,6 +99,39 @@
               </div>
           </div>
           `
+    }
+    const Root = ({data}) => {
+      return html`
+        <div class="Root">
+          <${Doc} doc=${data.doc} />
+          ${editMode ? html`<${Edit} data=${data} />` : ''}
+        </div>
+      `
+    }
+    const Edit = ({ data }) => {
+      const { doc } = data
+      return html`
+        <div class="Edit">
+          <${Progress} progress=${progress} />
+          <${RemainingPrompts} remainingPrompts=${progress.remainingPromptsWithoutAnswers} />
+        </div>
+      `
+    }
+    const RemainingPrompts = ({ remainingPrompts }) => {
+      return html`
+        <div class="RemainingPrompts">
+          <h3>Remaining Prompts</h3>
+          <ul>
+            ${remainingPrompts.map(prompt => html`
+              <li>
+                <a href="#${titleToId(prompt)}">${prompt}
+                  ${prompt}
+                </a>
+                </li>
+            `)}
+          </ul>
+        </div>
+      `
     }
     const Completion = ({ total, withAnswers, withoutAnswers }) => {
       return html`
@@ -168,7 +199,7 @@
       `
     }
     const html = htm.bind(h)
-    render(html`<${Doc} doc=${res.doc}/>`, document.body)
+    render(html`<${Root} data=${res}/>`, document.body)
   </script>
 
 </head>

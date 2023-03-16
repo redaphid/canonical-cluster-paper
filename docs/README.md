@@ -2,7 +2,7 @@
 
 You will find some crazy systems I made to answer the prompts in order to make writing them a little more fun. I know it's overkill, but I wanted to try out some new technologies, and this seemed like a good excuse to do so.
 
-Were these the best solutions to writing a document? Definitely. This is the first time such software has been written.
+Were these the best technologies to writing a document? Definitely. This is the first time such software has been written.
 
 The code is bad. But you can get some sense of my ability. And some of these technologies were new to me!
 

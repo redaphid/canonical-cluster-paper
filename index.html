@@ -19,6 +19,12 @@
     const defer = () => new Promise(resolve => requestAnimationFrame(resolve))
 
     const titleToId = title => title.toLowerCase().replace(/ /g, '-')
+    const getEditQueryParam = () => window.location.search.split('edit=')[1]
+
+    if (getEditQueryParam()) {
+      localStorage.setItem('editMode', getEditQueryParam())
+    }
+    const editMode = localStorage.getItem('editMode') === 'true'
     const getListOfPromptNamesWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {
@@ -50,13 +56,6 @@
         }, 0)
       }, 0)
     }
-
-    const isEditingMode = () => {
-      const urlParams = new URLSearchParams(window.location.search)
-      return urlParams.get('edit') === 'true'
-    }
-
-    const editMode = isEditingMode()
 
     const progress = {
       total: promptsWithoutAnswers() + promptsWithAnswers(),

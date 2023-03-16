@@ -273,6 +273,7 @@ doc:
             * Ping-Pong pairing.
             * "The best code is no code at all"
             * The "[Transformation Priority Premise](https://en.wikipedia.org/wiki/Transformation_Priority_Premise)" as a heuristic for code complexity.
+            * The Principle of Least Surprise
 
             ...and many others.
 
@@ -404,9 +405,10 @@ doc:
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
       - prompt: Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
         draft: true
+        link_to_question: 'http://localhost:8080/?edit=true#outline-your-thoughts-on-quality-in-software-development--what-practices-are-most-effective-to-drive-improvements-in-quality-'
         answers:
         - response: |
-            sdsd
+            Hm. If we're talking about how to write quality code, I've answered the question pretty thoroughly [when talking about why I think I'm a high-quality coder](#would-you-describe-yourself-as-a-high-quality-coder--why-). If we're talking about improving quality at a team level, I usually focus on collaboration and enthusiasm. Coding is fun! I have an open discussion with whoever is interested re: heuristics when it comes to "quality code". We can agree or disagree about them, and revisit them from time to time. But we at least know that they exist, and we have a lexicon for them.
 
       - prompt: Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?

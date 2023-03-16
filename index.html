@@ -18,7 +18,8 @@
 
     const defer = () => new Promise(resolve => requestAnimationFrame(resolve))
 
-    const titleToId = title => title.toLowerCase().replace(/ /g, '-')
+    //replace all non-alphanumeric charachters with dashes
+    const titleToId = title => title.toLowerCase().replace(/[^a-z0-9]/g, '-')
     const getEditQueryParam = () => window.location.search.split('edit=')[1]
 
     if (getEditQueryParam()) {

@@ -179,7 +179,12 @@
             ]
           },
           {
-            "prompt": "What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led."
+            "prompt": "What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.",
+            "answers": [
+              {
+                "response": "I was Staff at Citrix for 3 years, during which time I would sometimes manage multiple teams in order to accomplish a goal. At Octoblu (startup acquired by Citrix), I co-architected and managed a few different initiatives -  the major ones being the Meshblu 2.0 permission system referenced earlier [here](#experience-with-meshblu), and the \"Flow Engine\"\n"
+              }
+            ]
           },
           {
             "prompt": "What is your proudest success as an engineering leader?"

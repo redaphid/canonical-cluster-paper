@@ -353,7 +353,7 @@ doc:
             This is an interesting thing to try to quantify.
             I think the best way I can answer this is via a few personal anecdotes, and some reflection as to what that means.
 
-            I first used Linux when I bought Red Hat 6.0 from a Gamestop by saving my lunch money in high school. It didn't work for teenage me. I couldn't get the installation to finish. So I had to retreat.
+            I first used Linux when I bought Red Hat 6.0 from a Gamestop by saving my lunch money in high school. It didn't work for teenage me. I couldn't get the installation to finish. I had to retreat.
 
             Freshman year in college I decided to get Gentoo (stage 2) running on an old P4 with 128mb of ram, because I was trying to use it as a DVR, and needed all the performance I could get. It compiled for easily over 12 hours. The beeping from the speaker in the motherboard all night I'm sure haunts my then-roommate to this day. But I'm sure all the effort I put in to removing all printing capabilities from all the software on that distro via some kind of flag system emerge used was "worth it". And it worked.
 
@@ -392,11 +392,14 @@ doc:
             system.sources
             vscode.list
             ```
-            _yes, it's Pop :/_
+            _yes, it is Pop :/_
 
             I'm not sure how these anecdotes roll up to a quantitative measure of my Linux knowledge, but I think you get the gist.
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
+        answers:
+        - response: |
+            sadasd
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
       - prompt: Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
@@ -408,7 +411,18 @@ doc:
     - title: Industry leadership experience
       prompts:
       - prompt: Describe your speaking experience at industry events and conferences
+        answers:
+        - response: |
+            I've spoken at a few conferences, and ran quite a few hackathons. I think my biggest talk was at NodeConf, where I spoke negatively about Kubernetes. haha. I have since conceded the victory to Kubernetes.
+
+            I was on the local speaking circuit a bit w/regards to IoT, and ran a few workshops sponsored by Intel to get the word out about their IoT offerings.
+
+            Personally, I would teach Javascript in a monthly meetup, and go to local hackerspaces to teach some people to use the tools I was using, and they taught me theirs. I would also go to local meetups and talk about the things I was working on.
+
       - prompt: Are you a thought leader in any particular area of technology?
+        answers:
+        - response: |
+            Wellll I have a lot of thoughts about software development practices, but I don't tell many people about them, and I don't know how unique they are. Except maybe that cluster design?  tl;dr "no".
       - prompt: Describe any experience working with startups. What did you draw from that experience that would be relevant for this application?
       - prompt: Describe any experience working in a public company. What is important for your colleagues to know about being a public company?
     - title: Education

@@ -32,7 +32,6 @@
         }, []))
       }, [])
     }
-    console.log(getListOfPromptNamesWithoutAnswers())
     const promptsWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
@@ -65,12 +64,6 @@
     }
 
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
-
-    // Yes, this is a hack. I would normally have a Link component, but since I'm using markdown this will have to do.
-    const removeElementIdFromURL = async () => {
-      await defer()
-      window.history.replaceState({}, document.title, window.location.pathname)
-    }
     const Progress = ({progress}) => {
       const { total, withAnswers, withoutAnswers } = progress
       return html`
@@ -82,7 +75,7 @@
     }
     const Doc = ({ doc }) => {
       return html`
-          <div class="Doc" onClick=${removeElementIdFromURL}>
+          <div class="Doc">
             <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
             <div class="Info"/>
             <div class="Logo">

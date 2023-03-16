@@ -284,7 +284,7 @@
             "prompt": "What sort of high school student were you? Outside of class, what were your interests and hobbies?  What would your high school peers remember you for, if we asked them?",
             "answers": [
               {
-                "response": "I was a good student in high school - people thought of me as an academic. I was extremely in to computers, and so I went to LAN parties a lot with my fellow techies. I liked paintball. I took Wing Chun Kung Fu. I worked as a programmer after school at a place I [talk about later](#describe-some-high-school-achievements-considered-exceptional-by-peers-and-staff). I went to punk rock shows.\n\nMy high school peers remember me as a funny, good-natured, intelligent person who occasionally wrote very deep poetry in his notebooks. And obviously, yes, they remember me as a computer nerd. But they remember my attitude first, which I appreciate.\n"
+                "response": "I was a good student in high school - people thought of me as an academic. I was extremely in to computers, and so I went to LAN parties a lot with my fellow techies. I liked paintball. I took Wing Chun Kung Fu. I worked as a programmer after school at a place I [talk about later](#describe-some-high-school-achievements-considered-exceptional-by-peers-and-staff). I went to punk rock shows. I liked cars.\n\nMy high school peers remember me as a funny, good-natured, intelligent person who occasionally wrote very deep poetry in his notebooks. And obviously, yes, they remember me as a computer nerd. But they remember my attitude first, which I appreciate.\n"
               }
             ]
           },
@@ -300,15 +300,25 @@
             "prompt": "Describe some high school achievements considered exceptional by peers and staff",
             "answers": [
               {
-                "response": "Did I mention I was the best at English?\n\nThe English teachers really were pretty impressed by me. As were, of course, the Computer Science teachers. They employed me to do networking in classrooms and help various staff members with their computers.\n\nI think this is a good place to talk about how I got my first job.\nI was recruited by a subcontractor to Honeywell who was working on flight management systems for Airbus A320 aircraft and looking for high school kids he could pay $11/hr to to do some of his work for him when I was 16. This was awesome.\nThe staff were pretty impressed, as were my friends and parents. I had a great time, learned a lot, and made a lot of mistakes that I sincerely hope were caught by somebody.\n"
+                "response": "Did I mention I was the best at English?\n\nThe English teachers really were pretty impressed by me. As were, of course, the Computer Science teachers. They employed me to do networking in classrooms and help various staff members with their computers.\n\nI was recruited by a subcontractor to Honeywell who was working on flight management systems for Airbus A320 aircraft and looking for high school kids he could pay $11/hr to to do some of his work for him when I was 16. This was awesome.\nThe staff were pretty impressed, as were my friends and parents. I had a great time, learned a lot, and made a lot of mistakes that I sincerely hope were caught by somebody.\n"
               }
             ]
           },
           {
-            "prompt": "Which university courses did you perform best at? How did you rank in your degree?"
+            "prompt": "Which university courses did you perform best at? How did you rank in your degree?",
+            "answers": [
+              {
+                "response": "I did the best in computer science. I went to a liberal arts school, but I think I took every CS class they offered. It is a small school, and I bet the teachers remember me. I insisted on taking 3d graphics my first semester freshman year, and the school was flexible enough to allow me to do it. It was pretty rough going in to that class without taking any algorithm or datastructure classes yet, but I had been programming for fun and work long enough that I did pretty well.\n\n I don't think there were 'rankings' for my degree.\n"
+              }
+            ]
           },
           {
-            "prompt": "Outside of class, what were your interests and where did you spend your time?"
+            "prompt": "Outside of class, what were your interests and where did you spend your time?",
+            "answers": [
+              {
+                "response": "I spent a lot of time driving around, getting lost in the Pacific Northwest, and - obviously at this point - messing with computers.\nMy school had a program in which they would give you a \\*house\\* instead of a dorm room if you had an academic theme and put on a few events related to that theme per semester.\n\nThe program was similar to the fraternity/sorority system.\n\nMy friends and I founded \"Robothouse\", with 8 of us living in a smallish 2-story house, with me in the basement. We had a permanent LAN party, and sometimes big ones that would fill the house when friends would stop by.\n\nI also worked part-time for the school, writing software that interfaced with smart routers via SNMP. This was during the age when viruses were running wild in Windows-world. All the students on campus were connected to the same LAN, and were all pirating software for years. When the semester started, 1000s of these computers would plug in and viruses spread like wildfire.\n"
+              }
+            ]
           },
           {
             "prompt": "What did you achieve at university that you consider exceptional?"

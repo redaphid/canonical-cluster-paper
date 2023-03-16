@@ -486,6 +486,9 @@ doc:
             My job was to work on this software that would scan each computer when they signed up to use the network for the first time using Nessus. If Nessus found any critical vulnerabilities, we'd lock their computer in to a vlan where they could only access Windows Update (and maybe a few other services). Then they could update, try again, and the cycle would potentially repeat.
 
       - prompt: What did you achieve at university that you consider exceptional?
+        answers:
+        - response: |
+            I took the hardest possible computer science classes first, then wrapped around and took the 1-200 levels to finish my degree when I needed a break. Founding Robothouse was pretty cool, and it went on for a couple of years after I graduated. Which made me pretty happy.
       - prompt: At high school or university, what leadership roles did you take on?
     - title: Context
       prompts:

@@ -182,6 +182,8 @@ doc:
         - response: |
             I have used Docker extensively throughout my personal and professional life. I'm running a Minecraft server, a duckdns image, and a Plex media server on this machine as I type this! I also have Podman, but ironically I have to run Podman with sudo, and I can run Docker without. Which, come to think of it, is a pretty big security vulnerability on my home machine...
 
+            I often set up development environments for people that use docker compose liberally if we're working on a nontrivial project that requires multiple services. I also use Docker to run tests in CI/CD pipelines. In fact, I often use the same docker-compose.yml file for both development and CI/CD, spinning up the entire stack for testing before deployment.
+
             I have a few personal repos that at least demonstrate my interest in Docker that I might as well list off:
              - [here's a repo](https://github.com/redaphid/docker-compose-ecs-test) of me messing around with Docker Compose deploying to AWS! There is almost literally nothing in it, but if you're curious you can go through the commits and see what I was trying out.
              - [here's an older repo](https://github.com/redaphid/jad) of me using Docker in various ways on a home server. In the `services/plex` directory you can see me do a little fanciness where I encrypt my Plex server preferences so I don't leak my token and can still have a public repo.
@@ -304,9 +306,24 @@ doc:
       - prompt:  Would you describe yourself as an architect of resilient software? If so, why, and in which sorts of applications?
         answers:
         - response: |
-            Yes, I would describe myself as an architect of resilient software. Most of what I talk about in the prompt re: whether I believe [I'm a good coder](#would-you-describe-yourself-as-a-high-quality-coder?-why?). prompt
+            Yes, I would describe myself as an architect of resilient software.
 
-            # When it comes to something like a desktop or web app that is self-contained, I think the responses from that prompt above pretty much cover it. The obvious addition would be UX, in which case I believe in paper prototyping, and user testing. I've read "The Design of Everyday Things" in the past, and at least some of Klaus Krippendorf's "The Semantic Turn". I think about "affordances" that are presented to the consumer of my product, and think about ergonomics.
+            Obviously the statements re: being a [high-quality coder](#would-you-describe-yourself-as-a-high-quality-coder?-why?) apply here. I'm guessing that is a given, but I figured I'd refer to it just in case.
+
+            One way characterize architectural resiliency is by how well the system recovers from failure. And failures will happen.
+
+            One of the things I do is (paradoxically) make sure a system crashes out early if some critical expectation is not met. By making things crash as soon as possible, you an expectation that things may be crashing all the time, which causes resiliency to be a concern from the beginning.
+
+            I'm excited by the idea of [Principles of Chaos](http://principlesofchaos.org/).
+
+            I think of resiliency not as a "feature" of a system, but rather a property of the system. It's not easy to add to a system after the fact. It's something you have to design into the system from the beginning.
+          # I think any non-trivial software development needs continuous delivery and continuous integration. Which is not a surprising statement, but one I think is important to make. I usually make my CI pipeline spin up a system that is as close to production as is feasable, and do integration tests on them before deployment.
+
+
+
+          # I mentioned earlier my liberal usage of Docker in development and production, which help with resiliency by holding constantthe environment of the surrounding services as they are started.
+
+          # When it comes to something like a desktop or web app that is self-contained, I think the responses from that prompt above pretty much cover it. The obvious addition would be UX, in which case I believe in paper prototyping, and user testing. I've read "The Design of Everyday Things" in the past, and at least some of Klaus Krippendorf's "The Semantic Turn". I think about "affordances" that are presented to the consumer of my product, and think about ergonomics.
 
             # When it comes
 

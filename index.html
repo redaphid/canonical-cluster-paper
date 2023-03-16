@@ -35,7 +35,7 @@
     const promptsWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + (prompt?.answers?.length && !prompt.inProgress? 0 : 1)
+          return acc + (prompt.answers?.length && !prompt.draft? 0 : 1)
         }, 0)
       }, 0)
     }
@@ -43,7 +43,7 @@
     const promptsWithAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + (prompt?.answers?.length ? 1 : 0)
+          return acc + (prompt?.answers?.length && !prompt.draft ? 1 : 0)
         }, 0)
       }, 0)
     }

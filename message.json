@@ -198,7 +198,13 @@
             "prompt": "Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?"
           },
           {
-            "prompt": "Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?"
+            "prompt": "Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?",
+            "draft": true,
+            "answers": [
+              {
+                "response": "hi\n"
+              }
+            ]
           },
           {
             "prompt": "How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?",
@@ -210,11 +216,7 @@
           },
           {
             "prompt": "Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity",
-            "answers": [
-              {
-                "response": "sadasd\n"
-              }
-            ]
+            "draft": true
           },
           {
             "prompt": "Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?"
@@ -324,7 +326,7 @@
             "prompt": "What did you achieve at university that you consider exceptional?",
             "answers": [
               {
-                "response": "I took the hardest possible computer science classes first, then wrapped around and took the 1-200 levels to finish my degree when I needed a break. Founding Robothouse was pretty cool, and it went on for a couple of years after I graduated. Which made me pretty happy.\n"
+                "response": "I took the hardest possible computer science classes first, then wrapped around and took the 1-200 levels to finish my degree when I needed a break. Founding Robothouse was pretty cool, and it went on for a couple of years after I graduated. Which made me pretty happy.\n\nI received an automatic 'A' in assembly class, without writing much assembly. My professor was making a homemade image manipulation program, and one of the class's assignments was to write the algorithm for some subset of that program. I think it was color normalization for my year.\n\nThere was a competition where, if your algorithm was faster than the teacher's, you got an automatic 'A'. So I made a faster algorithm in C, using tons of compiler flags, and optimization levels for the particular CPU we were running it on. I got an 'A' without writing too much\nassembly.\n\nI then made a header file and a compiler script, and sent it to everyone in the class, saying they could use it if they kept my name in the comments of the header\n"
               }
             ]
           },

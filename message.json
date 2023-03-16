@@ -199,12 +199,7 @@
           },
           {
             "prompt": "Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?",
-            "draft": true,
-            "answers": [
-              {
-                "response": "hi\n"
-              }
-            ]
+            "draft": true
           },
           {
             "prompt": "How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?",
@@ -225,7 +220,13 @@
             "prompt": "Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market"
           },
           {
-            "prompt": "Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?"
+            "prompt": "Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?",
+            "draft": true,
+            "answers": [
+              {
+                "response": "I think the most important thing is to have a culture of quality. I think the best way to do this is to have a culture of learning. I think the best way to do this is to have a culture of trust. I think the best way to do this is to have a culture of respect. I think the best way to do this is to have a culture of empathy. I think the best way to do this is to have a culture of communication. I think the best way to do this is to have a culture of transparency. I think the best way to do this is to have a culture of collaboration. I think the best way to do this is to have a culture of inclusion. I think the best way to do this is to have a culture of diversity. I think the best way to do this is to have a culture of equity. I think the best way to do this is to have a culture of accessibility. I think the best way to do this is to have a culture of sustainability. I think the best way to do this is to have a culture of responsibility. I think the best way to do this is to have a culture of accountability. I think the best way to do this is to have a culture of ownership. I think the best way to do this is to have a culture of autonomy. I think the best way to do this is to ha\n"
+              }
+            ]
           },
           {
             "prompt": "Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?"

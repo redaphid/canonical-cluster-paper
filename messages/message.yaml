@@ -173,6 +173,9 @@ doc:
 
             I hope somebody took the time to read this, and that it was at least somewhat understandable. It was a lot of work recreating this from memory! Thanks for giving me a soapbox.
 
+
+            I am obviously interested in doing more research in this area.
+
       - prompt: Describe your experience integrating OpenID Connect providers or using OpenID Connect libraries in your projects.
         answers:
         - response: |

@@ -35,7 +35,7 @@
     const promptsWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + (prompt?.answers?.length ? 0 : 1)
+          return acc + (prompt?.answers?.length && !prompt.inProgress? 0 : 1)
         }, 0)
       }, 0)
     }
@@ -60,15 +60,30 @@
       total: promptsWithoutAnswers() + promptsWithAnswers(),
       withAnswers: promptsWithAnswers(),
       withoutAnswers: promptsWithoutAnswers(),
-      remainingPromptsWithoutAnswers: getListOfPromptNamesWithoutAnswers()
+      remainingPromptsWithoutAnswers: getListOfPromptNamesWithoutAnswers(),
+      timestamp: Date.now()
+    }
+    // get previous progress
+    let previousProgress = JSON.parse(localStorage.getItem('progress'))
+    // if there is no previous progress, set it
+    if (!previousProgress) {
+      localStorage.setItem('progress', JSON.stringify(progress))
+      previousProgress = progress
+    }
+    // find out how long it's been since the previous progress
+    const timeSinceLastUpdate = progress.timestamp - previousProgress.timestamp
+    // see if we have more prompts answered
+    if (previousProgress?.withAnswers < progress.withAnswers) {
+      localStorage.setItem('progress', JSON.stringify(progress))
     }
 
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
-    const Progress = ({progress}) => {
+    const Progress = ({progress, timeSinceLastProgress}) => {
       const { total, withAnswers, withoutAnswers } = progress
       return html`
         <div class="Progress">
           <h3>Progress</h3>
+          <h4>Since last update: ${timeSinceLastProgress}</h4>
           <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
           <p>${withoutAnswers} / ${total} (${Math.round((withoutAnswers / total) * 100)}%)</p>
         </div>    `
@@ -102,9 +117,12 @@
     }
     const Edit = ({ data }) => {
       const { doc } = data
+      const timeSinceLastProgress = Math.round((Date.now() - previousProgress.timestamp) / 1000)
+      // make time since last progress human readable
+      const timeSinceLastProgressHumanReadable = new Date(timeSinceLastProgress * 1000).toISOString().substr(11, 8)
       return html`
         <div class="Edit">
-          <${Progress} progress=${progress} />
+          <${Progress} progress=${progress} timeSinceLastProgress=${timeSinceLastProgressHumanReadable} />
           <${RemainingPrompts} remainingPrompts=${progress.remainingPromptsWithoutAnswers} />
         </div>
       `

@@ -276,7 +276,7 @@
             "prompt": "How did you fare in high school mathematics, physical sciences and computing? Which were strengths and which most enjoyable? How did you rank, competitively, in them?",
             "answers": [
               {
-                "response": "I was a good student in high school. I was an 'A' student in physical sciences. They were fun! I wasn't at the time a fan of math: I was too busy writing calculator games on my ti-89 (I was fancy) in Basic in class. My family has a kind of 'anti-math' bias. I was taught at the time that it was useless. I have since became pretty frustrated about this, and read up on math theory in Wikipedia sometimes.\n\nI was, however, very good at programming.\n\nThe computer science curriculum in high school coincidentally began my freshman year. Well, they had \"Basic Computer Training\".\nI was under the wrong impression I had to take this class to graduate. A classmate overheard me, and told me to take \"Visual Basic\" instead. I wish I could let them know what a difference that made in my life.\n\nI was part of the first generation to take computer science classes in the school. There weren't many of us. But we were all there because we wanted to be.\n\nI don't know if I ever got anything less than 100% on any assignment. It was so much fun. I had arms races with my friends as to who could make the most annoying program. I learned DirectX in VB6. I made programs to \"spy\" on the library computers. I couldn't get enough. I took literally every CS class offered in the school. As electives.\n"
+                "response": "I was a good student in high school. I was an 'A' student in physical sciences. They were fun! I wasn't at the time a fan of math; I was too busy writing calculator games on my ti-89 (I was fancy) in Basic in class. My family has a kind of 'anti-math' bias. I was taught at the time that it was useless. I have since became pretty frustrated about this, and read up on math theory in Wikipedia sometimes.\n\nI was, however, very good at programming.\n\nThe computer science curriculum in high school coincidentally began my freshman year. Well, they had \"Basic Computer Training\".\nI was under the wrong impression I had to take this class to graduate. A classmate overheard me, and told me to take \"Visual Basic\" instead. I wish I could let them know what a difference that made in my life.\n\nI was part of the first generation to take computer science classes in the school. There weren't many of us. But we were all there because we wanted to be.\n\nI don't know if I ever got anything less than 100% on any assignment. It was so much fun. I had arms races with my friends as to who could make the most annoying program. I learned DirectX in VB6. I made programs to \"spy\" on the library computers. I couldn't get enough. I took literally every CS class offered in the school, every year. As electives.\n"
               }
             ]
           },
@@ -284,13 +284,20 @@
             "prompt": "What sort of high school student were you? Outside of class, what were your interests and hobbies?  What would your high school peers remember you for, if we asked them?"
           },
           {
-            "prompt": "In languages and the arts at high school, what were your strongest subjects and how did you rank in those among your school peers?"
+            "prompt": "In languages and the arts at high school, what were your strongest subjects and how did you rank in those among your school peers?",
+            "answers": [
+              {
+                "response": "I did well in language arts in high school. I was picked to be the \"Best at English\" for the yearbook my graduation year, and have been able to brag about it at parties ever since. I got 5s in my AP English classes, and my teacher in Honors English actually remembered me when I ran into her years later.\nI was an 'A' student in anything language arts. But if \"Best at English\" in a high school yearbook means anything, then I was the best at English.\n\n(Honestly, though: This was chosen by the English teachers. I was actually the top student with regards to English).\n"
+              }
+            ]
           },
           {
-            "prompt": "Describe some high school achievements considered exceptional by peers and staff"
-          },
-          {
-            "prompt": "Which degree and university did you choose, and why?"
+            "prompt": "Describe some high school achievements considered exceptional by peers and staff",
+            "answers": [
+              {
+                "response": "Did I mention I was the best at English?\n\nThe English teachers really were pretty impressed by me. As were, of course, the Computer Science teachers. They employed me to do networking in classrooms and help various staff members with their computers.\n\nI think this is a good place to talk about how I got my first job.\nI was recruited by a subcontractor to Honeywell who was working on flight management systems for Airbus A320 aircraft and looking for high school kids he could pay $11/hr to to do some of his work for him when I was 16. This was awesome.\nThe staff were pretty impressed, as were my friends and parents. I had a great time, learned a lot, and made a lot of mistakes that I sincerely hope were caught by somebody.\n"
+              }
+            ]
           },
           {
             "prompt": "Which university courses did you perform best at? How did you rank in your degree?"

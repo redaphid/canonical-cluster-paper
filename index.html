@@ -179,12 +179,13 @@
     let figureFlip = 0
     const Prompt = ({ question }) => {
       const { prompt, answers } = question
-
+      const shouldSayDraft = editMode && question.draft
       return html`
-      <div class="Prompt" id=${titleToId(prompt)}>
+      <div class="Prompt ${shouldSayDraft? "draft": ''}" id=${titleToId(prompt)}>
           <header>
             <h4>${prompt}</h4>
           </header>
+          ${editMode && question.draft ? html`<p class="draft">Draft</p>` : ''}
           ${answers?.map(answer => {
             if(answer.figure) figureFlip++
             return html`

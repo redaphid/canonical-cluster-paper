@@ -38,6 +38,17 @@ h4 {
   width: fit-content;
 }
 
+.draft header::before, .draft header::after {
+  content: "!";
+  font-size: 2em;
+  margin: 0.5em;
+}
+.draft header {
+  background-color: var(--emphasis-color-extra);
+  color: var(--emphasis-color-foreground);
+  padding: 0.5em;
+}
+
 h5 {
   font-weight: var(--font-weight-smaller);
   font-size: 0.75em;

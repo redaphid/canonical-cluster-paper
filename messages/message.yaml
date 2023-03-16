@@ -250,7 +250,7 @@ doc:
 
             The particulars of a given database haven't affected my career much so far. I try to get to the point where I'm abstracting the details as soon as possible, and rarely think about it again unless some problem crops up.
 
-            Regarding development environments, I'm all-in on vscode and linux. I bought Red Hat 6.0 at a Gamestop in high school by saving up my lunch money. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the linux kernel to support this hardware! I want out of Mac-land.
+            Regarding development environments, I'm all-in on vscode and Linux. I bought Red Hat 6.0 at a Gamestop in high school by saving up my lunch money. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the Linux kernel to support this hardware! I want out of Mac-land.
 
       - prompt: Would you describe yourself as a high quality coder? Why?
         answers:
@@ -348,6 +348,25 @@ doc:
       - prompt: Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?
       - prompt: Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?
       - prompt:  How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?
+        answers:
+        - response: |
+            This is an interesting thing to try to quantify.
+            I think the best way I can answer this is via a few personal anecdotes, and some reflection as to what that means.
+
+            I first used Linux when I bought Red Hat 6.0 from a Gamestop by saving my lunch money in high school. It didn't work for teenage me. I couldn't get the installation to finish. So I had to retreat.
+
+            Freshman year in college I decided to get Gentoo (stage 2) running on an old P4 with 128mb of ram, because I was trying to use it as a DVR, and needed all the performance I could get. It compiled for easily over 12 hours. The beeping from the speaker in the motherboard all night I'm sure haunts my then-roommate to this day. But I'm sure all the effort I put in to removing all printing capabilities from all the software on that distro via some kind of flag system emerge used was "worth it". And it worked.
+
+            During this time I had a laptop whose cd-rom had failed, and the bios wouldn't detect the hard drive. I used Puppy Linux on a floppy to get the laptop to a usable state. And I used it quite a bit.
+
+            I've tried to use Alpine as a "hypervisor" that just ran virsh and everything else would be a container, or VM, but that failed because Alpine is a huge pain with it's state management when it's not in a container. So I fell back, once again, to Ubuntu. And that machine has been fairly problem-free.
+
+            I tried Void Linux close to 2 years ago, because I wanted to use a "bootloader" that allowed me to select from different ZFS datasets to use as the root filesystem for the machine. I wanted to use [ZFSBootMenu](https://docs.zfsbootmenu.org/en/latest/) to do this, and the tutorials all used Void. I got this to work, but it turns out systemd is pretty important these days, and I had trouble using Docker (well, Rancher) with it.
+
+            I know, for example, that ZFSBootmenu is not an "actual bootloader", but a Linux kernel that later (I believe) `kexec`s somehow to replace itself. Unfortunately I was trying to use VFIO to pass through a GPU to a VM, and I had suspicions it had something to do with this. So I used Ubuntu again, and that's where the VM is hosted to this day.
+
+
+
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market

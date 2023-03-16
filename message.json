@@ -249,7 +249,7 @@
             "prompt": "Describe your speaking experience at industry events and conferences",
             "answers": [
               {
-                "response": "I've spoken at a few conferences, and ran quite a few hackathons. I think my biggest talk was at NodeConf, where I spoke negatively about Kubernetes. haha. I have since conceded the victory to Kubernetes.\n\nI was on the local speaking circuit a bit w/regards to IoT, and ran a few workshops sponsored by Intel to get the word out about their IoT offerings.\n\nPersonally, I would teach Javascript in a monthly meetup, and go to local hackerspaces to teach some people to use the tools I was using, and they taught me theirs. I would also go to local meetups and talk about the things I was working on. I also taught kids to program a couple of times, using [processing](https://processing.org/).\n"
+                "response": "I've spoken at a few conferences, and ran quite a few hackathons. I think my biggest talk was at NodeConf, where I spoke negatively about Kubernetes. haha. I have since conceded the victory to Kubernetes.\n\nI was on the local speaking circuit a bit w/regards to IoT, and ran a few workshops sponsored by Intel to get the word out about their IoT offerings.\n\nPersonally, I would teach Javascript in a monthly meetup, and go to local hackerspaces to teach some people to use the tools I was using, and they taught me theirs. I would also go to local meetups and talk about the things I was working on. I also taught kids to program a couple of times, using [Processing](https://processing.org/).\n"
               }
             ]
           },
@@ -284,7 +284,7 @@
             "prompt": "What sort of high school student were you? Outside of class, what were your interests and hobbies?  What would your high school peers remember you for, if we asked them?",
             "answers": [
               {
-                "response": "I was a good student in high school - people thought of me as an academic. I was extremely in to computers, and so I went to LAN parties a lot with my fellow techies. I liked paintball. I took Wing Chun Kung Fu. I worked as a programmer after school at a place I [talk about later](#describe-some-high-school-achievements-considered-exceptional-by-peers-and-staff)\n"
+                "response": "I was a good student in high school - people thought of me as an academic. I was extremely in to computers, and so I went to LAN parties a lot with my fellow techies. I liked paintball. I took Wing Chun Kung Fu. I worked as a programmer after school at a place I [talk about later](#describe-some-high-school-achievements-considered-exceptional-by-peers-and-staff). I went to punk rock shows.\n\nMy high school peers remember me as a funny, good-natured, intelligent person who occasionally wrote very deep poetry in his notebooks. And obviously, yes, they remember me as a computer nerd. But they remember my attitude first, which I appreciate.\n"
               }
             ]
           },

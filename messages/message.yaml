@@ -5,7 +5,7 @@ doc:
   repo: https://github.com/redaphid/resume-canonical
   intro: |
     #### Structure of this Document
-    When responding to these prompts, I found that answering them in a discrete fashion was not the most effective way to communicate experience and expertise in some technical matters. I have therefore organized some responses into descriptions of concrete solutions in my career that utilize the technologies in question. I provide a detailed description porkbarreled in to answering the questions as I encounter them, and refer to these descriptions in subsequent prompts. I have also included some diagrams to help visualize the concepts I am trying to communicate.
+    When responding to these prompts, I found that answering them in a discrete fashion was not always the most effective way to communicate experience and expertise in some technical matters. I have therefore organized some responses into descriptions of concrete solutions in my career that utilize the technologies in question. I provide a detailed description porkbarreled in to answering the questions as I encounter them, and refer to these descriptions in subsequent prompts. I have also included some diagrams to help visualize the concepts I am trying to communicate.
 
     I hope this format makes sense to you, though I imagine I won't be able to clarify anything, due to the anonymity of this process.
   main:
@@ -325,18 +325,6 @@ doc:
             Things like [circuit breakers](https://martinfowler.com/bliki/CircuitBreaker.html) help.
 
             I think of resiliency not as a "feature" of a system, but rather a property of the system. It's not easy to add to a system after the fact. It's something you have to design into the system from the beginning.
-          # I think any non-trivial software development needs continuous delivery and continuous integration. Which is not a surprising statement, but one I think is important to make. I usually make my CI pipeline spin up a system that is as close to production as is feasable, and do integration tests on them before deployment.
-
-
-
-          # I mentioned earlier my liberal usage of Docker in development and production, which help with resiliency by holding constantthe environment of the surrounding services as they are started.
-
-          # When it comes to something like a desktop or web app that is self-contained, I think the responses from that prompt above pretty much cover it. The obvious addition would be UX, in which case I believe in paper prototyping, and user testing. I've read "The Design of Everyday Things" in the past, and at least some of Klaus Krippendorf's "The Semantic Turn". I think about "affordances" that are presented to the consumer of my product, and think about ergonomics.
-
-            # When it comes
-
-
-
 
       - prompt:  What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
       - prompt: What is your proudest success as an engineering leader?

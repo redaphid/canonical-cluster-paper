@@ -359,7 +359,7 @@ doc:
 
             During this time I had a laptop whose cd-rom had failed, and the bios wouldn't detect the hard drive. I used Puppy Linux on a floppy to get the laptop to a usable state. And I used it quite a bit.
 
-            I've tried to use Alpine as a "hypervisor" that just ran virsh and everything else would be a container, or VM, but that failed because Alpine is a huge pain with it's state management when it's not in a container. So I fell back, once again, to Ubuntu. And that machine has been fairly problem-free.
+            I've tried to use Alpine as a "hypervisor" that just ran virsh and everything else would be a container, or VM, but that failed because Alpine is a huge pain with it's state management when it's not in a container. So I returned, once again, to Ubuntu. And that machine has been fairly problem-free.
 
             I tried Void Linux close to 2 years ago, because I wanted to use a "bootloader" that allowed me to select from different ZFS datasets to use as the root filesystem for the machine. I wanted to use [ZFSBootMenu](https://docs.zfsbootmenu.org/en/latest/) to do this, and the tutorials all used Void. I got this to work, but it turns out systemd is pretty important these days, and I had trouble using Docker (well, Rancher) with it. Also the Docker daemon hates ZFS.
 

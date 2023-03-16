@@ -349,7 +349,6 @@ doc:
       - prompt: Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?
 
       - prompt: Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?
-        draft: true
       - prompt:  How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?
         answers:
         - response: |
@@ -400,7 +399,6 @@ doc:
             I'm not sure how these anecdotes roll up to a quantitative measure of my Linux knowledge, but I think you get the gist.
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
-        draft: true
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
       - prompt: Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
@@ -408,7 +406,7 @@ doc:
         link_to_question: 'http://localhost:8080/?edit=true#outline-your-thoughts-on-quality-in-software-development--what-practices-are-most-effective-to-drive-improvements-in-quality-'
         answers:
         - response: |
-            Hm. If we're talking about how to write quality code, I've answered the question pretty thoroughly [when talking about why I think I'm a high-quality coder](#would-you-describe-yourself-as-a-high-quality-coder--why-). If we're talking about improving quality at a team level, I usually focus on collaboration and enthusiasm. Coding is fun! I have an open discussion with whoever is interested re: heuristics when it comes to "quality code". We can agree or disagree about them, and revisit them from time to time. But we at least know that they exist, and we have a lexicon for them.
+            Hm. If we're talking about how to write quality code, I've answered the question pretty thoroughly [when talking about why I think I'm a high-quality coder](#would-you-describe-yourself-as-a-high-quality-coder--why-). If we're talking about improving quality at a team level, I usually focus on collaboration and enthusiasm. Coding is fun! I have an open discussion with whoever is interested re: heuristics when it comes to "quality code". We can agree or disagree about them, and revisit them from time to time. But we at least know they exist, and have a lexicon for them.
 
       - prompt: Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?

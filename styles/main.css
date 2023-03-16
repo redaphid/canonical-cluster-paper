@@ -80,9 +80,9 @@ time {
 .Doc {
   display: grid;
   grid-template-areas:
-    'Logo Identity'
-    'Info Intro'
-    'Info Main'
+    'Logo Identity Progress'
+    'Info Intro Progress'
+    'Info Main Progress'
     ;
   column-gap: 0.1em;
   row-gap: 0.1em;
@@ -218,11 +218,12 @@ time {
   right: 0;
   background-color: var(--emphasis-color-foreground);
   color: var(--emphasis-color);
-  padding: 0.5em;
+  /* padding: 0.5em; */
   border-top-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   font-weight: var(--font-weight-normal);
   z-index: 2;
   border: 0.25em solid var(--emphasis-color);
+  width: calc(100% - 8.5in - 1em);
 
 }

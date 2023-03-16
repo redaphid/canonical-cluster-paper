@@ -430,7 +430,7 @@ doc:
       - prompt: How did you fare in high school mathematics, physical sciences and computing? Which were strengths and which most enjoyable? How did you rank, competitively, in them?
         answers:
         - response: |
-            I was a good student in high school. I was an 'A' student in physical sciences. They were fun! I wasn't at the time a fan of math; I was too busy writing calculator games on my ti-89 (I was fancy) in Basic in class. My family has a kind of 'anti-math' bias. I was taught at the time that it was useless. I have since became pretty frustrated about this, and read up on math theory in Wikipedia sometimes.
+            I was a good student in high school. I was an 'A' student in physical sciences. They were fun! I wasn't at the time a fan of math; I was too busy writing calculator games on my ti-89 (I was fancy) in Basic in class. My family had a kind of 'anti-math' bias. I was taught at the time that it was useless. I have since became pretty frustrated about this, and read up on math theory in Wikipedia sometimes.
 
             I was, however, very good at programming.
 

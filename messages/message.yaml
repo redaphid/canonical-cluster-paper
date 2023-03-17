@@ -599,7 +599,7 @@ doc:
       - prompt: At high school or university, what leadership roles did you take on?
         answers:
         - response: |
-            Besides founding Robothouse, nothing readily comes to mind. I preferred organizational structures that didn't require an explicit 'leader' role. Like I liked to have leadership be an emergent property of the group, rather than something that is explicitly assigned.
+            Besides founding Robothouse, nothing readily comes to mind. I preferred organizational structures that didn't require an explicit 'leader' role. I liked to have leadership be an emergent property of the group, rather than something that is explicitly assigned.
     - title: Context
       prompts:
         - prompt: Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?

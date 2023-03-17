@@ -104,7 +104,7 @@
     const Doc = ({ doc }) => {
       return html`
           <div class="Doc">
-            <${Heading} title=${doc.title} miro=${doc.miro} repo=${doc.repo} />
+            <${Heading} title=${doc.title}/>
             <div class="Info"/>
             <div class="Logo">
               <img src="${doc.logo}" alt="logo" />
@@ -164,7 +164,7 @@
         </div>
       `
     }
-    const Heading = ({ title, miro, repo }) => {
+    const Heading = ({ title}) => {
       return html`
         <section class="Identity">
           <h1>${title}.</h1>

@@ -190,6 +190,7 @@
       return html`
       <div class="Prompt ${shouldSayDraft? "draft": ''}" id=${titleToId(prompt)}>
           <header>
+            ${shouldSayDraft? html`<h1>Draft</h1>`: ''}
             <h4>${prompt}</h4>
           </header>
           ${answers?.map(answer => {

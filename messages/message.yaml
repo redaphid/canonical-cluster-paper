@@ -351,7 +351,16 @@ doc:
 
       - prompt: Outline your thoughts on open source software development. What is important to get right in open source projects? What open source projects have you worked on? Have you been an open source maintainer, on which projects, and what was your role?
 
+
       - prompt: Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?
+        draft: true
+        answers:
+          - response: |
+              Meshblu, again, is a great example of my experience with this. We had hundreds of **unique** services, translating millions of messages between many protocols, to many devices and services. Most of these services were themselves using Meshblu to handle requests and responses, appearing to be a "device" within the system. This allowed us to delegate all event processing, data storage, and integrations into Meshblu itself.
+
+              Though not everyone is fortunate enough to have this sort of infrastructure built in in a cloud-spanning way, I think the principles of the system are the same.
+
+
       - prompt:  How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?
         answers:
         - response: |

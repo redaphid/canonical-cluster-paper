@@ -580,3 +580,6 @@ doc:
         - prompt: Why do you most want to work for Canonical?
         - prompt: What would you most want to change about Canonical?
         - prompt: What gets you most excited about this role?
+          draft: true
+          answers:
+          - response: "placeholder"

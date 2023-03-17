@@ -461,6 +461,9 @@ doc:
               But who am I kidding - no one is curious enough about design to put all that effort in to a written interview.
 
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
+        draft: true
+        answers:
+        - response: ''
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
     - title: Industry leadership experience

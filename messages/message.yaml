@@ -438,7 +438,9 @@ doc:
         answers:
           - response: |
               I talk about large-scale SaaS operations a bit [in the Meshblu section](#experience-with-meshblu), but I wouldn't characterize myself as having system administration responsibilities.
-              When it comes to devops, I've set up a couple of complicated workflows in [Concourse](https://concourse-ci.org/) and simpler ones in [Github Actions](https://github.com/features/actions)
+
+
+              When it comes to devops, I've set up a couple of complicated workflows in [Concourse](https://concourse-ci.org/) and simpler ones in [Github Actions](https://github.com/features/actions). In both cases, I have used Docker-in-Docker images [Like this one](https://hub.docker.com/r/cycloid/concourse-dind) for Concourse. I use this to spin up whatever is being tested in docker-compose, as well as any supporting services
 #              It's not much, bit I set up the repo I use to write this document to use CI to generate a pdf and publish a [Github release](https://github.com/redaphid/resume-canonical/releases/latest) on a push to main. You can see the Github Actions workflow used to create this document [here](https://github.com/redaphid/resume-canonical/blob/main/.github/workflows/main.yml). I am (obviously) used to more sophisticated devops scenarios, but I did this one for myself, for fun. That might say something about the level of familiarity I have with devops.
 
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?

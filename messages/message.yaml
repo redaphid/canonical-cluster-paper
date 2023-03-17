@@ -434,7 +434,6 @@ doc:
             I'm not sure how these anecdotes roll up to a quantitative measure of my Linux knowledge, but I think you get the gist.
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
-        draft: true
         answers:
           - response: |
               I talk about large-scale SaaS operations a bit [in the Meshblu section](#experience-with-meshblu), but I wouldn't characterize myself as having system administration responsibilities.
@@ -617,7 +616,6 @@ doc:
       prompts:
         - prompt: Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?
         - prompt: Who are Canonical's key competitors, and how should Canonical set about winning?
-          draft: true
         - prompt: Why do you most want to work for Canonical?
         - prompt: What would you most want to change about Canonical?
         - prompt: What gets you most excited about this role?

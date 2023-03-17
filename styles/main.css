@@ -20,7 +20,7 @@ body {
 }
 code {
   font-weight: var(--font-weight-regular);
-  font-size: 1.2em;
+  font-size: 1em;
 }
 section {
   padding: 0.5em;

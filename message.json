@@ -217,7 +217,13 @@
             ]
           },
           {
-            "prompt": "Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity"
+            "prompt": "Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity",
+            "draft": true,
+            "answers": [
+              {
+                "response": "sdfds\n"
+              }
+            ]
           },
           {
             "prompt": "Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?",

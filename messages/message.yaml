@@ -434,6 +434,10 @@ doc:
             I'm not sure how these anecdotes roll up to a quantitative measure of my Linux knowledge, but I think you get the gist.
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
+        draft: true
+        answers:
+          - response: |
+              sdfds
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
         answers:
           - response: |

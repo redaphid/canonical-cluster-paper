@@ -18,7 +18,10 @@ body {
   /* max-width: 8.5in; */
   color: var(--color-foreground);
 }
-
+code {
+  font-weight: var(--font-weight-regular);
+  font-size: 1.2em;
+}
 section {
   padding: 0.5em;
 }

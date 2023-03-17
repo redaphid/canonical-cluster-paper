@@ -10,6 +10,7 @@
     import { h, render } from 'https://esm.sh/preact'
     import htm from 'https://esm.sh/htm'
     const res = await fetch('message.json').then(res => res.json())
+    const timeout = ms => new Promise(resolve => setTimeout(resolve, ms))
 
     const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
     const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
@@ -26,6 +27,11 @@
     }
     const editMode = localStorage.getItem('editMode') === 'true'
 
+    //if the url has an element id in it, scroll to it
+    if (window.location.hash) {
+      timeout(250).then(() => document.getElementById(window.location.hash.replace('#', '')).scrollIntoView())
+    }
+
     // Copilot wrote all this reducing business. I'm not this crazy!
     const getListOfPromptNamesWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
@@ -37,7 +43,7 @@
     const promptsWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + (prompt.answers?.length && !prompt.draft? 0 : 1)
+          return acc + (prompt.answers?.length && !prompt.draft ? 0 : 1)
         }, 0)
       }, 0)
     }
@@ -84,7 +90,7 @@
     }
 
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
-    const Progress = ({progress, timeSinceLastProgress}) => {
+    const Progress = ({ progress, timeSinceLastProgress }) => {
       const { total, withAnswers, withoutAnswers } = progress
       const timeSinceLastProgressHumanReadable = new Date(timeSinceLastProgress * 1000).toISOString().substr(11, 8)
       return html`
@@ -118,7 +124,7 @@
           </div>
           `
     }
-    const Root = ({data}) => {
+    const Root = ({ data }) => {
       return html`
         <div class="Root">
           <${Doc} doc=${data.doc} />
@@ -162,7 +168,7 @@
         </div>
       `
     }
-    const Heading = ({ title}) => {
+    const Heading = ({ title }) => {
       return html`
         <section class="Identity">
           <h1>${title}.</h1>
@@ -189,16 +195,16 @@
       const { prompt, answers } = question
       const shouldSayDraft = editMode && question.draft
       return html`
-      <div class="Prompt ${shouldSayDraft? "draft": ''}" id=${titleToId(prompt)}>
-          <header id=${shouldSayDraft? "draft" : ''}>
+      <div class="Prompt ${shouldSayDraft ? "draft" : ''}" id=${titleToId(prompt)}>
+          <header id=${shouldSayDraft ? "draft" : ''}>
             <h4>${prompt}</h4>
           </header>
           ${answers?.map(answer => {
-            if(answer.figure) figureFlip++
-            return html`
+        if (answer.figure) figureFlip++
+        return html`
                 <ul class="Answers">
                   <li class="Answer ${!(figureFlip % 2) ? 'flip-figure' : ''}">
-                    ${answer.response? html`<p><${RenderRawHtml} html=${marked(answer.response)}/></p>`: ''}
+                    ${answer.response ? html`<p><${RenderRawHtml} html=${marked(answer.response)}/></p>` : ''}
                     ${answer.figure ? html`<${Figure} figure=${answer.figure} hasResponse=${!!answer.response} />` : ''}
                   </li>
                 </ul>
@@ -212,8 +218,8 @@
       return html`
        ${figure.miro ? html`
         <a id="figure-${figure.figure}" href=${getMiroLink(figure.miro)} target="_blank">
-          <img class="${!hasResponse? "fill-response": ""}"  src="figures/${figure.figure}".jpg />
-        </a>` : html`<img  class="${!hasResponse? "fill-response": ""}" src="figures/${figure.figure}.jpg" />`}
+          <img class="${!hasResponse ? "fill-response" : ""}"  src="figures/${figure.figure}".jpg />
+        </a>` : html`<img  class="${!hasResponse ? "fill-response" : ""}" src="figures/${figure.figure}.jpg" />`}
       `
     }
     const html = htm.bind(h)

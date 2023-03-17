@@ -13,7 +13,7 @@
 
     const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
     const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
-    window.getWidgetFromMiroLink = getWidgetFromMiroLinkx
+    window.getWidgetFromMiroLink = getWidgetFromMiroLink
 
     //replace all non-alphanumeric characters with dashes
     const titleToId = (title) => {

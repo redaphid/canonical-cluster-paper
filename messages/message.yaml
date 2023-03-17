@@ -437,7 +437,7 @@ doc:
         draft: true
         answers:
           - response: |
-              I talk about large-scale SaaS operations a bit [in the Meshblu section](#ex perience-with-meshblu), but I wouldn't characterize myself as having system administration responsibilities.
+              I talk about large-scale SaaS operations a bit [in the Meshblu section](#experience-with-meshblu), but I wouldn't characterize myself as having system administration responsibilities.
 
               When it comes to devops, I've set up a couple of complicated workflows in [Concourse](https://concourse-ci.org/) and simpler ones in [Github Actions](https://github.com/features/actions). In both cases, I have used Docker-in-Docker images [like this one for Concourse](https://hub.docker.com/r/cycloid/concourse-dind). I use this to spin up whatever is being tested in docker-compose, as well as any relevant supporting software, using "real" Docker images whenever possible. The whole thing runs inside the CI environment, for both unit and integration testing.
 

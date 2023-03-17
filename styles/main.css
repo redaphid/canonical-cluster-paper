@@ -39,8 +39,8 @@ h4 {
 }
 
 .draft header::before, .draft header::after {
-  content: "!";
-  font-size: 2em;
+  content: "\A !Draft! \A";
+  font-size: 1.5em;
   margin: 0.5em;
 }
 .draft header {

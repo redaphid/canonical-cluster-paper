@@ -493,7 +493,7 @@ doc:
 
               And then make a ton of new, unique diagrams using that style guide's color scheme and visual hierarchy. Maybe create a whole new document writing system to experiment with theming documents in the spirit of said style guide while still allowing for exceptions to the theme via modification of the code. Spend time thinking about how to communicate at least __some__ information in that document visually, and semantically. Accidentally cause the semantics of \<em\>(emphasis) tags to become ambiguous, and then _not be able to use emphasis in markdown without looking like asides now._
 
-              But who am I kidding - no one is curious enough about design to put all that effort in to a written interview.
+              But who am I kidding - no one is interested enough about design to put all that effort in to a written interview.
 
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
         answers:

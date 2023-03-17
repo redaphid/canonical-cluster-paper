@@ -406,9 +406,8 @@ doc:
             I've accidentally been in the initrd environment a few times, and was confused and amazed by what was going on. Then did research in to how it works. I think it loads the binary with this minimal set of tools directly in to ram before continuing to start the system? I have messed around there to try to save machines in the past.
 
             I've been curious re: musl, but sadly think it'll never catch on.
-            I like the "everything is a file" stuff.
 
-            I've dd'd my own hard drives on a few occasions.
+            I like the "everything is a file" stuff. I've dd'd my own hard drives on a few occasions.
 
             I have a use an old machine in my home network as a bastion host for ssh'ing into my VM server. Running Ubuntu, of course.
 
@@ -445,7 +444,7 @@ doc:
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
         answers:
         - response: |
-            I deal with my understanding and experience some when it comes to some enterprise infrastructure while talking about the cluster designed to integrate with enterprise infrastructure [here](#the-totally-naive-services-cluster--open-policy-agent-experience).
+            I talk about my understanding and experience when it comes to some enterprise infrastructure while talking about the cluster designed to integrate with enterprise infrastructure [here](#the-totally-naive-services-cluster--open-policy-agent-experience).
             More specifically, when I talk about [making authorization adapters](#authorization-adapters) and [delegating authority](#delegating-authorization-decision-making).
 
       - prompt: Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
@@ -611,4 +610,4 @@ doc:
         - prompt: What gets you most excited about this role?
           answers:
           - response: |
-              I don't know if you've noticed the [huge, 10 page long](#the-totally-naive-services-cluster--open-policy-agent-experience) description of this experimental cluster I worked on where I talk a lot about my interest in the theory of security in distributed systems. I don't know how to elaborate on this much more. I'm clearly interested in the work.
+              I don't know if you've noticed the [huge description of this cluster I worked on](#the-totally-naive-services-cluster--open-policy-agent-experience) where I talk a lot about my interest in the theory of security in distributed systems. I don't know how to elaborate on this much more. I'm clearly interested in the work.

@@ -11,6 +11,8 @@ doc:
 
     If you're interested in seeing how I think, looking at the commits in [it's repo](https://github.com/redaphid/resume-canonical) is seeing me in my natural setting. I didn't plan on bringing attention to it until now.
 
+    The diagrams were made in Miro. [Here is the link to the board](https://miro.com/app/board/uXjVMeJA43k=)
+
   main:
     - title: Identity and Authorization Technology
       prompts:
@@ -423,6 +425,10 @@ doc:
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
+        draft: true
+        answers:
+          - response: |
+              https://miro.com/app/board/uXjVMeJA43k=
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
       - prompt: Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
         answers:

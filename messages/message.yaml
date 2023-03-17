@@ -274,6 +274,7 @@ doc:
             * "The best code is no code at all"
             * The "[Transformation Priority Premise](https://en.wikipedia.org/wiki/Transformation_Priority_Premise)" as a heuristic for code complexity.
             * The Principle of Least Surprise
+            * "Branching by Abstraction"
 
             ...and many others.
 
@@ -356,9 +357,16 @@ doc:
         draft: true
         answers:
           - response: |
-              Meshblu, again, is a great example of my experience with this. We had hundreds of **unique** services, translating millions of messages between many protocols, to many devices and services. Most of these services were themselves using Meshblu to handle requests and responses, appearing to be a "device" within the system. This allowed us to delegate all event processing, data storage, and integrations into Meshblu itself.
+              Meshblu, again, is a great example of my experience with this. We had hundreds of **unique** services, translating millions of messages between many protocols, to many devices and services. Most of these services were themselves using Meshblu to handle requests, responses, configuration, and data storage, because they appeared to be a "device" within the system. This allowed us to delegate all event processing, data storage, and integrations into Meshblu itself.
 
-              Though not everyone is fortunate enough to have this sort of infrastructure built in in a cloud-spanning way, I think the principles of the system are the same.
+              Though not everyone is fortunate enough to have this sort of infrastructure built in in a cloud-spanning way, the principles of the system are the same. The services should be as simple and decoupled as possible, exposing a small, sensible API. We should strive to delegate as much of this complexity as possible to the environment around the service. I'm starting to notice a theme in my responses here.
+
+              I don't believe in forcing uniformity upon any single service in the system as long as it is small - and services should be, unless there is a good reason to make them larger.
+              Rather, we should make the path to uniformity so simple and easy that people want to walk it. Libraries, generators, templates, guides, and things of this nature should be provided to make service development as easy as possible - but not forced upon anyone. This is an evolutionary approach to making good tools that I find to be very effective.
+
+              Small services that have responsibilities pushed as far out to the edge as possible are easy to maintain, and easy to replace. The heuristic I mentioned earlier that software either "obviously has no bugs" or "has no obvious bugs" is a good one when thinking about maintainability and reliability.
+
+              Architectures of large systems should provide environments that help the services within push those responsibilities out. I don't know if you remember the [way too long](#the-totally-naive-services-cluster--open-policy-agent-experience) description of my experimental cluster architecture earlier, but I think it's a good example of how to think about responsibility delegation in a large system.
 
 
       - prompt:  How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?

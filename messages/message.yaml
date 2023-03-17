@@ -592,7 +592,7 @@ doc:
 
             I received an automatic 'A' in assembly class, without writing much assembly. My professor was making a homemade image manipulation program, and one of the class's assignments was to write the algorithm for some subset of that program. I think it was color normalization for my year.
 
-            There was a competition where, if your algorithm was faster than the teacher's, you got an automatic 'A'. So I made a faster algorithm in C, using tons of compiler flags, and optimization levels for the particular CPU we were running it on. I got an 'A' without writing too much
+            There was a competition where, if your algorithm was faster than the teacher's, you would get an automatic 'A'. So I made a faster algorithm in C, using tons of compiler flags, and optimization levels for the particular CPU we were running it on. I got an 'A' without writing too much
             assembly.
 
             I then made a header file and a compiler script, and sent it to everyone in the class, saying they could use it if they kept my name in the comments of the header

@@ -242,13 +242,7 @@
             ]
           },
           {
-            "prompt": "Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?",
-            "draft": true,
-            "answers": [
-              {
-                "response": ""
-              }
-            ]
+            "prompt": "Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?"
           },
           {
             "prompt": "Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?"
@@ -345,7 +339,13 @@
             ]
           },
           {
-            "prompt": "At high school or university, what leadership roles did you take on?"
+            "prompt": "At high school or university, what leadership roles did you take on?",
+            "draft": true,
+            "answers": [
+              {
+                "response": "I was important. Probably.\n"
+              }
+            ]
           }
         ]
       },

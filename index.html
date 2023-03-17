@@ -189,7 +189,7 @@
       const shouldSayDraft = editMode && question.draft && answers?.length
       return html`
       <div class="Prompt ${shouldSayDraft? "draft": ''}" id=${titleToId(prompt)}>
-          <header ${shouldSayDraft? 'id="draft' : ''}>
+          <header id=${shouldSayDraft? "draft" : ''}>
             ${shouldSayDraft? html`<h1>Draft</h1>`: ''}
             <h4>${prompt}</h4>
           </header>

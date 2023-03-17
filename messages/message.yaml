@@ -461,9 +461,6 @@ doc:
               But who am I kidding - no one is curious enough about design to put all that effort in to a written interview.
 
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
-        draft: true
-        answers:
-        - response: ''
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
     - title: Industry leadership experience
@@ -556,6 +553,10 @@ doc:
             I then made a header file and a compiler script, and sent it to everyone in the class, saying they could use it if they kept my name in the comments of the header
 
       - prompt: At high school or university, what leadership roles did you take on?
+        draft: true
+        answers:
+        - response: |
+            I was important. Probably.
     - title: Context
       prompts:
         - prompt: Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?

@@ -340,10 +340,9 @@
           },
           {
             "prompt": "At high school or university, what leadership roles did you take on?",
-            "draft": true,
             "answers": [
               {
-                "response": "I was important. Probably.\n"
+                "response": "Besides founding Robothouse, nothing readily comes to mind. I preferred organizational structures that didn't require an explicit 'leader' role. Like I liked to have leadership be an emergent property of the group, rather than something that is explicitly assigned.\n"
               }
             ]
           }

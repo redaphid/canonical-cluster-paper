@@ -189,7 +189,7 @@
     let figureFlip = 0
     const Prompt = ({ question }) => {
       const { prompt, answers } = question
-      const shouldSayDraft = editMode && question.draft && answers?.length
+      const shouldSayDraft = editMode && question.draft
       return html`
       <div class="Prompt ${shouldSayDraft? "draft": ''}" id=${titleToId(prompt)}>
           <header id=${shouldSayDraft? "draft" : ''}>

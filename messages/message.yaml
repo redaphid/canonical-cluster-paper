@@ -462,7 +462,6 @@ doc:
               But who am I kidding - no one is curious enough about design to put all that effort in to a written interview.
 
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
-        draft: trust
         answers:
           - response: |
               It must be measured. And we have to define what "fast enough" is. According to Donald Knuth, "Premature optimization is the root of all evil".

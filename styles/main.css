@@ -57,7 +57,6 @@ h5 {
   width: fit-content;
 }
 
-
 i {
   font-size: 1.2em;
   margin-right: 0.5em;
@@ -65,10 +64,7 @@ i {
 }
 
 /* this will be used for the titles I had at each job */
-/* em {
-  font-style: normal;
-  font-weight: 300;
-} */
+
 em {
   font-style: italic;
   font-weight:100;

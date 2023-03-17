@@ -436,7 +436,22 @@ doc:
         answers:
           - response: |
               I took a few design classes in my graduate studies, but I wouldn't consider myself an expert at user experience. I do, however, have a few "tools in the toolbox" that can guide me along.
-              The first thing I think about when I think about design is what I took away from reading Klaus Krippendorf's "[The Semantic Turn](https://www.amazon.com/Semantic-Turn-New-Foundation-Design/dp/0415322200)". I don't pretend to understand all of it, but the concept of "affordances" made such an impact on me that it is the first thing I think about when I think about design.
+
+              The first thing I think about when I think about design is what I took away from reading Klaus Krippendorf's "[The Semantic Turn](https://www.amazon.com/Semantic-Turn-New-Foundation-Design/dp/0415322200)". I won't pretend I've read all of it, but the concept of "affordances" made such an impact on me that it is the first thing I think about when I think about design.
+
+              My understanding of affordances is that they are "properties of an object that broadcast what can be done with it, and how". To that effect, I think the primary consideration when designing a user experience is to make the affordances of the system clear.
+
+              Of course, in practice, this cannot be the only concern. We can't have a UI that's just a series of labeled components in a big, gray list. Style is important, and much more than affordances are communicated with a good design.
+
+              Having a consistent design language is nice, for graphic design as well as UX. They are both, after all, are communicating things to the user in non-verbal ways. I like to think about design as a language, and I think it's important to have a consistent vocabulary. But it also can't be like "newspeak" from 1984. We need some variation to communicate nuance.
+
+              I'd imagine someone who is interested in communication via design would take something like a style guide in to account. Say, read up on the colors, tints, font weights, and visual hierarchies. Try to understand the information this design pattern is trying to communicate.
+
+              And then make a ton of new, unique diagrams using that style guide's color scheme and visual hierarchy. Maybe create a whole new document writing system so they can theme documents in the spirit of this style guide. Spend time thinking about how to communicate at least __some__ information in that document visually. Accidentally cause the semantics of \<em\>(emphasis) tags to become ambiguous, and then _not be able to use emphasis in markdown without it looking like an aside now._
+
+              But who am I kidding - no one is curious enough about design to put all that effort in to a written interview.
+
+
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?

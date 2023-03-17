@@ -434,10 +434,14 @@ doc:
             I'm not sure how these anecdotes roll up to a quantitative measure of my Linux knowledge, but I think you get the gist.
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
-        draft: true
+
         answers:
           - response: |
-              sdfds
+              I talk about large-scale SaaS operations a bit [in the Meshblu section](#experience-with-meshblu), but I wouldn't characterize myself as having system administration responsibilities.
+              When it comes to devops, I've set them up for a few projects, and I often become the "devops expert" for a project because I know a little about it. I am not claiming I'm an __actual__ devops expert. Just painting a picture of my experiences.
+
+              It's not much, bit I set up the repo I use to write this document to use CI to generate a pdf and publish a [Github release](https://github.com/redaphid/resume-canonical/releases/latest) on a push to main. You can see the Github Actions workflow used to create this document [here](https://github.com/redaphid/resume-canonical/blob/main/.github/workflows/main.yml). I am used to more sophisticated devops scenarios, but I did this one for myself, for fun. That might say something about the level of familiarity I have with devops.
+
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
         answers:
           - response: |

@@ -217,6 +217,10 @@ time {
 .Answer.flip-figure {
   flex-direction: row-reverse;
 }
+.Answer strong {
+  font-style: italic;
+  font-weight: var(--font-weight-bigger);
+}
 .Answer .fill-response {
   flex-grow: 1;
   margin: 0.25em;

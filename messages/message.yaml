@@ -580,7 +580,6 @@ doc:
         - prompt: Why do you most want to work for Canonical?
         - prompt: What would you most want to change about Canonical?
         - prompt: What gets you most excited about this role?
-          draft: true
           answers:
           - response: |
-              I don't know if you've noticed the [huge, 10 page long](#the-totally-naive-services-cluster--open-policy-agent-experience) description of this experimental cluster I worked on where I talk a lot about my interest in the theory of security in distributed systems.
+              I don't know if you've noticed the [huge, 10 page long](#the-totally-naive-services-cluster--open-policy-agent-experience) description of this experimental cluster I worked on where I talk a lot about my interest in the theory of security in distributed systems. I don't know how to elaborate on this much more. I'm clearly interested in the work.

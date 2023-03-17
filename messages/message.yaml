@@ -449,7 +449,9 @@ doc:
 
               Another source that springs to mind every time I think about design is [The Humane Interface](https://www.amazon.com/Humane-Interface-Directions-Designing-Interactive/dp/0201379376), by Jef Raskin. I read this book long after it came out, but the principles are still relevant. I am famous amongst coworkers for being very against modals, because this book made such a strong argument.
 
-              I also like the idea of a ZUI ("Zoomable User Interface") from that book a lot, and I find keeping that idea in mind can inform some design decisions - even if there is no obvious "zooming" involved.
+              I also like the idea of a ZUI ("Zoomable User Interface") from that book a lot, and I find keeping that idea in mind can inform some design decisions - even if there is no obvious "zooming" involved. And also universal undo/redoing.
+
+              I was passionate enough about these principles that I led the design of Octoblu's visual editor for the Flow Engine so we would follow these 3 principles, as well as many others. You can see an example of how the UI works [here](https://youtu.be/g9sLUn_lPaQ?t=266). You may notice the lack of modals during configuration, the infinite, zooming canvas, and the universal undo/redo visible in the upper right in this video.
 
               I'd imagine someone who is interested in communication via design would take something like a style guide in to account. Say, read up on the colors, tints, font weights, and visual hierarchies. Try to understand the information this design pattern is trying to communicate.
 

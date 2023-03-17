@@ -225,7 +225,13 @@
             ]
           },
           {
-            "prompt": "Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market"
+            "prompt": "Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market",
+            "draft": true,
+            "answers": [
+              {
+                "response": "sadasd"
+              }
+            ]
           },
           {
             "prompt": "Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?",

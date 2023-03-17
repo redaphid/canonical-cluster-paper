@@ -201,7 +201,7 @@ doc:
         - response: |
             I have used Docker extensively throughout my personal and professional life. I'm running a Minecraft server, a duckdns image, and a Plex media server on this machine as I type this! I also have Podman, but ironically I have to run Podman with sudo, and I can run Docker without. Which, come to think of it, is a pretty big security vulnerability on my home machine...
 
-            I often set up development environments for people that use docker compose liberally if we're working on a nontrivial project that requires multiple services. I also use Docker to run tests in CI/CD pipelines. In fact, I often use the same docker-compose.yml file for both development and CI/CD, spinning up the entire stack for testing before deployment.
+            I talk in more depth about my professional Docker experience [in the devops section](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) of this document.
 
             I have a few personal repos that at least demonstrate my interest in Docker that I might as well list off:
              - [here's a repo](https://github.com/redaphid/docker-compose-ecs-test) of me messing around with Docker Compose deploying to AWS! There is almost literally nothing in it, but if you're curious you can go through the commits and see what I was trying out.
@@ -215,7 +215,7 @@ doc:
 
             As you probably can imagine from the cluster experiment, I am at least somewhat familiar with Kubernetes. To be honest I usually have to spin up and look in to using Kubernetes whenever I get my hands dirty with the copius YAML config. Kubernetes is the pragmatic choice for all enterprise development right now, but personally I find it to grossly violate the Unix Philosophy with it's complexity. That said, Kubernetes is important. I have used it in the past, and will again. Personal disagreements notwithstanding.
 
-            I prefer Docker Swarm, but I know I'm a minority at this point.
+            I prefer Docker Swarm, but I know I'm a minority at this point. If you refer to the [devops section](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) of this document, you may see why this is the case.
 
             Regarding LXD: I just looked in to it, and it sounds pretty awesome! I haven't tried it, but it sounds like it might be helpful for me.
 
@@ -434,6 +434,7 @@ doc:
             I'm not sure how these anecdotes roll up to a quantitative measure of my Linux knowledge, but I think you get the gist.
 
       - prompt: Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity
+        draft: true
         answers:
           - response: |
               I talk about large-scale SaaS operations a bit [in the Meshblu section](#experience-with-meshblu), but I wouldn't characterize myself as having system administration responsibilities.

@@ -432,6 +432,10 @@ doc:
 
       - prompt: Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
+        draft: true
+        answers:
+          - response: |
+              dasd
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?

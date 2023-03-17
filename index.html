@@ -78,6 +78,10 @@
     // see if we have more prompts answered
     if (previousProgress?.withAnswers < progress.withAnswers) {
       localStorage.setItem('progress', JSON.stringify(progress))
+      // record the time it took in an array in localstorage
+      const times = JSON.parse(localStorage.getItem('times')) || []
+      times.push(timeSinceLastUpdate)
+      localStorage.setItem('times', JSON.stringify(times))
     }
 
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })

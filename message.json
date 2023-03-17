@@ -232,7 +232,7 @@
             "draft": true,
             "answers": [
               {
-                "response": "I deal with my understanding and experience some when it comes to some enterprise infrastructure while talking about the cluster designed to integrate with enterprise infrastructure [here](#the-totally-naive-services-cluster--open-policy-agent-experience).\nMore specifically, I talked about interfacing with some enterprise infrastructure [here](#authorization-adapters)\n"
+                "response": "I deal with my understanding and experience some when it comes to some enterprise infrastructure while talking about the cluster designed to integrate with enterprise infrastructure [here](#the-totally-naive-services-cluster--open-policy-agent-experience).\nMore specifically, when I talk about [making authorization adapters](#authorization-adapters) and [delegating authority](#delegating-authorization-decision-making).\n"
               }
             ]
           },

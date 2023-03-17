@@ -168,7 +168,7 @@ doc:
             miro: '3458764548861602424'
 
         - response: |
-            _this, of course, has implications when it comes to pagination, but I had some wild ideas that are outside of the scope of the experiment_.
+            _this, of course, has implications when it comes to pagination, but I had some ideas that are outside of the scope of the experiment_.
         - response: |
             With the addition of this filtering, the authorization barrier is now symmetric, with OPA both gating access to resources and filtering the response. At this point the pod architecture allows for a service to be fully naive.
           figure:

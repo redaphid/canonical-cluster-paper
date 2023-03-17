@@ -95,7 +95,7 @@ doc:
         - response: |
             In the initial implementation, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP  (Identity Provider) with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I talk about [later on](#authorization-adapters).
 
-            Regardless of the mechanism used, in the end an OPA policy always gated access to the cluster. The client's authentication data was evaluated against OPA policies, which had the final say. This, like all autoinjected systems in the cluster, could be opted out of via configuration.
+            Regardless of the mechanism used, in the end an OPA policy always gated access to the cluster. The client's authentication data was evaluated against OPA policies, which had the final say. This, like all autoinjected systems in the cluster, it could be opted out of via configuration.
 
             This implementation, however, has a potential vulnerability in that we would need to scrub an "Identity" header off of the incoming request. Since all requests were coming in through the ingress controller that Envoy was manipulating the headers from, in theory this wouldn't be a problem - but I would have rather encapsulated the request in an envelope larger than the request itself. I had learned with Meshblu that separation between data and metadata is very important, especially with regard to security.
 
@@ -501,7 +501,7 @@ doc:
 
               Computers are pretty good at talking to other computers.
 
-              That said: does performance matter? Yes. It can become an issue. In my opinion you should mitigate risk of performance issues the same way you mitigate risk with everything in software: contain things in very small, well-defined interfaces. If you've done things right, you should be able to replace the implementation of the interface with a faster one without the rest of the code knowing about it. I do this even in microcontroller work where performance is often an issue.
+              That said: does performance matter? Yes. It canx become an issue. In my opinion you should mitigate risk of performance issues the same way you mitigate risk with everything in software: contain things in very small, well-defined interfaces. If you've done things right, you should be able to replace the implementation of the interface with a faster one without the rest of the code knowing about it. I do this even in microcontroller work where performance is often an issue.
 
               If we're dealing with something that can horizontally scale, then that is a great way to create a stopgap while working on a more performant solution, which again reduces performance risk.
 

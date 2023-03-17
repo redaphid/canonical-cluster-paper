@@ -259,7 +259,7 @@ time {
   /* padding: 0.1em; */
   border-bottom: 0.05em solid var(--emphasis-color);
 }
-.Progress header {
+.Progress > header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

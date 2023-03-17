@@ -500,7 +500,7 @@ doc:
 
               Computers are pretty good at talking to other computers.
 
-              That said: does performance matter? Yes. It canx become an issue. In my opinion you should mitigate risk of performance issues the same way you mitigate risk with everything in software: contain things in very small, well-defined interfaces. If you've done things right, you should be able to replace the implementation of the interface with a faster one without the rest of the code knowing about it. I do this even in microcontroller work where performance is often an issue.
+              That said: does performance matter? Yes. It can become an issue. In my opinion you should mitigate risk of performance issues the same way you mitigate risk with everything in software: contain things in very small, well-defined interfaces. If you've done things right, you should be able to replace the implementation of the interface with a faster one without the rest of the code knowing about it. I do this even in microcontroller work where performance is often an issue.
 
               If we're dealing with something that can horizontally scale, then that is a great way to create a stopgap while working on a more performant solution, which again reduces performance risk.
 

@@ -91,9 +91,13 @@
       return html`
         <div class="Progress">
           <h3>Progress</h3>
+          <header>
           <h4>Since last update: ${timeSinceLastProgressHumanReadable} - You've got this!</h4>
+          <a href="#draft"><button>Draft</button></a>
+          </header>
           <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
           <p>${withoutAnswers} / ${total} (${Math.round((withoutAnswers / total) * 100)}%)</p>
+
         </div>    `
     }
     const Doc = ({ doc }) => {

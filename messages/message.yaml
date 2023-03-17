@@ -380,7 +380,7 @@ doc:
               I don't believe in forcing uniformity upon any single service in the system as long as it is small - and services should be, unless there is a good reason to make them larger.
               Rather, we should make the path to uniformity so simple and easy that people want to walk it. Libraries, generators, templates, guides, and things of this nature should be provided to make service development as easy as possible - but not forced upon anyone. This is an evolutionary approach to making good tools that I find to be very effective.
 
-              Small services that have responsibilities pushed as far out to the edge as possible are easy to maintain, and easy to replace. The heuristic I mentioned earlier that software either "obviously has no bugs" or "has no obvious bugs" is a good one when thinking about maintainability and reliability.
+              Small services that have other responsibilities pushed as far out to the edge as possible are easy to maintain, and easy to replace. The heuristic I mentioned earlier that software either "obviously has no bugs" or "has no obvious bugs" is a good one when thinking about maintainability and reliability.
 
               Architectures of large systems should provide environments that help the services within push those responsibilities out. I don't know if you remember the [way too long](#the-totally-naive-services-cluster--open-policy-agent-experience) description of my experimental cluster architecture earlier, but I think it's a good example of how to think about responsibility delegation in a large system.
 

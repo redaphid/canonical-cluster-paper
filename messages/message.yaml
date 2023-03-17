@@ -443,7 +443,6 @@ doc:
               I know about reducing the surface area of attack for the "cloud estate" at a theoretical level, and have done it before in the less-hand-holding Amazon resources (e.g. EC2 clusters).
 
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
-        draft: true
         answers:
         - response: |
             I deal with my understanding and experience some when it comes to some enterprise infrastructure while talking about the cluster designed to integrate with enterprise infrastructure [here](#the-totally-naive-services-cluster--open-policy-agent-experience).

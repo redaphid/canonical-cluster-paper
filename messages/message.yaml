@@ -464,7 +464,8 @@ doc:
         draft: trust
         answers:
           - response: |
-              asdasd
+              It must be measured. And we have to define what "fast enough" is. According to Donald Knuth, "Premature optimization is the root of all evil".
+              Often people will see suboptimal things like nested `for(` loops and make the assumption that they are the cause of poor performance. But these loops may often run a few times. A colleague of mine once told me that "the average loop in code runs like 6 times". I don't know if that's true, and searching for "average loop iterations computer science" looks like a chore to go through.
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
     - title: Industry leadership experience

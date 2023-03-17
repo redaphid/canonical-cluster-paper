@@ -27,6 +27,8 @@
       localStorage.setItem('editMode', getEditQueryParam())
     }
     const editMode = localStorage.getItem('editMode') === 'true'
+
+    // Copilot wrote all this reducing business. I'm not this crazy!
     const getListOfPromptNamesWithoutAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {

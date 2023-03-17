@@ -470,7 +470,7 @@ doc:
 
               But more importantly, you shouldn't be doing that optimizing by hand if you can help it. Write the code that is easy to understand first. Premature optimization is the root of all evil. Then, if you have a performance problem, profile it. Find the bottleneck. Then optimize that. Don't optimize the code you haven't written yet, unless it's fairly easy to do.
 
-              I tell a story [later on](#what-did-you-achieve-at-university-that-you-consider-exceptional-) about how I got an automatic A in assembly class without writing any assembly.
+              I tell a story [later on](#what-did-you-achieve-at-university-that-you-consider-exceptional-) about how I got an automatic A in assembly class without writing any assembly. This is because people misunderstood how to be performant in assembly, vs a C optimizing compiler that's specific to the CPU architecture you are targeting.
 
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?

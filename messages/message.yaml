@@ -75,6 +75,7 @@ doc:
             The barriers between these circles were enforced by OPA.
             Outside of the authentication barrier, we are in a no-trust environment.
             Once we pass through the authentication barrier, communications between the services can trust that the request was from who it says it is.
+
         - response: |
             #### Authentication Barrier
             An OPA service was installed alongside Envoy at the ingress gateway of the cluster. OPA would evaluate the request after obtaining information necessary to reason about authentication legitimacy. This information could be provided as a result of an OIDC workflow, some kind of Active Directory authentication, or a variety of other authorization methods we supported via an adapter pattern described [later in this document](#authorization-adapters). This policy could also be a passthrough, and assume whatever security handshake that happened earlier in the request flow validated user identity correctly.
@@ -92,7 +93,7 @@ doc:
             miro: '3458764548844659047'
 
         - response: |
-            In the proof of concept, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP  (Identity Provider) with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I talk about [later on](#authorization-adapters).
+            In the initial implementation, I used Envoy to insert an "Identity" header into the request after the request was validated through whatever mechanism the client wanted to use. We offered a Keycloak instance as an IdP  (Identity Provider) with OIDC capabilities, but we also would accept OIDC credentials from a trusted 3rd party; or many other authentication mechanisms - we followed an adapter pattern for normalizing auth requirements and data, which I talk about [later on](#authorization-adapters).
 
             Regardless of the mechanism used, in the end an OPA policy always gated access to the cluster. The client's authentication data was evaluated against OPA policies, which had the final say. This, like all autoinjected systems in the cluster, could be opted out of via configuration.
 
@@ -132,6 +133,12 @@ doc:
            I accomplished this by making several microservices that used the adapter pattern to ETL (extract,transform,load) any information necessary for policy evaluation from various IdPs to OPA's internal, ephermal datastore.
 
             I preferred this method to OPA policies doing http requests to our adapters, as I feel doing http requests and parsing the results make policies much more difficult to understand, as the policy now has to know and deal with implementation details, which defeats the purpose of having a restricted policy language.
+
+            It's important to note that OPA policies could also proxy the authn/z decision making to an existing security service. For example, I made a microservice that could query Okta's decision-making engine and treat Okta's response as authoritative. A simple http service internal to the cluster that takes data from the post body, queries Okta, and returns 200s if Okta says things are ok, 400s otherwise.
+
+            In a production system, I would try to use/make a plugin for OPA that abstracts the communication to an external identity provider behind a simple construct accessible to the Rego language, keeping the policy language again unaware of the specifics of http. But this effort could be done in parallel to others working on the cluster, with the security model held constant.
+
+            Through this, enterprise customers could keep all their rules for authentication and authorization in Okta, which they may already be using for other purposes. Keycloak has a similar mechanism, with a different scheme when it comes to rule execution. It's a common feature of identity providers.
 
           figure:
             figure: identity-provider-data-to-opa
@@ -434,7 +441,11 @@ doc:
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
         draft: true
         answers:
-        - response: "sadasd"
+        - response: |
+            I deal with my understanding and experience some when it comes to some enterprise infrastructure while talking about the cluster designed to integrate with enterprise infrastructure [here](#the-totally-naive-services-cluster--open-policy-agent-experience).
+            More specifically, I talked about interfacing with some enterprise infrastructure [here](#authorization-adapters)
+            I wrote code that interfaced with Okta, Azure Active Directory, LDAP, and Keycloak that translated their auth data in to a simple format consumable by OPA.
+
       - prompt: Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
         answers:
         - response: |

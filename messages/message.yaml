@@ -454,7 +454,7 @@ doc:
           - response: |
               I am somewhat experienced when it comes to public cloud operations. I've used AWS off and on for a long time, but I do have to refresh my memory on how to do certain things whenever I touch it. But things change so fast, it's worth reading up on it every time I use it.
 
-              I know about reducing the surface area of attack for the "cloud estate" at a theoretical level, and have done it before in the less-hand-holding Amazon resources (e.g. EC2 clusters).
+              I know about reducing the surface area of attack for the "cloud estate" at a theoretical level, and have done it before in the less-managed Amazon resources (e.g. EC2 clusters).
 
       - prompt: Describe your experience with enterprise infrastructure and application management, either as a user running enterprise operations, or as a vendor targeting the enterprise market
         answers:

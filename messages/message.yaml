@@ -608,6 +608,10 @@ doc:
             Since we're talking about it here, I have been thinking about whether we should prevent OPA from being able to modify a message that passes through it - or to call external services via REST or the like.
             We may be able to further constrain policies to make it very difficult to leak auth data.
 
+            Besides this I worked with the startup "Octoblu" I've mentioned earlier, and details about it's product Meshblu in the [Meshblu section](#experience-with-meshblu). I refer to it elsewhere in this document to illustrate my thoughts and experience when it comes to scaling.
+
+            I also worked with a medical startup, and worked a little on "Computes", a decentralized computation platform bought by Magic Leap.
+
       - prompt: Describe any experience working in a public company. What is important for your colleagues to know about being a public company?
     - title: Education
       prompts:

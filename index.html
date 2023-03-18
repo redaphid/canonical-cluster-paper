@@ -189,9 +189,10 @@
     const Prompt = ({ question }) => {
       const { prompt, answers } = question
       const shouldSayDraft = editMode && question.draft
+      const shouldBePrimaryDraft = shouldSayDraft && question.draft === 'primary'
       return html`
       <div class="Prompt ${shouldSayDraft ? "draft" : ''}" id=${titleToId(prompt)}>
-          <header id=${shouldSayDraft ? "draft" : ''}>
+          <header id=${shouldBePrimaryDraft ? "draft" : ''}>
             <h4>${prompt}</h4>
           </header>
           ${answers?.map(answer => {

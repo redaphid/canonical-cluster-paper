@@ -62,7 +62,6 @@
       total: getPromptCount(),
       withAnswers: promptsWithAnswers(),
       withoutAnswers: getUnfinishedPrompts(),
-      remainingPromptsWithoutAnswers: getUnfinishedPrompts(),
       timestamp: Date.now()
     }
     // get previous progress
@@ -134,16 +133,16 @@
       return html`
         <div class="Edit">
           <${Progress} progress=${progress} timeSinceLastProgress=${timeSinceLastProgress} />
-          <${RemainingPrompts} remainingPrompts=${progress.remainingPromptsWithoutAnswers} />
+          <${RemainingPrompts} withoutAnswers=${progress.withoutAnswers} />
         </div>
       `
     }
-    const RemainingPrompts = ({ remainingPrompts }) => {
+    const RemainingPrompts = ({ withoutAnswers }) => {
       return html`
         <div class="RemainingPrompts">
           <h3>Remaining Prompts</h3>
           <ul>
-            ${remainingPrompts.map(({prompt,draft}) => html`
+            ${withoutAnswers.map(({prompt,draft}) => html`
               <li>
                 <a href="#${titleToId(prompt)}">
                   ${prompt}

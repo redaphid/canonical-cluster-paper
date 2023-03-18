@@ -308,7 +308,8 @@
             ]
           },
           {
-            "prompt": "Describe any experience working in a public company. What is important for your colleagues to know about being a public company?"
+            "prompt": "Describe any experience working in a public company. What is important for your colleagues to know about being a public company?",
+            "draft": "primary"
           }
         ]
       },

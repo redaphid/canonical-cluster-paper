@@ -612,6 +612,7 @@ doc:
             I also worked with a medical startup, and worked a little on "Computes", a decentralized computation platform bought by Magic Leap.
 
       - prompt: Describe any experience working in a public company. What is important for your colleagues to know about being a public company?
+        draft: primary
     - title: Education
       prompts:
       - prompt: How did you fare in high school mathematics, physical sciences and computing? Which were strengths and which most enjoyable? How did you rank, competitively, in them?

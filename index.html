@@ -92,7 +92,7 @@
           <h3>Progress</h3>
           <header>
           <h4>Since last update: ${displayTime} - You've got this!</h4>
-          <a href="#draft"><button>Primary Draft</button></a>
+          <a href="#draft"><button class="primary draft">Primary Draft</button></a>
           </header>
           <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
           <p>${total - withAnswers} / ${total} (${Math.round(((total-withAnswers) / total) * 100)}%)</p>
@@ -144,7 +144,7 @@
           <ul>
             ${withoutAnswers.map(({prompt,draft}) => html`
               <li class="prompt ${draft ? 'draft': ''} ${draft === 'primary'? 'primary': ''}">
-                <a href="#${titleToId(prompt)}">
+                <a class="header" href="#${titleToId(prompt)}">
                   ${prompt}
                 </a>
                 </li>
@@ -191,7 +191,7 @@
       const primaryDraft = draft && question.draft === 'primary'
       return html`
       <div class="Prompt ${draft ? "draft" : ''} ${primaryDraft ? "primary": ''}" id=${titleToId(prompt)}>
-          <header id=${primaryDraft ? "draft" : ''}>
+          <header class="header" id=${primaryDraft ? "draft" : ''}>
             ${draft ? html`<h5>!draft ${primaryDraft ? '!primary': ''  }</h4>` : ''}
             <h4>${prompt}</h4>
           </header>

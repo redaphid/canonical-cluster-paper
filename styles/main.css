@@ -41,15 +41,6 @@ h4 {
   width: fit-content;
 }
 
-.draft header {
-  background-color: var(--emphasis-color-extra);
-  color: var(--emphasis-color-foreground);
-  padding: 0.5em;
-  font-size: 1.5em;
-}
-.draft.primary {
-  border: 0.1em solid var(--emphasis-color-extra);
-}
 h5 {
   font-weight: var(--font-weight-smaller);
   font-size: 0.75em;
@@ -267,14 +258,25 @@ time {
   padding: 0.5em;
   border-bottom: 0.05em solid var(--emphasis-color);
 }
-.RemainingPrompts .prompt.draft, .RemainingPrompts .prompt.draft * {
-  background-color: var(--emphasis-color);
-  font-weight: var(--font-weight-biggest);
-  color: var(--emphasis-color-foreground);
+
+.draft {
+  font-weight: var(--font-weight-bigger);
   padding: 0.25em;
 }
 
-.RemainingPrompts .prompt.draft.primary, .RemainingPrompts .prompt.draft.primary * {
+.draft .header {
+  background-color: var(--emphasis-color-extra);
+  color: var(--emphasis-color-foreground);
+  padding: 0.25em;
+  font-size: 1.2em;
+}
+
+.draft.primary .header {
+  border: 0.1em solid var(--emphasis-color-extra);
+  background-color: var(--emphasis-color-alt);
+}
+
+.go-to-primary-draft {
   background-color: var(--emphasis-color-alt);
 }
 /* Hide Progress in print form */

@@ -193,6 +193,8 @@
       return html`
       <div class="Prompt ${draft ? "draft" : ''} ${primaryDraft ? "primary": ''}" id=${titleToId(prompt)}>
           <header id=${primaryDraft ? "draft" : ''}>
+            ${draft ? html`<h5>!Draft</h4>` : ''}
+            ${primaryDraft ? html`<h5>!Primary Draft</h4>` : ''}
             <h4>${prompt}</h4>
           </header>
           ${answers?.map(answer => {

@@ -143,8 +143,8 @@
           <h3>Remaining Prompts</h3>
           <ul>
             ${withoutAnswers.map(({prompt,draft}) => html`
-              <li class="unanswered">
-                <a class="${draft ? 'draft': ''} ${draft === 'primary'? 'primary': ''}" href="#${titleToId(prompt)}">
+              <li class="prompt ${draft ? 'draft': ''} ${draft === 'primary'? 'primary': ''}">
+                <a href="#${titleToId(prompt)}">
                   ${prompt}
                 </a>
                 </li>

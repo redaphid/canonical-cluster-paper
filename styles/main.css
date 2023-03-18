@@ -267,12 +267,15 @@ time {
   padding: 0.5em;
   border-bottom: 0.05em solid var(--emphasis-color);
 }
-.RemainingPrompts .draft {
+.RemainingPrompts .prompt.draft, .RemainingPrompts .prompt.draft * {
   background-color: var(--emphasis-color);
+  font-weight: var(--font-weight-biggest);
   color: var(--emphasis-color-foreground);
+  padding: 0.25em;
 }
-.RemainingPrompts .draft.primary {
-  background-color: var(--emphasis-color-extra);
+
+.RemainingPrompts .prompt.draft.primary, .RemainingPrompts .prompt.draft.primary * {
+  background-color: var(--emphasis-color-alt);
 }
 /* Hide Progress in print form */
 @media print {

@@ -89,7 +89,7 @@
           <a class="primary draft" href="#draft"><button class="header">Primary Draft</button></a>
           </header>
           <p>${withAnswers.length} / ${total} (${Math.round((withAnswers.length / total) * 100)}%)</p>
-          <p>${withoutAnswers.length} / ${total} (${Math.round((withAnswers.length / total) * 100)}%)</p>
+          <p>${withoutAnswers.length} / ${total} (${Math.round((withoutAnswers.length / total) * 100)}%)</p>
 
         </div>    `
     }
@@ -144,15 +144,6 @@
                 </li>
             `)}
           </ul>
-        </div>
-      `
-    }
-    const Completion = ({ total, withAnswers, withoutAnswers }) => {
-      return html`
-        <div class="Completion">
-          <h3>Completion</h3>
-          <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
-          <p>${withoutAnswers} / ${total} (${Math.round((withoutAnswers / total) * 100)}%)</p>
         </div>
       `
     }

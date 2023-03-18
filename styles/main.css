@@ -270,6 +270,7 @@ time {
   font-size: 1.2em;
 }
 
+
 .draft.primary .header {
   border: 0.1em solid var(--emphasis-color-extra);
   background-color: var(--emphasis-color-alt);

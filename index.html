@@ -13,8 +13,6 @@
     const timeout = ms => new Promise(resolve => setTimeout(resolve, ms))
 
     const getMiroLink = widget => `${res.doc.miro}/?moveToWidget=${widget}`
-    const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
-    window.getWidgetFromMiroLink = getWidgetFromMiroLink
 
     //replace all non-alphanumeric characters with dashes
     const titleToId = (title) => {
@@ -27,9 +25,8 @@
     }
     const editMode = localStorage.getItem('editMode') === 'true'
 
-    const isPromptFinished = prompt => {
-      return prompt?.answers?.length && !prompt.draft
-    }
+    const isPromptFinished = prompt => prompt?.answers?.length && !prompt.draft
+
     const getUnfinishedPrompts = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {
@@ -209,6 +206,11 @@
     if (window.location.hash) {
       timeout(250).then(() => document.getElementById(window.location.hash.replace('#', '')).scrollIntoView({alignToTop: true}))
     }
+  </script>
+  <script>
+    //helper functions for me to run manually in the console
+    const getWidgetFromMiroLink = link => link.split('moveToWidget=')[1].split('&')[0]
+    window.getWidgetFromMiroLink = getWidgetFromMiroLink
   </script>
 
 </head>

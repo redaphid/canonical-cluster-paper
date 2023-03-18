@@ -269,7 +269,7 @@ time {
 }
 /* Hide Progress in print form */
 @media print {
-  .Progress {
+  .Edit {
     display: none;
   }
 }

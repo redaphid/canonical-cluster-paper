@@ -590,6 +590,16 @@ doc:
 
             The web crawler would then evaluate that line of Python and use it as a way of scoring which links were the most promsing ones to follow in it's quest. This made the academics very happy, because they could tweak those basic statements, let the crawler run for a while, and see where it went and what it came back with.
 
+            I'd like to explore a similar solution with OPA, in which authn/z data would be exposed as a simple entity in the language, allowing the policy to read clearly without having to care about the implementation details of a request.
+            Imagine a scenario in which you could write a policy like this:
+            ```rego
+              default false
+              allow = true {
+                some person in sales
+                person.id = identity
+              }
+            ```
+            _Note: this is likely not valid Rego; it's been a bit since I've written it. Hopefully this gets the point across._
       - prompt: Describe any experience working in a public company. What is important for your colleagues to know about being a public company?
     - title: Education
       prompts:

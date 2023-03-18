@@ -320,7 +320,7 @@
             ]
           },
           {
-            "prompt": "What sort of high school student were you? Outside of class, what were your interests and hobbies?  What would your high school peers remember you for, if we asked them?",
+            "prompt": "What sort of high school student were you? Outside of class, what were your interests and hobbies? What would your high school peers remember you for, if we asked them?",
             "answers": [
               {
                 "response": "I was a good student in high school - people thought of me as an academic. I was extremely in to computers, and so I went to LAN parties a lot with my fellow techies. I liked paintball. I took Wing Chun Kung Fu. I worked as a programmer after school at a place I [talk about later](#describe-some-high-school-achievements-considered-exceptional-by-peers-and-staff). I went to punk rock shows. I liked cars.\n\nMy high school peers remember me as a funny, good-natured, intelligent person who occasionally wrote very deep poetry in his notebooks. And obviously, yes, they remember me as a computer nerd. But they remember my attitude first, which I appreciate.\n"

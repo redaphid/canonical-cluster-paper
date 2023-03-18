@@ -27,22 +27,18 @@
     }
     const editMode = localStorage.getItem('editMode') === 'true'
 
-    // Copilot wrote all this reducing business. I'm not this crazy!
-    const getListOfPromptNamesWithoutAnswers = () => {
+    const getPromptCount = () => {
+      return res.doc.main.reduce((acc, section) => {
+        return acc + section.prompts.length
+      }, 0)
+    }
+    const getUnfinishedPrompts = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {
-          return acc.concat(prompt?.answers?.length ? [] : [prompt.prompt])
+          return acc.concat(prompt?.answers?.length || prompt.draft ? [] : [prompt.prompt])
         }, []))
       }, [])
     }
-    const promptsWithoutAnswers = () => {
-      return res.doc.main.reduce((acc, section) => {
-        return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + (prompt.answers?.length && !prompt.draft ? 0 : 1)
-        }, 0)
-      }, 0)
-    }
-
     const promptsWithAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
@@ -60,10 +56,10 @@
     }
 
     const progress = {
-      total: promptsWithoutAnswers() + promptsWithAnswers(),
+      total: getPromptCount(),
       withAnswers: promptsWithAnswers(),
-      withoutAnswers: promptsWithoutAnswers(),
-      remainingPromptsWithoutAnswers: getListOfPromptNamesWithoutAnswers(),
+      withoutAnswers: getUnfinishedPrompts(),
+      remainingPromptsWithoutAnswers: getUnfinishedPrompts(),
       timestamp: Date.now()
     }
     // get previous progress
@@ -87,16 +83,17 @@
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
     const Progress = ({ progress, timeSinceLastProgress }) => {
       const { total, withAnswers, withoutAnswers } = progress
-      const timeSinceLastProgressHumanReadable = new Date(timeSinceLastProgress * 1000).toISOString().substr(11, 8)
+      console.log(progress)
+      const displayTime = new Date(timeSinceLastProgress * 1000).toISOString().substr(11, 8)
       return html`
         <div class="Progress">
           <h3>Progress</h3>
           <header>
-          <h4>Since last update: ${timeSinceLastProgressHumanReadable} - You've got this!</h4>
+          <h4>Since last update: ${displayTime} - You've got this!</h4>
           <a href="#draft"><button>Primary Draft</button></a>
           </header>
           <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
-          <p>${withoutAnswers} / ${total} (${Math.round((withoutAnswers / total) * 100)}%)</p>
+          <p>${total - withAnswers} / ${total} (${Math.round(((total-withAnswers) / total) * 100)}%)</p>
 
         </div>    `
     }

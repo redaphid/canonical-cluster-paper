@@ -572,7 +572,6 @@ doc:
         - response: |
             I have a lot of thoughts about software development practices, but I don't tell many people about them, and I don't know how unique they are. tl;dr "no".
       - prompt: Describe any experience working with startups. What did you draw from that experience that would be relevant for this application?
-        draft: primary
         answers:
         - response: |
             I've worked at a few startups, and in general I enjoy the fast pace and ability to make big decisions quickly. I like the ability to make a big impact on the company, and to have the creative freedom to come up with solutions to problems. There's a kind of trust implicit in startup culture. The lack of red tape and focus on people over process is nice.

@@ -472,7 +472,6 @@ doc:
 
 
       - prompt: Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?
-        draft: primary
         answers:
           - response: |
                 When it comes to documentation, my first concern is making sure they don't go out of sync with the code. It's difficult to keep documentation up to date, and it can be difficult to tell if they are out of date. I've been learning some Rust lately, and the concept of a "doctest" might help keep the documentation and code in sync. Python has something similar. If a language has features that incentivize keeping documentation and code in sync, these features should be used because they will likely be the most friction-free way to get started.
@@ -499,6 +498,13 @@ doc:
                 This __could__ be enforce by CI. As a developer, I'm not sure how happy that would make me.
 
                 It would also be interesting to have a warning in CI if the code changed, but the documentation didn't. Not all code changes require documentation changes, but making something nag the developer about the doc file not being modified might be enough to get them to think about it. A balance must be struck here that would involve some experimentation.
+
+                As a developer, One of the things that makes me dread updating documentation is when it is a huge, monolithic series of intimidating files. Breaking down documentation into small, atomic pieces like this would make things more approachable. You would need higher-level documentation as you move up the abstraction ladder, but perhaps a similar idea could be used recursively.
+
+                As far as good examples of open source docs, Arch Linux's [wiki](https://wiki.archlinux.org/) is famously amazing when it comes to anything Linux. I suspect their culture is one which celebrates documentation.
+
+                I've been using an [Entity Component System](https://en.wikipedia.org/wiki/Entity_component_system) library called [Bevy](https://bevyengine.org/) for a while now, and The "[Bevy Unofficial Cheatbook](https://bevy-cheatbook.github.io/)" is fantastic. I read it just for fun. And that's saying a lot.
+
 
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
         answers:

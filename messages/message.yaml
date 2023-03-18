@@ -521,7 +521,7 @@ doc:
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
 
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
-        draft: true
+        draft:
         answers:
           - response: |
               I've outlined my thoughts regarding devops very thoroughly in the section of this document that talks about [devops and sysadmin stuff](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) elsewhere in this document.

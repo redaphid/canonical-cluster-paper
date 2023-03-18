@@ -261,7 +261,6 @@ time {
 
 .draft {
   font-weight: var(--font-weight-bigger);
-  padding: 0.25em;
 }
 
 .draft .header {
@@ -273,10 +272,6 @@ time {
 
 .draft.primary .header {
   border: 0.1em solid var(--emphasis-color-extra);
-  background-color: var(--emphasis-color-alt);
-}
-
-.go-to-primary-draft {
   background-color: var(--emphasis-color-alt);
 }
 /* Hide Progress in print form */

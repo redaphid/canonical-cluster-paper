@@ -230,6 +230,7 @@ time {
   border: 0.25em solid var(--emphasis-color);
   width: calc(100% - 8.5in - 1em);
   max-height: 100%;
+  font-size: (100% + 1vw);
 
 }
 .RemainingPrompts {

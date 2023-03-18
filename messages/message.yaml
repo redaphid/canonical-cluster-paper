@@ -479,7 +479,21 @@ doc:
 
                 These features alone don't guarantee that the __intention__ of the code is documented, though.
                 Having a culture that celebrates documentation is probably the most effective way to keep the docs up to date, and accurate. Perhaps a project generator that generates a markdown file next to code files, or to make a team's practice to write documentation in markdown files in the same directory as the code they are documenting.
-                I'm imagining a scenario similar to React's philosophy of "code that changes together, lives together", and adding documentation to the mix.
+                I'm imagining a scenario similar to recent code organization philosophy of "code that changes together, lives together", and adding documentation to the mix.
+                For example, a team might have a directory structure like this:
+
+                ```
+                /src/components/
+                  /IceCream
+                    IceCream.js
+                    IceCream.test.js
+                    IceCream.css
+                    IceCream.md
+                  /Tamale
+                    Tamale.js
+                    Tamale.test.js
+                    Tamale.css
+                    Tamale.md
 
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
         answers:

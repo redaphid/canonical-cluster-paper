@@ -267,6 +267,13 @@ time {
   padding: 0.5em;
   border-bottom: 0.05em solid var(--emphasis-color);
 }
+.RemainingPrompts .draft {
+  background-color: var(--emphasis-color);
+  color: var(--emphasis-color-foreground);
+}
+.RemainingPrompts .draft.primary {
+  background-color: var(--emphasis-color-extra);
+}
 /* Hide Progress in print form */
 @media print {
   .Edit {

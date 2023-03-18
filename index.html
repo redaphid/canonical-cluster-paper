@@ -143,7 +143,7 @@
         <div class="RemainingPrompts">
           <h3>Remaining Prompts</h3>
           <ul>
-            ${remainingPrompts.map(prompt => html`
+            ${remainingPrompts.map(({prompt,draft}) => html`
               <li>
                 <a href="#${titleToId(prompt)}">
                   ${prompt}

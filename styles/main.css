@@ -264,6 +264,16 @@ time {
   font-weight: var(--font-weight-bigger);
 }
 
+.draft .header {
+  background-color: var(--emphasis-color-extra);
+  color: var(--emphasis-color-foreground);
+}
+
+
+.draft.primary .header {
+  border: 0.1em solid var(--emphasis-color-extra);
+  background-color: var(--emphasis-color-alt);
+}
 /* Hide Progress in print form */
 @media print {
   .Edit {

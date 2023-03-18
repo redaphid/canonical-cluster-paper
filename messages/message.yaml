@@ -475,7 +475,7 @@ doc:
         draft: primary
         answers:
           - response: |
-                asd
+                When it comes to documentation, my first concern is making sure they don't go out of sync with the code.
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
         answers:
           - response: |

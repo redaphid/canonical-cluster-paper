@@ -80,7 +80,6 @@
     const Progress = ({ progress, timeSinceLastProgress }) => {
       const {withAnswers, withoutAnswers } = progress
       const total = withAnswers.length + withoutAnswers.length
-      console.log(progress)
       const displayTime = new Date(timeSinceLastProgress * 1000).toISOString().substr(11, 8)
       return html`
         <div class="Progress">

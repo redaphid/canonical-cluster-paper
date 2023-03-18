@@ -472,6 +472,10 @@ doc:
 
 
       - prompt: Outline your thoughts on documentation in large software projects. What practices should teams follow? What are great examples of open source docs?
+        draft: primary
+        answers:
+          - response: |
+                asd
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
         answers:
           - response: |

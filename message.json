@@ -272,7 +272,7 @@
           },
           {
             "prompt": "Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?",
-            "draft": null,
+            "draft": true,
             "answers": [
               {
                 "response": "I've outlined my thoughts regarding devops very thoroughly in the section of this document that talks about [devops and sysadmin stuff](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) elsewhere in this document.\n"

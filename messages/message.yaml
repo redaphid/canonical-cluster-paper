@@ -485,16 +485,16 @@ doc:
                 ```
                 /src/components/
                   /IceCream
-                    IceCream.js
-                    IceCream.test.js
+                    IceCream.ts
+                    IceCream.test.ts
                     IceCream.css
                     IceCream.md
                   /Tamale
-                    Tamale.js
-                    Tamale.test.js
+                    Tamale.ts
+                    Tamale.test.ts
                     Tamale.css
                     Tamale.md
-
+                ```
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
         answers:
           - response: |

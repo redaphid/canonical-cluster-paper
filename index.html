@@ -27,6 +27,9 @@
     }
     const editMode = localStorage.getItem('editMode') === 'true'
 
+    const isPromptFinished = prompt => {
+      return prompt?.answers?.length && !prompt.draft
+    }
     const getPromptCount = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.length
@@ -35,14 +38,14 @@
     const getUnfinishedPrompts = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {
-          return acc.concat(prompt?.answers?.length || prompt.draft ? [] : [prompt.prompt])
+          return acc.concat(isPromptFinished(prompt) ? [] : [prompt])
         }, []))
       }, [])
     }
     const promptsWithAnswers = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + (prompt?.answers?.length && !prompt.draft ? 1 : 0)
+          return acc + isPromptFinished(prompt) ? 1 : 0
         }, 0)
       }, 0)
     }

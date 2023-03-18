@@ -520,6 +520,7 @@ doc:
               I also ascribe to the whole "Make it work, make it right, make it fast" mantra.
 
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
+        draft: true
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
 
     - title: Industry leadership experience

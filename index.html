@@ -188,11 +188,11 @@
     let figureFlip = 0
     const Prompt = ({ question }) => {
       const { prompt, answers } = question
-      const shouldSayDraft = editMode && question.draft
-      const shouldBePrimaryDraft = shouldSayDraft && question.draft === 'primary'
+      const draft = editMode && question.draft
+      const primaryDraft = draft && question.draft === 'primary'
       return html`
-      <div class="Prompt ${shouldSayDraft ? "draft" : ''}" id=${titleToId(prompt)}>
-          <header id=${shouldBePrimaryDraft ? "draft" : ''}>
+      <div class="Prompt ${draft ? "draft" : ''} ${primaryDraft ? "primary": ''}" id=${titleToId(prompt)}>
+          <header id=${primaryDraft ? "draft" : ''}>
             <h4>${prompt}</h4>
           </header>
           ${answers?.map(answer => {

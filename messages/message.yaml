@@ -495,6 +495,11 @@ doc:
                     Tamale.css
                     Tamale.md
                 ```
+
+                This __could__ be enforce by CI. As a developer, I'm not sure how happy that would make me.
+
+                It would also be interesting to have a warning in CI if the code changed, but the documentation didn't. Not all code changes require documentation changes, but making something nag the developer about the doc file not being modified might be enough to get them to think about it. A balance must be struck here that would involve some experimentation.
+
       - prompt: Outline your thoughts on user experience, usability and design in software. How do you lead teams to deliver outstanding user experience?
         answers:
           - response: |

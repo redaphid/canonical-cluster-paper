@@ -30,11 +30,6 @@
     const isPromptFinished = prompt => {
       return prompt?.answers?.length && !prompt.draft
     }
-    const getPromptCount = () => {
-      return res.doc.main.reduce((acc, section) => {
-        return acc + section.prompts.length
-      }, 0)
-    }
     const getUnfinishedPrompts = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {
@@ -42,12 +37,12 @@
         }, []))
       }, [])
     }
-    const promptsWithAnswers = () => {
+    const getFinishedPrompts = () => {
       return res.doc.main.reduce((acc, section) => {
-        return acc + section.prompts.reduce((acc, prompt) => {
-          return acc + isPromptFinished(prompt) ? 1 : 0
-        }, 0)
-      }, 0)
+        return acc.concat(section.prompts.reduce((acc, prompt) => {
+          return acc.concat(isPromptFinished(prompt) ? [prompt] : [])
+        }, []))
+      }, [])
     }
 
     const getPrompt = id => {
@@ -59,8 +54,7 @@
     }
 
     const progress = {
-      total: getPromptCount(),
-      withAnswers: promptsWithAnswers(),
+      withAnswers: getFinishedPrompts(),
       withoutAnswers: getUnfinishedPrompts(),
       timestamp: Date.now()
     }
@@ -84,7 +78,8 @@
 
     const RenderRawHtml = ({ html }) => h('div', { dangerouslySetInnerHTML: { __html: html } })
     const Progress = ({ progress, timeSinceLastProgress }) => {
-      const { total, withAnswers, withoutAnswers } = progress
+      const {withAnswers, withoutAnswers } = progress
+      const total = withAnswers.length + withoutAnswers.length
       console.log(progress)
       const displayTime = new Date(timeSinceLastProgress * 1000).toISOString().substr(11, 8)
       return html`
@@ -94,8 +89,8 @@
           <h4>Since last update: ${displayTime} - You've got this!</h4>
           <a class="primary draft" href="#draft"><button class="header">Primary Draft</button></a>
           </header>
-          <p>${withAnswers} / ${total} (${Math.round((withAnswers / total) * 100)}%)</p>
-          <p>${total - withAnswers} / ${total} (${Math.round(((total-withAnswers) / total) * 100)}%)</p>
+          <p>${withAnswers.length} / ${total} (${Math.round((withAnswers.length / total) * 100)}%)</p>
+          <p>${withoutAnswers.length} / ${total} (${Math.round((withAnswers.length / total) * 100)}%)</p>
 
         </div>    `
     }

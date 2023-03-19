@@ -269,6 +269,7 @@ doc:
             Regarding development environments, I'm all-in on vscode and Linux. I bought Red Hat 6.0 at a Gamestop in high school by saving up my lunch money. I had to buy a Macbook for the aforementioned browser project, and I'll use it occasionally because the hardware is fantastic. Please someone update the Linux kernel to support this hardware! I want out of Mac-land.
 
       - prompt: Would you describe yourself as a high quality coder? Why?
+        draft: primary
         answers:
         - response: |
             Yes, I would describe myself as a high quality coder.
@@ -295,7 +296,7 @@ doc:
 
             ...and many others.
 
-            I simplify interfaces exposed to whatever is consuming my code as much as possible, exposing the bare surface area necessary for it to be functional. I try to use the simplest data structure for inputs and outputs.
+            I simplify interfaces exposed to whatever is consuming my code as much as possible, exposing the minimal surface area necessary for it to be functional. I try to use the simplest data structure for inputs and outputs.
 
             When it comes to code complexity, I believe "There are either obviously no errors, or no obvious errors". Defects hide in complexity. Keep your code as simple as possible - but no simpler.
 

@@ -87,8 +87,8 @@ time {
     ;
   column-gap: 0.1em;
   row-gap: 0.1em;
-  background-color: #AEA79F;
   max-width: 8.5in;
+  background-color: var(--emphasis-color-extra);
 }
 .Intro {
   grid-area: Intro;
@@ -168,6 +168,7 @@ time {
 }
 .Prompts {
   background-color: var(--emphasis-color-foreground);
+  page-break-inside: avoid;
 }
 .Prompts ul {
   list-style: none;

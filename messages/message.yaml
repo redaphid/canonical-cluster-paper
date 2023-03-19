@@ -101,6 +101,8 @@ doc:
 
             In addition, this header could be manipulated by a malicious service within the cluster. The header solution was good enough for a proof of concept, but further research would be needed to create an envelope for the request that sufficiently separated "userland" requests and cluster metadata. Anyway, that's a mini self-audit of this implementation.
 
+            _Since writing the statements above, I've been reading up a little on Kafka. Kafka seems to have the metadata/data separation that I was looking for. It's streaming nature would probably make the authz egress filter I talk about later achievable with less friction than http. We might be able to map requests to responses better as well. Anyway. I probably should learn more._
+
             Past this barrier, the services could trust that the request was from who it said it was, but they could not (yet) trust that the request was authorized to do what it was trying to do.
 
         - response: |

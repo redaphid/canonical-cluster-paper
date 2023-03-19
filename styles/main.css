@@ -263,11 +263,14 @@ time {
   text-decoration: none;
 }
 
-.TableOfContents a:hover {
-  text-decoration: underline;
+.TableOfContents ul {
+  padding: 0.45em;
+  margin-bottom: 0.25em;
+  margin-left: 0.25em;
 }
 
 .TableOfContents li {
+
   margin-bottom: 0.25em;
 }
 

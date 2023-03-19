@@ -66,7 +66,6 @@
       })
       return sections
     }
-    console.log(getTableOfContents())
     const progress = {
       withAnswers: getFinishedPrompts(),
       withoutAnswers: getUnfinishedPrompts(),
@@ -117,7 +116,10 @@
             </>
             <div class="Intro">
               <${RenderRawHtml} html=${marked(doc.intro)} />
-              <ul class="TableOfContents">
+
+              <div class="TableOfContents">
+                <h3>Table of Contents</h3>
+                <ul>
                 ${getTableOfContents().map(section => html`
                   <li>
                     <a href="#${section.id}">${section.title}</a>
@@ -130,7 +132,8 @@
                     </ul>
                   </li>
                 `)}
-              </ul>
+                </ul>
+              </div>
             </div>
             <div class="Main">
               ${doc.main.map(section => html`

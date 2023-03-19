@@ -529,6 +529,7 @@ doc:
               But who am I kidding - no one is interested enough about design to put all that effort in to a written interview.
 
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
+        draft: primary
         answers:
           - response: |
               It must be measured. And we have to define what "fast enough" is. According to Donald Knuth, "Premature optimization is the root of all evil".
@@ -536,6 +537,8 @@ doc:
               Often people will see suboptimal things like nested `for(` loops, and make the assumption that they are the cause of poor performance. But these loops may often run a few times. A colleague of mine once told me that "the average loop in code runs like 6 times". I don't know if that's true, and searching for "average loop iterations computer science" looks like a chore to go through. But it's an interesting thought to consider while analyzing the code by hand. If it's an extremely inefficient loop that runs 6 times, I'd much rather we use the slower, more semantically accurate code if those 6 interations aren't very complex.
 
               But more importantly, you shouldn't be doing that optimizing by hand if you can help it. Write the code that is easy to understand first. Premature optimization is the root of all evil. Then, if you have a performance problem, profile it. Find the bottleneck. Then optimize that. Don't optimize the code you haven't written yet, unless it's fairly easy to do.
+
+              That said, designing things to be parallelizable is a good idea. It's easier to think about in the beginning, and opens up a whole new dimension for performance optimization.
 
               I tell a story [later on](#what-did-you-achieve-at-university-that-you-consider-exceptional-) about how I got an automatic A in assembly class without writing any assembly. This is because people misunderstood how to be performant in assembly, vs a C optimizing compiler that's specific to the CPU architecture you are targeting. By writing C code, I was able to explain to the compiler what I wanted to achieve semantically, and the compiler knew how to optimize for that specific CPU better than most humans could. The compiler knew about fancy and obscure assembly instructions and how to use them. Computers are good at memorizing how to do stuff like that. I talk about the usefullness of abstractions like this some more when [discussing startups I have worked with](#describe-any-experience-working-with-startups--what-did-you-draw-from-that-experience-that-would-be-relevant-for-this-application-)
 

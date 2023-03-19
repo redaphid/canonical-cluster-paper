@@ -711,6 +711,7 @@ doc:
 
         - prompt: Who are Canonical's key competitors, and how should Canonical set about winning?
         - prompt: Why do you most want to work for Canonical?
+          draft: primary
         - prompt: What would you most want to change about Canonical?
           answers:
           - response: |

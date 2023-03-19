@@ -26,7 +26,6 @@
     const editMode = localStorage.getItem('editMode') === 'true'
 
     const isPromptFinished = prompt => prompt?.answers?.length && !prompt.draft
-
     const getUnfinishedPrompts = () => {
       return res.doc.main.reduce((acc, section) => {
         return acc.concat(section.prompts.reduce((acc, prompt) => {
@@ -50,6 +49,24 @@
       }, 0)
     }
 
+    const getTableOfContents = () =>{
+      // for each section, get the section name and prompt names
+      const sections = res.doc.main.map(section => {
+        const prompts = section.prompts.map(prompt => {
+          return {
+            title: prompt.prompt,
+            id: titleToId(prompt.prompt)
+          }
+        })
+        return {
+          title: section.title,
+          id: titleToId(section.title),
+          prompts
+        }
+      })
+      return sections
+    }
+    console.log(getTableOfContents())
     const progress = {
       withAnswers: getFinishedPrompts(),
       withoutAnswers: getUnfinishedPrompts(),
@@ -100,6 +117,20 @@
             </>
             <div class="Intro">
               <${RenderRawHtml} html=${marked(doc.intro)} />
+              <ul class="table-of-contents">
+                ${getTableOfContents().map(section => html`
+                  <li>
+                    <a href="#${section.id}">${section.title}</a>
+                    <ul>
+                      ${section.prompts.map(prompt => html`
+                        <li>
+                          <a href="#${prompt.id}">${prompt.title}</a>
+                        </li>
+                      `)}
+                    </ul>
+                  </li>
+                `)}
+              </ul>
             </div>
             <div class="Main">
               ${doc.main.map(section => html`
@@ -154,7 +185,7 @@
     const Prompts = ({ section }) => {
       return html`
         <section class="Prompts">
-          <h3>${section.title}</h3>
+          <h3 id=${titleToId(section.title)} >${section.title}</h3>
           <ul>
             ${section.prompts.map(s => html`
               <li>

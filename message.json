@@ -273,7 +273,13 @@
             ]
           },
           {
-            "prompt": "Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?"
+            "prompt": "Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?",
+            "draft": "primary",
+            "answers": [
+              {
+                "response": "I think it'\n"
+              }
+            ]
           },
           {
             "prompt": "Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?",

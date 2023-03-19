@@ -529,7 +529,6 @@ doc:
               But who am I kidding - no one is interested enough about design to put all that effort in to a written interview.
 
       - prompt: Outline your thoughts on performance in software engineering. How do you ensure that your product is fast?
-        draft: primary
         answers:
           - response: |
               It must be measured. And we have to define what "fast enough" is. According to Donald Knuth, "Premature optimization is the root of all evil".
@@ -574,9 +573,10 @@ doc:
 
 
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
+        draft: primary
         answers:
         - response: |
-            I talk about my thoughts regarding devops quite a bit  in the [Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) section of this document.
+            I talk about my thoughts regarding devops quite a bit  in the "[describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity)" section of this document.
             #### Automated Systems
             In preparing to answer this question, I did a little research in to CI pipelinse for devsecops. I am concerned that this sort of automatic exploit-detecting pipeline would throw tons of warnings everywhere at first,which is understandable. It would take a long time - maybe in the order of months? - to configure things in such a way that it doesn't snow the team with warnings. But it stands a chance of being worth it in the long run.
 

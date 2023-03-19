@@ -701,7 +701,7 @@ doc:
 
               _Joking above. I can't make those "strong guarantees". Just felt fun to put in._
 
-               When it comes to driving down costs or increasing performance, there is something to be said about a higher-tech or experimental culture that a company like Canonical can provide that pure algorithmic muscle can't. In order to make a huge quantitative increase in performance, something qualitative has to have changed under the hood. Those optimizing C compilers I talked about in the section where I talk about [personal achievements in college](#what-did-you-achieve-at-university-that-you-consider-exceptional-) have been around for a long, long time. Something bigger than a more efficient version of the current generation of algorithms must be found.
+               When it comes to driving down costs or increasing performance, there is something to be said about a higher-tech or experimental culture that a company like Canonical can provide that pure algorithmic muscle can't. In order to make a huge quantitative increase in performance, something qualitative has to have changed under the hood. Those optimizing C compilers I talked about in the [personal achievements in college](#what-did-you-achieve-at-university-that-you-consider-exceptional-) and later as an anecdote in the [performance section](#outline-your-thoughts-on-performance-in-software-engineering--how-do-you-ensure-that-your-product-is-fast-) have been around for a long, long time. I feel that the anecdote can apply to performance in general.
 
                But this could be investigated in parallel to an initiative to increase performace by more traditional means.
 

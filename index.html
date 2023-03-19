@@ -117,7 +117,7 @@
             </>
             <div class="Intro">
               <${RenderRawHtml} html=${marked(doc.intro)} />
-              <ul class="table-of-contents">
+              <ul class="TableOfContents">
                 ${getTableOfContents().map(section => html`
                   <li>
                     <a href="#${section.id}">${section.title}</a>
@@ -188,9 +188,7 @@
           <h3 id=${titleToId(section.title)} >${section.title}</h3>
           <ul>
             ${section.prompts.map(s => html`
-              <li>
                 <${Prompt} question=${s} />
-              </li>
             `)}
           </ul>
         </section>
@@ -203,7 +201,7 @@
       const draft = editMode && question.draft
       const primaryDraft = draft && question.draft === 'primary'
       return html`
-      <div class="Prompt ${draft ? "draft" : ''} ${primaryDraft ? "primary": ''}" id=${titleToId(prompt)}>
+      <li class="Prompt ${draft ? "draft" : ''} ${primaryDraft ? "primary": ''}" id=${titleToId(prompt)}>
           <header class="header" id=${primaryDraft ? "draft" : ''}>
             ${draft ? html`<h5>!draft ${primaryDraft ? '!primary': ''  }</h4>` : ''}
             <h4>${prompt}</h4>
@@ -219,7 +217,7 @@
                 </ul>
               `})}
 
-        </div>
+        </li>
       `
     }
 

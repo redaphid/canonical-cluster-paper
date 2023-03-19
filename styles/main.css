@@ -88,7 +88,7 @@ time {
   column-gap: 0.1em;
   row-gap: 0.1em;
   max-width: 8.5in;
-  background-color: var(--emphasis-color-extra);
+  /* background-color: var(--emphasis-color-extra); */
 }
 .Intro {
   grid-area: Intro;
@@ -100,16 +100,6 @@ time {
   justify-content: center;
   font-weight: var(--font-weight-smaller);
 }
-.Education p {
-  font-weight: var(--font-weight-regular);
-  font-size: 0.9em;
-  margin: 0;
-}
-
-.Educations>ul>li {
-  margin-bottom: 1em;
-}
-
 .Logo {
   grid-area: Logo;
   background-color: var(--emphasis-color-alt);
@@ -263,6 +253,24 @@ time {
   border-bottom: 0.05em solid var(--emphasis-color);
 }
 
+.TableOfContents {
+  margin-left: 0.25em;
+  padding: 0.25em;
+}
+
+.TableOfContents a {
+  color: var(--foreground-color);
+  text-decoration: none;
+}
+
+.TableOfContents a:hover {
+  text-decoration: underline;
+}
+
+.TableOfContents li {
+  margin-bottom: 0.25em;
+}
+
 .draft {
   font-weight: var(--font-weight-bigger);
 }
@@ -271,7 +279,6 @@ time {
   background-color: var(--emphasis-color-extra);
   color: var(--emphasis-color-foreground);
 }
-
 
 .draft.primary .header {
   border: 0.1em solid var(--emphasis-color-extra);

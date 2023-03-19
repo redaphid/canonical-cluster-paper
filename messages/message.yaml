@@ -541,6 +541,7 @@ doc:
       - prompt: Outline your thoughts on security in software engineering. How do you lead your engineers to improve their security posture and awareness?
 
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
+        draft: primary
 
     - title: Industry leadership experience
       prompts:

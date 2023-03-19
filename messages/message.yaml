@@ -713,7 +713,15 @@ doc:
           draft: primary
           answers:
           - response: |
-              Why does this text go from right to left?
+              The obvious answer, as always, is Microsoft. They position themselves in the same space as Canonical according to Canonical's landing page. Microsoft has historically been trusted by enterprise clients vs. open source, and they have tons of money to spend on marketing and R&D. They also have a huge installed base of Windows users, and a lot of those users are in the enterprise space.
+
+              Canonical can set about winning by being the best at what they do. They can't compete with Microsoft on marketing, but they can compete on performance, security, and reliability. They can also compete on price, but that's a bit of a double-edged sword when it comes to reputation.
+
+              Open source is a huge advantage for Canonical, even if Microsoft is embracing it lately. The entire open source stack is so configurable and flexible by nature that it has many more "dimensions" in solution space, which increases the odds of finding interesting and powerful approaches to problems. Canonical can win not just by doing the best, but by doing the best __differently__.
+
+              Another obvious area to think about is other Linux distributions and their associated professional services. I don't know if anyone comes close to Canonical in this regard. Does Red Hat still have a large market share?
+
+              Amazon may be a competitor if they start offering managed solutions in their cloud that encroach upon Canonical's territory. This would be a tough one to fight out. I know they have their own flavor of Linux now. Canonical could position itself as being more flexible in terms of the underlying infrastructure. Canonical could, for example, have on-prem cluster installations. Or by being the (ahem) __canonical__ professionals when it comes to open source software. Or being more flexible of a solution than this hypothetical Amazon offering.
 
         - prompt: Why do you most want to work for Canonical?
           answers:

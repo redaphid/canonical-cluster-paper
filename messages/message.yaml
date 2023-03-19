@@ -711,7 +711,6 @@ doc:
 
         - prompt: Who are Canonical's key competitors, and how should Canonical set about winning?
         - prompt: Why do you most want to work for Canonical?
-          draft: primary
           answers:
           - response: |
               The first thing that comes to mind, of course, is the ethos of open source that Canonical is built on. The mission statement (for Ubuntu, at least) is very similar to some of my own. I've gone on long, passionate talks about my thoughts on the open source movement and feel strongly about it.

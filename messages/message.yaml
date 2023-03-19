@@ -692,7 +692,10 @@ doc:
           draft: primary
           answers:
           - response: |
-              Ubuntu's mission statement aligns closely with my own, and feels like an extension of the classic open source software movement. I haven't really thought about localization or accessibility as part of the open source movement, and it's interesting to think about. Ubuntu's mission has an almost evangelical twist to it
+              Ubuntu's mission statement aligns closely with my own, and feels like an extension of the classic open source software movement. I haven't really thought about localization or accessibility as part of the open source movement, and it's interesting to think about. Ubuntu's mission even more of an evangelical twist to it when taking these under consideration. I literally can't find anything I disagree with.
+
+              That said, I'm trying to find out of Canonical's is different in some way. If it isn't, the corporate mission statement is hard to find. I'd guess that
+
         - prompt: Who are Canonical's key competitors, and how should Canonical set about winning?
         - prompt: Why do you most want to work for Canonical?
         - prompt: What would you most want to change about Canonical?

@@ -398,7 +398,8 @@
             ]
           },
           {
-            "prompt": "Who are Canonical's key competitors, and how should Canonical set about winning?"
+            "prompt": "Who are Canonical's key competitors, and how should Canonical set about winning?",
+            "draft": "primary"
           },
           {
             "prompt": "Why do you most want to work for Canonical?",

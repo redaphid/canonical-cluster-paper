@@ -432,7 +432,7 @@ doc:
 
               In all instances in which I've used this method of testing, my team has been able to use the same `docker-compose.yml` on both their local machines and CI. This method also helps to avoid mocking when possible. I believe it's a good practice to work with "real" systems during development and testing whenever possible.
 
-              Finally, I'll take this time to soapbox for a second about Docker Swarm. Docker Swarm's configuration yaml is a superset of Docker Compose's. If done correctly, a system could have local development, CI, and production all using the same `docker-compose.yml`. Swarm needs some additional configuration regarding scaling, etc, but the swarm config can reference the same config file used everywhere. It is not, however, capable of doing the advanced security configuration that I outline in the [cluster section](#the-totally-naive-services-cluster--open-policy-agent-experience). I have a mostly-empty repo that is a poc of deploying swarm config to AWS [here](https://github.com/redaphid/docker-compose-ecs-test).
+              I used to evangelize Docker Swarm because the homogeneity of configuration could be extended to deploys as well. I have a mostly-empty repo that is a poc of deploying swarm config to AWS [here](https://github.com/redaphid/docker-compose-ecs-test).
 
       - prompt: Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
         answers:
@@ -542,6 +542,9 @@ doc:
 
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
         draft: primary
+        answers:
+        - response: |
+            I talk about my thoughts regarding devops quite a bit  in the [Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) section of this document.
 
     - title: Industry leadership experience
       prompts:

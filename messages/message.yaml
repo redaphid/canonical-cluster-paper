@@ -555,7 +555,7 @@ doc:
             In both cases, a lot of intentional work needs to be done, specifically, to curate these warnings to the point where they merit attention.
 
             #### Organization and Culture
-
+            I really like the idea of "shift left". In our industry we repeatedly learn that we should slice vertically and not horizontally. I'm a full-stack developer. I like to traverse stack strata. Having what would normally be called a "security team" fold in to the development team seems like a good idea.
 
     - title: Industry leadership experience
       prompts:

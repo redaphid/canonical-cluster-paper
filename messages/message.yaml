@@ -712,6 +712,11 @@ doc:
         - prompt: Who are Canonical's key competitors, and how should Canonical set about winning?
         - prompt: Why do you most want to work for Canonical?
         - prompt: What would you most want to change about Canonical?
+          answers:
+          - response: |
+              I don't know enough about Canonical to have an opinion on this. I'm too far away from the organization. Now, when it comes to Ubuntu, I have some thoughts...
+              :)
+
         - prompt: What gets you most excited about this role?
           answers:
           - response: |

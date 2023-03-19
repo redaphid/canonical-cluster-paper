@@ -689,7 +689,6 @@ doc:
     - title: Context
       prompts:
         - prompt: Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?
-          draft: primary
           answers:
           - response: |
               Ubuntu's mission statement aligns closely with my own, and feels like an extension of the classic open source software movement. I haven't really thought about localization or accessibility as part of the open source movement, and it's interesting to think about. Ubuntu's mission even more of an evangelical twist to it when taking these under consideration. I literally can't find anything I disagree with.

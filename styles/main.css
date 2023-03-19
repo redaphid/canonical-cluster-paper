@@ -164,6 +164,7 @@ time {
   margin: 0;
   padding: 0;
   padding-left: 1em;
+  font-weight: var(--font-weight-smallest);
 }
 
 .Prompt {

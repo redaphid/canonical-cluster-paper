@@ -540,10 +540,9 @@ doc:
         draft: primary
         answers:
         - response: |
-            The prevailing theory in the devsecops world is that the developers should
+            The ideas I've been reading reading about in the DevSecOps-land have a lot of merit. I like thinking about security as a developer - to the surprise of no one reading this, I'm sure. But I also like developing a product, from beginning to end.
 
       - prompt: Outline your thoughts on devops and devsecops. Which practices are effective, and which are overrated?
-        draft: true
         answers:
         - response: |
             I talk about my thoughts regarding devops quite a bit  in the [Describe your experience with large-scale IT operations, SAAS, or other running services, in a devops or IS or system administration capacity](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) section of this document.
@@ -555,7 +554,7 @@ doc:
             In both cases, a lot of intentional work needs to be done, specifically, to curate these warnings to the point where they merit attention.
 
             #### Organization and Culture
-            I really like the idea of "shift left". In our industry we repeatedly learn that we should slice vertically and not horizontally. I'm a full-stack developer. I like to traverse stack strata. Having what would normally be called a "security team" fold in to the development team seems like a good idea.
+            I really like the idea of "shift left". In our industry we repeatedly learn that we should slice vertically and not horizontally. I'm a full-stack developer. I like to traverse stack strata. Having what would normally be called a "security team" fold in to the development team seems like a good idea. The traditional separation can be a communication barrier, and often feels like an "us versus them" situation.
 
     - title: Industry leadership experience
       prompts:

@@ -349,7 +349,7 @@ doc:
 
             Things like [circuit breakers](https://martinfowler.com/bliki/CircuitBreaker.html) help.
 
-            I think of resiliency not as a "feature" of a system, but rather a property of the system. It's not easy to add to a system after the fact. It's something you have to design into the system from the beginning.
+            I think of resiliency not as a "feature" of a system, but rather a property of the system. It's much less work when you design for resiliency from the beginning, as opposed to trying to retrofit it later.
 
       - prompt:  What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
         answers:

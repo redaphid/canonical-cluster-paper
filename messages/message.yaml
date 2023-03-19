@@ -296,7 +296,7 @@ doc:
 
             ...and many others.
 
-            I simplify interfaces exposed to whatever is consuming my code as much as possible, exposing the minimal surface area necessary for it to be functional. I try to use the simplest data structure for inputs and outputs.
+            I simplify interfaces exposed to whatever is consuming my code as much as possible, exposing the smallest surface area necessary for it to be functional. I try to use the simplest data structure for inputs and outputs.
 
             When it comes to code complexity, I believe "There are either obviously no errors, or no obvious errors". Defects hide in complexity. Keep your code as simple as possible - but no simpler.
 

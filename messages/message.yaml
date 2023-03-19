@@ -371,14 +371,13 @@ doc:
         draft: primary
         answers:
           - response: |
-              As I imagine most people working at Canonical would say, I think open source software is one of the most powerful forces in the world today. It's a manifestation of the very human impulse to share and help each other. It's a complex mind meld that is growing and evolving under it's own volition. Humanity's collective ability to think and wanting to help, manifest.
+              As I imagine most people working at Canonical would say, I think open source software is one of the most powerful forces in the world today. It's a manifestation of the very human impulse to share and help each other. It's a complex mind meld that is growing and evolving under it's own volition. Humanity's collective ability to think and help, manifest.
 
               I know they're doing it for probably most developers, but when I received an email that my code was in the [Arctic Code Vault](https://archiveprogram.github.com/arctic-vault/) my eyes watered.
 
               I've talked about [Meshblu](#experience-with-meshblu) a lot, but it was a really fun, challenging, and varied project to work on. As for my role as a maintainer, Octoblu's usual pseudo-leaderless organization makes my 'role' in developing it hard to qualify. I pushed straight to master on any of the 1.2k repos we were working on whenever I finished something that wouldn't break the code. But everyone had that freedom.
 
-              That said, this was my job. Many people used Meshblu, but few contributed to it outside of those paid to do so. But at least a few adapters were made by members of the community to bring some weird device or service we didn't support into the platform. We had engagement in hackathons for hobbyist developers. And both of those were pretty satisfying.
-
+              That said, this was my job. Many people used Meshblu, but few contributed to it outside of those paid to do so. But at least a few adapters were made by members of the community to bring some weird device or service we didn't support into the platform. We had engagement in hackathons for hobbyist developers. And tons of throughput from people using it. And all of those were satisfying.
 
 
       - prompt: Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?

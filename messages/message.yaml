@@ -713,7 +713,8 @@ doc:
           draft: primary
           answers:
           - response: |
-              sad
+              Why does this text go from right to left?
+
         - prompt: Why do you most want to work for Canonical?
           answers:
           - response: |
@@ -724,8 +725,6 @@ doc:
               Canonical is at the forefront of so many bleeding-edge technologies and that is very exciting to me. I went to graduate school in computer science because I __liked__ learning in depth about interesting concepts in our field.
 
               In summary: Canonical lives in the intersection of my interests and my values. I'd like to be a part of that.
-
-          draft: true
 
         - prompt: What would you most want to change about Canonical?
           answers:

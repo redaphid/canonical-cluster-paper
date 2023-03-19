@@ -351,7 +351,6 @@ doc:
             I think of resiliency not as a "feature" of a system, but rather a property of the system. It's much less work when you design for resiliency from the beginning, as opposed to trying to retrofit it later.
 
       - prompt:  What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
-        draft: primary
         answers:
         - response: |
             I was Staff at Citrix for 3 years, during which time I would sometimes manage multiple teams in order to accomplish a goal. At Octoblu (startup acquired by Citrix), I co-architected and managed a few different initiatives - the major ones being the Meshblu 2.0 permission system referenced earlier [here](#experience-with-meshblu), and the "Flow Engine" - a flow-based execution engine that ran on top of our open source, free-to-use IoT platform Meshblu. We deployed the flows at large scale, using redis queues and workers, taking advantage of any asynchronicity we could to make the system as fast as possible. In the beginning, the system used a Docker container for each flow, but as you can imagine, this did not scale.
@@ -377,7 +376,7 @@ doc:
 
               I've talked about [Meshblu](#experience-with-meshblu) a lot, but it was a really fun, challenging, and varied project to work on. As for my role as a maintainer, Octoblu's usual pseudo-leaderless organization makes my 'role' in developing it hard to qualify. I pushed straight to master on any of the 1.2k repos we were working on whenever I finished something that wouldn't break the code. But everyone had that freedom.
 
-              That said, this was my job. Many people used Meshblu, but few contributed to it outside of those paid to do so. But at least a few adapters were made by members of the community to bring some weird device or service we didn't support into the platform. We had engagement in hackathons for hobbyist developers. And tons of throughput from people using it. And all of those were satisfying.
+              That said, this was my job. Many people used Meshblu, but few contributed to it outside of those paid to do so. But many people coded on top of it, either for their own personal projects, or as an adapter for some weird device or service we didn't support into the platform. We had engagement in hackathons for hobbyist developers. And tons of throughput from people using it. And all of those were satisfying. But I wasn't exposed to much open source governance.
 
 
       - prompt: Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?

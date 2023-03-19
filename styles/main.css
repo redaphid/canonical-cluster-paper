@@ -158,7 +158,6 @@ time {
 }
 .Prompts {
   background-color: var(--emphasis-color-foreground);
-  page-break-inside: avoid;
 }
 .Prompts ul {
   list-style: none;
@@ -256,6 +255,7 @@ time {
 .TableOfContents {
   margin-left: 0.25em;
   padding: 0.25em;
+  page-break-after: always;
 }
 
 .TableOfContents a {

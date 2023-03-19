@@ -768,7 +768,7 @@ doc:
         - prompt: Why do you most want to work for Canonical?
           answers:
           - response: |
-              The first thing that comes to mind, of course, is the ethos of open source that Canonical is built on. The mission statement (for Ubuntu, at least) is very similar to some of my own. I've gone on long, passionate talks about my thoughts on the open source movement and feel strongly about it.
+              The first thing that comes to mind is the ethos of open source upon which Canonical is built. The mission statement (for Ubuntu, at least) overlaps with my own. I've gone on long, passionate talks about my thoughts on the open source movement and feel strongly about it.
 
               Canonical is arguably the most influential company in the open source movement, and I'd like to be a part of that.
 
@@ -779,10 +779,10 @@ doc:
         - prompt: What would you most want to change about Canonical?
           answers:
           - response: |
-              I don't know enough about Canonical to have an opinion on this. I'm too far away from the organization. Now, when it comes to Ubuntu, I have some thoughts...
+              I don't know enough about Canonical to have an opinion on this. I'm too far away from the organization. Now, when it comes to Ubuntu, I have some uninformed thoughts...
               :)
 
         - prompt: What gets you most excited about this role?
           answers:
           - response: |
-              I don't know if you've noticed the [huge description of this cluster I worked on](#the-totally-naive-services-cluster--open-policy-agent-experience) where I talk a lot about my interest in the theory of security in distributed systems. I'm clearly in to this stuff :). I am also interested in anything involving research & development or interesting new technology, and it sounds like Canonical is a great opportunity to work on a lot of that stuff.
+              I don't know if you've noticed the [huge description of this cluster I worked on](#the-totally-naive-services-cluster--open-policy-agent-experience) where I talk a lot about my interest in the theory of security in distributed systems. I'm clearly in to this stuff :). I am also interested in anything involving research & development or interesting new technology, and it sounds like Canonical is a great opportunity to be involved in that.

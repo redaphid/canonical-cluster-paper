@@ -106,7 +106,7 @@
                 }
               },
               {
-                "response": "_this, of course, would have implications when it comes to pagination. A streaming model with backpressure would support this kind of design. Is that what Kafka is? I'll have to look into that. Envoy has a filter for Kafka, and Envoy also has a plugin for gating request via opa policies._\n"
+                "response": "_this would have implications when it comes to pagination. A streaming model with backpressure would support this kind of design. Is that what Kafka is? I'll have to look into that. Envoy has a filter for Kafka, and Envoy also has a plugin for gating request via opa policies._\n"
               },
               {
                 "response": "With the addition of this filtering, the authorization barrier is now symmetric, with OPA both gating access to resources and filtering the response. At this point the pod architecture allows for a service to be fully naive.\n",

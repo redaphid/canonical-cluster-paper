@@ -710,7 +710,6 @@ doc:
 
 
         - prompt: Who are Canonical's key competitors, and how should Canonical set about winning?
-          draft: primary
           answers:
           - response: |
               The obvious answer, as always, is Microsoft. They position themselves in the same space as Canonical according to Canonical's landing page. Microsoft has historically been trusted by enterprise clients vs. open source, and they have tons of money to spend on marketing and R&D. They also have a huge installed base of Windows users, and a lot of those users are in the enterprise space.

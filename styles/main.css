@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;700&display=swap');
 /* Generic styles */
 
 body {
@@ -12,6 +12,7 @@ body {
   --font-weight-bigger: 500;
   --font-weight-regular: 400;
   --font-weight-smaller: 300;
+  --font-weight-smallest: 100;
   --figure-size:30em;
   font-family: 'Ubuntu', Symbol;
   font-size: 0.85em;
@@ -27,15 +28,14 @@ section {
 }
 
 h3 {
-  font-weight: var(--font-weight-bigger);
+  font-weight: var(--font-weight-smallest);
   font-size: 1.5em;
   /* margin: 0; */
   width: fit-content;
-  border-bottom: 0.05em solid var(--color-foreground);
 }
 
 h4 {
-  font-weight: var(--font-weight-bigger);
+  font-weight: var(--font-weight-smaller);
   font-size: 1em;
   margin: 0;
   width: fit-content;
@@ -157,7 +157,9 @@ time {
 .Main {
   grid-area: Main;
 }
-
+.Prompt li {
+  break-inside: avoid;
+}
 .Prompt > header {
   margin-bottom: 0.25em;
 }

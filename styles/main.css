@@ -1,5 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); */
 /* Generic styles */
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/15be2ffe-UbuntuBeta0.865[wdth,wght]-latin.woff2") format("woff2-variations")
+}
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: italic;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/a84821f4-UbuntuBeta0.865-Italic[wdth,wght]-latin.woff2") format("woff2-variations")
+}
+
+@font-face {
+  font-family: "Ubuntu Mono variable";
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/ec568c8f-UbuntuMonoBeta0.865[wght]-latin.woff2") format("woff2-variations")
+}
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/929e5b64-UbuntuBeta0.865[wdth,wght]-cyrillic-extended.woff2") format("woff2-variations");
+  unicode-range: U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F
+}
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/ec29c093-UbuntuBeta0.865[wdth,wght]-cyrillic.woff2") format("woff2-variations");
+  unicode-range: U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/0a8276a6-UbuntuBeta0.865[wdth,wght]-greek-extended.woff2") format("woff2-variations");
+  unicode-range: U+1F00-1FFF
+}
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/16acdbb4-UbuntuBeta0.865[wdth,wght]-greek.woff2") format("woff2-variations");
+  unicode-range: U+0370-03FF
+}
+
+@font-face {
+  font-family: "Ubuntu variable";
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("https://assets.ubuntu.com/v1/c81d0142-UbuntuBeta0.865[wdth,wght]-latin-extended.woff2") format("woff2-variations");
+  unicode-range: U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+}
 
 body {
   --emphasis-color-extra: #77216F;
@@ -12,8 +80,9 @@ body {
   --font-weight-bigger: 500;
   --font-weight-regular: 400;
   --font-weight-smaller: 300;
+  --font-weight-smallest: 100;
   --figure-size:30em;
-  font-family: 'Ubuntu', Symbol;
+  font-family: 'Ubuntu variable', 'Ubuntu';
   font-size: 0.85em;
   /* max-width: 8.5in; */
   color: var(--color-foreground);
@@ -27,11 +96,12 @@ section {
 }
 
 h3 {
-  font-weight: var(--font-weight-bigger);
-  font-size: 1.5em;
-  /* margin: 0; */
+  font-weight: var(--font-weight-smallest);
+  font-size: 2em;
+  margin: 0;
   width: fit-content;
-  border-bottom: 0.05em solid var(--color-foreground);
+  font-style: normal;
+  line-height: 2em;
 }
 
 h4 {
@@ -100,14 +170,10 @@ time {
   justify-content: center;
   font-weight: var(--font-weight-smaller);
 }
-.Education p {
-  font-weight: var(--font-weight-regular);
-  font-size: 0.9em;
-  margin: 0;
-}
 
-.Educations>ul>li {
-  margin-bottom: 1em;
+.Doc h1 {
+  font-style: normal;
+  font-weight: var(--font-weight-biggest);
 }
 
 .Logo {

@@ -215,9 +215,7 @@ doc:
             It looks like after a while I started using ZFS and relied on automatic snapshots to keep my Docker configs at home.
 
 
-            As you probably can imagine from the cluster experiment, I am at least somewhat familiar with Kubernetes. To be honest I usually have to spin up and look in to using Kubernetes whenever I get my hands dirty with the copius YAML config. Kubernetes is the pragmatic choice for all enterprise development right now, but personally I find it to grossly violate the Unix Philosophy with it's complexity. That said, Kubernetes is important. I have used it in the past, and will again. Personal disagreements notwithstanding.
-
-            I prefer Docker Swarm for systems that don't need Kubernetes's complex features. If you refer to the [devops section](#describe-your-experience-with-large-scale-it-operations--saas--or-other-running-services--in-a-devops-or-is-or-system-administration-capacity) of this document, you may see why this is the case.
+            As you probably can imagine from the cluster experiment, I am at least somewhat familiar with Kubernetes. To be honest I usually have to spin up and look in to using Kubernetes whenever I get my hands dirty with the copius YAML config. Kubernetes is the pragmatic choice for all enterprise development right now.
 
             Regarding LXD: I just looked in to it, and it sounds pretty awesome! I haven't tried it, but it sounds like it might be helpful for me.
 

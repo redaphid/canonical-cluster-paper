@@ -602,7 +602,6 @@ doc:
         - response: |
             I have a lot of thoughts about software development practices, but I don't tell many people about them, and I don't know how unique they are. tl;dr "no".
       - prompt: Describe any experience working with startups. What did you draw from that experience that would be relevant for this application?
-        draft: primary
         answers:
         - response: |
             I've worked at a few startups, and in general I enjoy the fast pace and ability to make big decisions quickly. I like the ability to make a big impact on the company, and to have the creative freedom to come up with solutions to problems. There's a kind of trust implicit in startup culture. The lack of red tape and focus on people over process is nice.
@@ -707,7 +706,7 @@ doc:
         answers:
         - response: |
             I spent a lot of time driving around, getting lost in temperate rainforests, and - obviously at this point - messing with computers.
-            My school had a program in which they would give you a \*house\* instead of a dorm room if you had an academic theme and put on a few events related to that theme per semester.
+            My school had a program in which they would give you a **house** instead of a dorm room if you had an academic theme and put on a few events related to that theme per semester.
 
             The program was similar to the fraternity/sorority system.
 
@@ -724,10 +723,9 @@ doc:
 
             I received an automatic 'A' in assembly class, without writing much assembly. My professor was making a homemade image manipulation program, and one of the class's assignments was to write the algorithm for some subset of that program. I think it was color normalization for my year.
 
-            There was a competition where, if your algorithm was faster than the teacher's, you would get an automatic 'A'. So I made a faster algorithm in C, using tons of compiler flags, and optimization levels for the particular CPU we were running it on. I got an 'A' without writing too much
-            assembly.
+            There was a competition where, if your algorithm was faster than the teacher's, you would get an automatic 'A'. So I made a faster algorithm in C, using tons of compiler flags, and optimization levels for the particular CPU we were running it on. So I got an 'A'.
 
-            I then made a header file and a compiler script, and sent it to everyone in the class, saying they could use it if they kept my name in the comments of the header
+            I then made a header file and a compiler script, and sent it to everyone in the class, saying they could use it if they kept my name in the comments of the header. So a lot of people got 'A's in assembly that year.
 
       - prompt: At high school or university, what leadership roles did you take on?
         answers:

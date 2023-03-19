@@ -211,7 +211,7 @@
         return html`
                 <ul class="Answers">
                   <li class="Answer ${!(figureFlip % 2) ? 'flip-figure' : ''}">
-                    ${answer.response ? html`<p><${RenderRawHtml} html=${marked(answer.response)}/></p>` : ''}
+                    ${answer.response ? html`<${RenderRawHtml} html=${marked(answer.response)}/>` : ''}
                     ${answer.figure ? html`<${Figure} figure=${answer.figure} hasResponse=${!!answer.response} />` : ''}
                   </li>
                 </ul>

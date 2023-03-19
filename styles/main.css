@@ -190,7 +190,7 @@ time {
   justify-content: space-between;
   align-items: center;
 }
-.Anwser > p > div {
+.Prompts p {
   page-break-inside: avoid;
 }
 .Answer.flip-figure {

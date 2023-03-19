@@ -612,7 +612,6 @@ doc:
             I also worked with a medical startup, and worked a little on "Computes", a decentralized computation platform bought by Magic Leap.
 
       - prompt: Describe any experience working in a public company. What is important for your colleagues to know about being a public company?
-        draft: primary
         answers:
           - response: |
               I worked at a public company for a few years. In my mind, "large company" and "public company" are somewhat intertwined. But thinking about it more, I did have some experiences that were specific to public companies.
@@ -622,6 +621,11 @@ doc:
               His demeanor was in stark contrast to Elliott Management, a [famously ruthless activist investment company](https://www.newyorker.com/magazine/2018/08/27/paul-singer-doomsday-investor). Elliott Management is the kind of company that would buy defaulted debt at a huge discount from countries with fragile economies, then engage in legal battles at the __soverign nation__ level to force the governments to pay the debt in full.
 
               Elliott Management focused on getting Citrix's stock price up quickly, and the most obvious strategy to do so is to cut divisions of the company that weren't profitable. Surprisingly, Octoblu survived these initial cost-cutting measures. Perhaps because we were acquired so recently. But our mission dramatically changed. We were no longer a startup, and we were no longer part of a company that valued experimentation. Instead we were to develop "smart conference rooms". This was still interesting work. But our relationship with the company changed. Our developer evangelist was instructed "not  to tweet about robots" anymore. I felt like we were stuffed in the back room of a closet somewhere, to be wheeled out during conferences to show off the fun things we could do.
+
+              It was a surreal experience to have your stock value go up as your parent company became hostile to your mission.
+
+              This is the only experience I can think of in which I can differentiate between "large company" and "public company". That said, one experience doesn't equal a trend. I'd be open to working for a public company again.
+
     - title: Education
       prompts:
       - prompt: How did you fare in high school mathematics, physical sciences and computing? Which were strengths and which most enjoyable? How did you rank, competitively, in them?

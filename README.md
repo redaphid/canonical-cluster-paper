@@ -27,7 +27,11 @@ If you go through the history, you'll see me slowly converging on to this soluti
 
 ## How to use this repo
 
-To run the system you should execute `./scripts/run.sh` Shocking, I know.
+To run the system you should execute `./scripts/run.sh` Shocking, I know. If you want to run the whole thing, you'll need `fish`, `yq`, and `npm`. Not everything these scripts do are necessary - this was written just for me.
+
+Once it's running, you can go to `localhost:8080` and see the rendered document there, presented as the PDF printer will see it. If you append a `edit=true` as a query param, you'll end up in (big surprise) "edit mode". Like this: `localhost:8080?edit=true`.
+
+After you enter edit mode, the state is stored in localStorage, so you'll have to set `edit=false` as a query param if you want to get out of it.
 
 ### Tech Stack
 

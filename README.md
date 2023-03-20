@@ -27,7 +27,9 @@ Below is an example of what 'edit mode' looks like:
 ![edit mode](images/edit-mode.png)
 
 On the right, it lists all the prompts you haven't answered yet, as well as 'drafts'. Clicking on the name of any prompt will take you there, and you'll stay there even when the page refreshes.
-Drafts are prompts that have `draft: [ true | primary ]` in the prompt object in `message.yaml`. The system will highlight prompts that are in draft form in bright colors. To make them easier to find while scrolling around.
+Drafts are prompts that have `draft: [ true | primary ]` in the prompt object in `message.yaml`. The system will highlight prompts that are in draft form in bright colors, to make them easier to find.
+
+In addition, the system makes drafts easier to find by adding `!draft` in the header of prompts that are in draft form. This allows you to just use the usual browser search function (ctrl+f) to find drafts quickly by searching for `!draft`. The primary draft also has a `!primary` in the header, so you can find it that way as well.
 
 In the image above, the orange highlighted one is the "primary draft". All that means is that the 'Primary Draft' button on the upper-right side will take you to the primary draft. And also that tacking on `#draft` to the url, so it looks like `localhost:8080#draft` will always take you to the current primary draft.
 

@@ -19,11 +19,12 @@ This repo can help navigate around the prompts as you answer them. You can answe
   - I found myself thinking about _some_ information that I wanted to record related to a prompt, but I wanted to make sure I didn't count it as completed just because there was some text below the prompt.
 
 You can also easily link to other areas of the document to tie concepts together.
+I also wrote it to help encourage me to keep writing - I needed it, at times.
 
 Below is an example of what 'edit mode' looks like:
 ![edit mode](images/edit-mode.png)
-I also wrote it to help encourage me to keep writing - I needed it, at times.
 
+On the right, it lists all the prompts you haven't answered yet, as well as 'drafts'. Clicking on the name of any prompt will take you there, and you'll stay there even when the page refreshes.
 
 If you go through the history, you'll see me slowly converging on to this solution.
 

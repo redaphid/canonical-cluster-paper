@@ -64,6 +64,11 @@ The system helps out a little bit in that it creates anchor tags from the sectio
 
 For example, the prompt "Would you describe yourself as a high quality coder? Why?" has this id once rendered in html:  `would-you-describe-yourself-as-a-high-quality-coder--why-`
 
+This lets me link to that prompt anywhere else I'm writing markdown via the usual syntax:
+```markdown
+  [Am I a high-quality coder?](#would-you-describe-yourself-as-a-high-quality-coder--why)
+```
+
 ### Tech Stack
 
 #### Preact

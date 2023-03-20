@@ -12,8 +12,8 @@ The primary purpose of this repo is to write the prompts sent to me by Canonical
 ## What is this repo, besides answers to the prompts?
 I'm glad you asked! I didn't think anybody would ever see this code but me. But since you're curious:
 
+This repo was made to help me navigate around the prompts as I was answering them; I didn't answer them all in order, and I needed to know what I'd already done. I also wanted to easily link to concepts I'd addressed in other places in the document, to illustrate points.
 
-This repo was made to help me navigate around the prompts as I was answering them; I didn't answer them all in order, and I needed to know what I'd already done.
 I didn't want to use a wysiwyg like Libre Office, because combining the formatting/style with my answers felt wrong as a developer. The style separation also helped me focus on answering the prompt. And when I couldn't answer any prompts, I amused myself while writing this system, thinking about them in the background
 
 

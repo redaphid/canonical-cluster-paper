@@ -54,8 +54,6 @@ i {
   color: var(--emphasis-color-extra);
 }
 
-/* this will be used for the titles I had at each job */
-
 em {
   font-style: italic;
   font-weight:100;
@@ -88,7 +86,6 @@ time {
   column-gap: 0.1em;
   row-gap: 0.1em;
   max-width: 8.5in;
-  /* background-color: var(--emphasis-color-extra); */
 }
 .Intro {
   grid-area: Intro;
@@ -104,7 +101,6 @@ time {
   grid-area: Logo;
   background-color: var(--emphasis-color-alt);
   color: var(--emphasis-color-foreground);
-  /* padding: 1em; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,7 +211,6 @@ time {
   right: 0;
   background-color: var(--emphasis-color-foreground);
   color: var(--emphasis-color);
-  /* padding: 0.5em; */
   border-top-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   font-weight: var(--font-weight-normal);

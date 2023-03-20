@@ -41,7 +41,7 @@ If you go through the history, you'll see me slowly converging on to this soluti
 
 ## How to use this repo
 
-To run the system you should execute `./scripts/run.sh` Shocking, I know. If you want to run the whole thing, you'll need `fish`, `yq`, and `npm`. Not everything these scripts do are necessary - this was written just for me.
+To run the system you should execute `./scripts/run.sh`. Shocking, I know. If you want to run the whole thing, you'll need `fish`, `yq`, `fswatch`, and `npm`. Not everything these scripts do are necessary - this was written just for me.
 
 Once it's running, you can go to `localhost:8080` and see the rendered document there, presented as the PDF printer will see it. If you append a `edit=true` as a query param, you'll end up in (big surprise) "edit mode". Like this: `localhost:8080?edit=true`.
 
@@ -52,10 +52,10 @@ The content is stored in `./messages/message.yaml`, because I wasn't sure what I
   main:
     - title: Identity and Authorization Technology
       prompts:
-      - prompt: Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.
+      - prompt: Is security important?
         answers:
         - response: |
-            your answer here
+            ya probably.
 ```
 
 The key "main" is an array of question categories, as given to me by Canonical. Each category has an array of prompts. Each prompt has a (unfortunately named) "prompt" key, containing the prompt, and an "answers" key, which is an array containg the answers to the prompt.

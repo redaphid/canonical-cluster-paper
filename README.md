@@ -2,7 +2,7 @@
 
 You will find some crazy systems I made to answer the prompts in order to make writing them a little more fun. I know it's overkill, but I wanted to try out some new stuff.
 
-Were these the best technologies to writing a document? Definitely. This is the first time such software has been written.
+Were these the best technologies to use while writing a document? Definitely. This is the first time such software has been written.
 
 This repo is forked from my resume generating repo, which I will refrain from linking to in an effort to try to keep this this written portion anonymous.
 
@@ -27,7 +27,7 @@ Below is an example of what 'edit mode' looks like:
 ![edit mode](images/edit-mode.png)
 
 On the right, it lists all the prompts you haven't answered yet, as well as 'drafts'. Clicking on the name of any prompt will take you there, and you'll stay there even when the page refreshes.
-Drafts are prompts that have `draft: [ true | primary ]` in the prompt object in `message.yaml`. The system will highlight prompts that are in draft form in bright, ugly colors. To make them easier to find while scrolling around.
+Drafts are prompts that have `draft: [ true | primary ]` in the prompt object in `message.yaml`. The system will highlight prompts that are in draft form in bright colors. To make them easier to find while scrolling around.
 
 In the image above, the orange highlighted one is the "primary draft". All that means is that the 'Primary Draft' button on the upper-right side will take you to the primary draft. And also that tacking on `#draft` to the url, so it looks like `localhost:8080#draft` will always take you to the current primary draft.
 
@@ -69,6 +69,14 @@ This lets me link to that prompt anywhere else I'm writing markdown via the usua
   [Am I a high-quality coder?](#would-you-describe-yourself-as-a-high-quality-coder--why)
 ```
 
+You can add a figure to any part of an answer by using this syntax:
+```yaml
+  figure:
+    figure: naive-cluster-overview
+    miro: '3458764548628056239'
+```
+You'll notice that there is a tightly-coupled relationship between figures and elements in a Miro board. This was intentional, and actually took longer than just copying and pasting the link to an object on the board. But I think it's cool to click on a figure and be taken to the latest version of that figure. And I also like people to look around my Miro boards as I use them, in case they're interested in my process.
+I considered Miro diagrams to be a constrained, simplified form of information in the same way that the Markdown is.
 ### Tech Stack
 
 #### Preact

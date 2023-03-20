@@ -79,6 +79,11 @@ You can add a figure to any part of an answer by using this syntax:
 ```
 You'll notice that there is a tightly-coupled relationship between figures and elements in a Miro board. This was intentional, and actually took longer than just copying and pasting the link to an object on the board. But I think it's cool to click on a figure and be taken to the latest version of that figure. And I also like people to look around my Miro boards as I use them, in case they're interested in my process.
 I considered Miro diagrams to be a constrained, simplified form of information in the same way that the Markdown is.
+
+## Deployment
+
+Github Actions is set up to generate and release a pdf form of this document on push to `main` branch. The release has a timestamp.
+
 ### Tech Stack
 
 #### Preact

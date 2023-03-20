@@ -14,8 +14,14 @@ I'm glad you asked! I didn't think anybody would ever see this code but me. But 
 
 This repo was made to help me navigate around the prompts as I was answering them; I didn't answer them all in order, and I needed to know what I'd already done. I also wanted to easily link to concepts I'd addressed in other places in the document, to illustrate points.
 
-I didn't want to use a wysiwyg like Libre Office, because combining the formatting/style with my answers felt wrong as a developer. The style separation also helped me focus on answering the prompt. And when I couldn't answer any prompts, I amused myself while writing this system, thinking about them in the background
+I also wrote it to help encourage me to keep writing - I needed it, at times.
 
+So it:
+* Styles the response "for you" - though it was actually me who did the styling.
+* Keeps track of the questions you've answered, the ones you haven't answered yet, and the ones in "draft" form.
+
+
+If you go through the history, you'll see me slowly converging on to this solution that
 
 ## How to use this repo
 

@@ -20,6 +20,8 @@ This repo can help navigate around the prompts as you answer them. You can answe
 
 You can also easily link to other areas of the document to tie concepts together.
 
+Below is an example of what 'edit mode' looks like:
+![edit mode](images/edit-mode.png)
 I also wrote it to help encourage me to keep writing - I needed it, at times.
 
 
@@ -33,6 +35,19 @@ Once it's running, you can go to `localhost:8080` and see the rendered document 
 
 After you enter edit mode, the state is stored in localStorage, so you'll have to set `edit=false` as a query param if you want to get out of it.
 
+The content is stored in `./messages/message.yaml`, because I wasn't sure what I was making yet. The file contains all your prompts and responses. It's format is the following:
+```yaml
+  main:
+    - title: Identity and Authorization Technology
+      prompts:
+      - prompt: Describe your experience with authorization systems, specifically Open Policy Agent and OAuth.
+        answers:
+        - response: |
+            your answer here
+```
+
+The key "main" is an array of question categories, as given to me by Canonical. The title being the name of the category has an array of prompts, which should be self-explanatory. Each prompt
+Each category
 ### Tech Stack
 
 #### Preact

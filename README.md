@@ -9,23 +9,25 @@ This repo is forked from my resume generating repo, which I will refrain from li
 The primary purpose of this repo is to write the prompts sent to me by Canonical. It can, however, be used to answer any prompt set. This is a one-off repo. But since you're here, let me show you around!
 
 
-## What is this repo, besides answers to the prompts?
+## What is this, besides answers to prompts?
 I'm glad you asked! I didn't think anybody would ever see this code but me. But since you're curious:
 
-This repo was made to help me navigate around the prompts as I was answering them; I didn't answer them all in order, and I needed to know what I'd already done. I also wanted to easily link to concepts I'd addressed in other places in the document, to illustrate points.
+This repo can help navigate around the prompts as you answer them. You can answer prompts in any order, and keep track of:
+* prompts you have answered
+* prompts you haven't answered
+* prompts that are in "draft form"
+  - I found myself thinking about _some_ information that I wanted to record related to a prompt, but I wanted to make sure I didn't count it as completed just because there was some text below the prompt.
+
+You can also easily link to other areas of the document to tie concepts together.
 
 I also wrote it to help encourage me to keep writing - I needed it, at times.
 
-So it:
-* Styles the response "for you" - though it was actually me who did the styling.
-* Keeps track of the questions you've answered, the ones you haven't answered yet, and the ones in "draft" form.
 
-
-If you go through the history, you'll see me slowly converging on to this solution that
+If you go through the history, you'll see me slowly converging on to this solution.
 
 ## How to use this repo
 
-
+To run the system you should execute `./scripts/run.sh` Shocking, I know.
 
 ### Tech Stack
 

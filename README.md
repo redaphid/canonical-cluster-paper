@@ -18,6 +18,8 @@ This repo can help navigate around the prompts as you answer them. You can answe
 * prompts that are in "draft form"
   - I found myself thinking about _some_ information that I wanted to record related to a prompt, but I wanted to make sure I didn't count it as completed just because there was some text below the prompt.
 
+The answers to prompts are written in Markdown, to allow for some formatting and linking.
+
 You can also easily link to other areas of the document to tie concepts together.
 I also wrote it to help encourage me to keep writing - I needed it, at times.
 
@@ -54,8 +56,14 @@ The content is stored in `./messages/message.yaml`, because I wasn't sure what I
             your answer here
 ```
 
-The key "main" is an array of question categories, as given to me by Canonical. The title being the name of the category has an array of prompts, which should be self-explanatory. Each prompt
-Each category
+The key "main" is an array of question categories, as given to me by Canonical. Each category has an array of prompts. Each prompt has a (unfortunately named) "prompt" key, containing the prompt, and an "answers" key, which is an array containg the answers to the prompt.
+
+Answers are in Markdown format. Answers are an array, rather than a string, so I can do some formatting with the figures. The contents of the answer objects `response` is where the text for the response goes.
+
+The system helps out a little bit in that it creates anchor tags from the section and question names that are based off of the text of the prompt or section. This allows us to link to other questions of sections of the document easily.
+
+For example, the prompt "Would you describe yourself as a high quality coder? Why?" has this id once rendered in html:  `would-you-describe-yourself-as-a-high-quality-coder--why-`
+
 ### Tech Stack
 
 #### Preact

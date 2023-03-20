@@ -23,6 +23,8 @@ The answers to prompts are written in Markdown, to allow for some formatting and
 You can also easily link to other areas of the document to tie concepts together.
 I also wrote it to help encourage me to keep writing - I needed it, at times.
 
+It also generates a table of contents at the beginning, which is useful.
+
 Below is an example of what 'edit mode' looks like:
 ![edit mode](images/edit-mode.png)
 

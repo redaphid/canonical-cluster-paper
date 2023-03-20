@@ -25,6 +25,13 @@ Below is an example of what 'edit mode' looks like:
 ![edit mode](images/edit-mode.png)
 
 On the right, it lists all the prompts you haven't answered yet, as well as 'drafts'. Clicking on the name of any prompt will take you there, and you'll stay there even when the page refreshes.
+Drafts are prompts that have `draft: [ true | primary ]' in the prompt object in `message.yaml`. The system will highlight prompts that are in draft form in bright, ugly colors. To make them easier to find while scrolling around.
+
+In the image above, the orange highlighted one is the "primary draft". All that means is that the 'Primary Draft' button on the upper-right side will take you to the primary draft. And also that tacking on `#draft` to the url, so it looks like `localhost:8080#draft` will always take you to the current primary draft.
+
+
+Once a prompt has an answer and doesn't have a `draft` key, it is considered done. Ideally this would be an explicit state with something like `done: true`, but I was lazy and making the system backwards-compatible with answers I wrote that didn't have the concept of drafts.
+
 
 If you go through the history, you'll see me slowly converging on to this solution.
 
